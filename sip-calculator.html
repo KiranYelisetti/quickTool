@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-IN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,10 @@
     <!-- Primary Meta Tags -->
     <title>SIP Calculator India - Free Mutual Fund SIP Return Calculator | QuickTools India</title>
     <meta name="title" content="SIP Calculator India - Free Mutual Fund SIP Return Calculator">
-    <meta name="description" content="Free SIP Calculator for India - Calculate mutual fund SIP returns with accurate projections. Plan your monthly investments (₹500 to ₹1 lakh), expected returns (10-30%), and time period (1-40 years). Includes rupee cost averaging benefits.">
-    <meta name="keywords" content="SIP calculator, SIP calculator India, mutual fund calculator, SIP return calculator, systematic investment plan, SIP monthly investment, mutual fund SIP, investment calculator India, SIP planner, retirement planning calculator">
+    <meta name="description"
+        content="Free SIP Calculator for India - Calculate mutual fund SIP returns with accurate projections. Plan your monthly investments (₹500 to ₹1 lakh), expected returns (10-30%), and time period (1-40 years). Includes rupee cost averaging benefits.">
+    <meta name="keywords"
+        content="SIP calculator, SIP calculator India, mutual fund calculator, SIP return calculator, systematic investment plan, SIP monthly investment, mutual fund SIP, investment calculator India, SIP planner, retirement planning calculator">
     <meta name="author" content="QuickTools India">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.quicktoolsindia.com/sip-calculator.html">
@@ -17,7 +20,8 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.quicktoolsindia.com/sip-calculator.html">
     <meta property="og:title" content="SIP Calculator India - Free Mutual Fund SIP Return Calculator">
-    <meta property="og:description" content="Calculate your mutual fund SIP returns with accurate projections. Plan monthly investments from ₹500 to ₹1 lakh.">
+    <meta property="og:description"
+        content="Calculate your mutual fund SIP returns with accurate projections. Plan monthly investments from ₹500 to ₹1 lakh.">
     <meta property="og:image" content="https://www.quicktoolsindia.com/og-sip-calculator.png">
     <meta property="og:site_name" content="QuickTools India">
     <meta property="og:locale" content="en_IN">
@@ -131,10 +135,11 @@
     }
     </script>
 </head>
+
 <body class="bg-gradient-to-br from-green-50 to-emerald-100 min-h-screen">
     <!-- Header -->
     <header class="bg-white shadow-md">
-        <div class="container mx-auto px-4 py-4">
+        <div class="container mx-auto px-4 py-6">
             <div class="flex items-center justify-between">
                 <a href="index.html" class="flex items-center space-x-3 hover:opacity-80 transition">
                     <i class="fas fa-tools text-2xl text-indigo-600"></i>
@@ -152,10 +157,13 @@
         <div class="max-w-4xl mx-auto">
             <!-- Title -->
             <div class="text-center mb-8">
-                <div class="inline-block bg-gradient-to-br from-green-400 to-green-600 w-16 h-16 rounded-full flex items-center justify-center mb-4">
-                    <i class="fas fa-chart-line text-3xl text-white"></i>
+                <div class="flex items-center justify-center gap-4 mb-2">
+                    <div
+                        class="inline-block bg-gradient-to-br from-green-400 to-green-600 w-12 h-12 rounded-full flex items-center justify-center">
+                        <i class="fas fa-chart-line text-xl text-white"></i>
+                    </div>
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-800">SIP Calculator</h1>
                 </div>
-                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">SIP Calculator</h1>
                 <p class="text-gray-600">Calculate your Systematic Investment Plan returns</p>
             </div>
 
@@ -170,18 +178,18 @@
                         <div>
                             <label class="block text-gray-700 font-semibold mb-2">Monthly Investment (₹)</label>
                             <input type="number" id="monthlyInvestment" value="5000" min="100" max="1000000"
-                                   class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-green-500 focus:outline-none text-lg">
-                            <input type="range" id="monthlyInvestmentSlider" value="5000" min="100" max="100000" step="100"
-                                   class="w-full mt-2 accent-green-600">
+                                class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-green-500 focus:outline-none text-lg">
+                            <input type="range" id="monthlyInvestmentSlider" value="5000" min="100" max="100000"
+                                step="100" class="w-full mt-2 accent-green-600">
                         </div>
 
                         <!-- Expected Return Rate -->
                         <div>
                             <label class="block text-gray-700 font-semibold mb-2">Expected Return Rate (% p.a.)</label>
                             <input type="number" id="returnRate" value="12" min="1" max="30" step="0.5"
-                                   class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-green-500 focus:outline-none text-lg">
+                                class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-green-500 focus:outline-none text-lg">
                             <input type="range" id="returnRateSlider" value="12" min="1" max="30" step="0.5"
-                                   class="w-full mt-2 accent-green-600">
+                                class="w-full mt-2 accent-green-600">
                             <p class="text-sm text-gray-500 mt-1">Typical range: 10-15% for equity funds</p>
                         </div>
 
@@ -189,12 +197,13 @@
                         <div>
                             <label class="block text-gray-700 font-semibold mb-2">Time Period (Years)</label>
                             <input type="number" id="timePeriod" value="10" min="1" max="40"
-                                   class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-green-500 focus:outline-none text-lg">
+                                class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-green-500 focus:outline-none text-lg">
                             <input type="range" id="timePeriodSlider" value="10" min="1" max="40"
-                                   class="w-full mt-2 accent-green-600">
+                                class="w-full mt-2 accent-green-600">
                         </div>
 
-                        <button onclick="calculateSIP()" class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-3 rounded-lg hover:from-green-600 hover:to-green-700 transition-all shadow-lg">
+                        <button onclick="calculateSIP()"
+                            class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-3 rounded-lg hover:from-green-600 hover:to-green-700 transition-all shadow-lg">
                             <i class="fas fa-calculator mr-2"></i>Calculate Returns
                         </button>
                     </div>
@@ -228,8 +237,11 @@
 
                 <!-- Info Section -->
                 <div class="mt-8 bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
-                    <h3 class="font-bold text-gray-800 mb-2"><i class="fas fa-info-circle text-blue-500 mr-2"></i>What is SIP?</h3>
-                    <p class="text-gray-700 text-sm">Systematic Investment Plan (SIP) allows you to invest a fixed amount regularly in mutual funds. It uses rupee cost averaging and the power of compounding to generate wealth over time.</p>
+                    <h3 class="font-bold text-gray-800 mb-2"><i class="fas fa-info-circle text-blue-500 mr-2"></i>What
+                        is SIP?</h3>
+                    <p class="text-gray-700 text-sm">Systematic Investment Plan (SIP) allows you to invest a fixed
+                        amount regularly in mutual funds. It uses rupee cost averaging and the power of compounding to
+                        generate wealth over time.</p>
                 </div>
             </div>
 
@@ -237,8 +249,10 @@
             <div class="mt-12 bg-white rounded-lg shadow-lg p-8">
                 <h2 class="text-2xl font-bold text-gray-800 mb-4">Benefits of SIP Investment</h2>
                 <p class="text-gray-600 mb-4">
-                    SIP (Systematic Investment Plan) is a method of investing in mutual funds where you invest a fixed amount regularly
-                    (monthly, quarterly, etc.). It's one of the most popular investment options in India for building wealth over time.
+                    SIP (Systematic Investment Plan) is a method of investing in mutual funds where you invest a fixed
+                    amount regularly
+                    (monthly, quarterly, etc.). It's one of the most popular investment options in India for building
+                    wealth over time.
                 </p>
                 <h3 class="text-xl font-bold text-gray-800 mb-3 mt-6">Key Benefits</h3>
                 <ul class="list-disc list-inside text-gray-600 space-y-2">
@@ -253,15 +267,17 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white mt-12 py-8">
+    <footer class="bg-gray-800 text-white mt-16 py-8">
         <div class="container mx-auto px-4">
             <!-- Feedback Section -->
             <div class="text-center mb-6 pb-6 border-b border-gray-700">
                 <h3 class="text-lg font-semibold mb-2">
                     <i class="fas fa-lightbulb text-yellow-400 mr-2"></i>Have a Tool Idea or Feedback?
                 </h3>
-                <p class="text-gray-300 text-sm mb-3">We'd love to hear from you! Suggest new calculators or share your thoughts.</p>
-                <a href="mailto:quicktoolsindiaa@gmail.com" class="inline-flex items-center bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
+                <p class="text-gray-300 text-sm mb-3">We'd love to hear from you! Suggest new calculators or share your
+                    thoughts.</p>
+                <a href="mailto:quicktoolsindiaa@gmail.com"
+                    class="inline-flex items-center bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
                     <i class="fas fa-envelope mr-2"></i>quicktoolsindiaa@gmail.com
                 </a>
             </div>
@@ -339,4 +355,5 @@
         calculateSIP();
     </script>
 </body>
+
 </html>
