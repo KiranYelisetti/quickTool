@@ -14,45 +14,56 @@
     <link rel="canonical" href="https://www.quicktoolsindia.com/privacy-policy.html">
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 min-h-screen transition-colors duration-200">
     <!-- Header -->
-    <header class="bg-white shadow-md">
+    <header class="bg-white dark:bg-gray-800 shadow-md transition-colors duration-200">
         <div class="container mx-auto px-4 py-6">
             <div class="flex items-center justify-between">
                 <a href="index.html" class="flex items-center space-x-3 hover:opacity-80 transition">
-                    <i class="fas fa-tools text-2xl text-indigo-600"></i>
-                    <span class="text-xl md:text-2xl font-bold text-gray-800">QuickTools India</span>
+                    <i class="fas fa-tools text-2xl text-indigo-600 dark:text-indigo-400"></i>
+                    <span class="text-xl md:text-2xl font-bold text-gray-800 dark:text-white">QuickTools India</span>
                 </a>
 
                 <!-- Navigation -->
-                <nav class="flex items-center space-x-6">
-                    <a href="index.html" class="hidden md:flex items-center text-gray-700 hover:text-indigo-600 font-semibold transition">
+                <nav class="flex items-center space-x-4">
+                    <a href="index.html" class="hidden md:flex items-center text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-semibold transition">
                         <i class="fas fa-home mr-1"></i>Home
                     </a>
 
+                    <!-- Dark Mode Toggle -->
+                    <button onclick="toggleDarkMode()" id="darkModeToggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon text-gray-600 dark:text-yellow-300 dark:hidden"></i>
+                        <i class="fas fa-sun text-yellow-500 hidden dark:inline"></i>
+                    </button>
+
                     <!-- Tools Dropdown -->
                     <div class="relative" id="toolsDropdown">
-                        <button onclick="toggleDropdown()" class="flex items-center text-indigo-600 hover:text-indigo-800 font-semibold transition">
+                        <button onclick="toggleDropdown()" class="flex items-center text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 font-semibold transition">
                             <i class="fas fa-th mr-1"></i>Tools
                             <i class="fas fa-chevron-down ml-1 text-xs"></i>
                         </button>
 
                         <!-- Dropdown Menu -->
-                        <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-200 z-50">
-                            <a href="sip-calculator.html" class="block px-4 py-3 hover:bg-indigo-50 transition border-b border-gray-100">
-                                <i class="fas fa-chart-line text-green-600 mr-2"></i>SIP Calculator
+                        <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-56 bg-white dark:bg-gray-700 rounded-lg shadow-xl border border-gray-200 dark:border-gray-600 z-50">
+                            <a href="sip-calculator.html" class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
+                                <i class="fas fa-chart-line text-green-600 dark:text-green-400 mr-2"></i>SIP Calculator
                             </a>
-                            <a href="gst-calculator.html" class="block px-4 py-3 hover:bg-indigo-50 transition border-b border-gray-100">
-                                <i class="fas fa-percentage text-blue-600 mr-2"></i>GST Calculator
+                            <a href="gst-calculator.html" class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
+                                <i class="fas fa-percentage text-blue-600 dark:text-blue-400 mr-2"></i>GST Calculator
                             </a>
-                            <a href="age-calculator.html" class="block px-4 py-3 hover:bg-indigo-50 transition border-b border-gray-100">
-                                <i class="fas fa-calendar-alt text-purple-600 mr-2"></i>Age Calculator
+                            <a href="age-calculator.html" class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
+                                <i class="fas fa-calendar-alt text-purple-600 dark:text-purple-400 mr-2"></i>Age Calculator
                             </a>
-                            <a href="image-resizer.html" class="block px-4 py-3 hover:bg-indigo-50 transition">
-                                <i class="fas fa-image text-orange-600 mr-2"></i>Image Resizer
+                            <a href="image-resizer.html" class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition text-gray-800 dark:text-gray-200">
+                                <i class="fas fa-image text-orange-600 dark:text-orange-400 mr-2"></i>Image Resizer
                             </a>
                         </div>
                     </div>
@@ -63,35 +74,35 @@
 
     <!-- Main Content -->
     <section class="container mx-auto px-4 py-8 md:py-12">
-        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Privacy Policy</h1>
-            <p class="text-gray-600 mb-8"><strong>Last Updated:</strong> December 27, 2025</p>
+        <div class="max-w-4xl mx-auto bg-white dark:bg-gray-700 rounded-lg shadow-lg p-8 transition-colors duration-200">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Privacy Policy</h1>
+            <p class="text-gray-600 dark:text-gray-300 mb-8"><strong>Last Updated:</strong> December 27, 2025</p>
 
             <!-- Introduction -->
             <div class="mb-8">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">1. Introduction</h2>
-                <p class="text-gray-700 mb-4">
-                    Welcome to QuickTools India ("we," "our," or "us"). We are committed to protecting your privacy and ensuring you have a positive experience on our website. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website at <a href="https://www.quicktoolsindia.com" class="text-indigo-600 hover:underline">www.quicktoolsindia.com</a>.
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">1. Introduction</h2>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                    Welcome to QuickTools India ("we," "our," or "us"). We are committed to protecting your privacy and ensuring you have a positive experience on our website. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website at <a href="https://www.quicktoolsindia.com" class="text-indigo-600 dark:text-indigo-400 hover:underline">www.quicktoolsindia.com</a>.
                 </p>
-                <p class="text-gray-700">
+                <p class="text-gray-700 dark:text-gray-300">
                     By using our website, you agree to the collection and use of information in accordance with this policy.
                 </p>
             </div>
 
             <!-- Information We Collect -->
             <div class="mb-8">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">2. Information We Collect</h2>
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">2. Information We Collect</h2>
 
-                <h3 class="text-xl font-semibold text-gray-800 mb-3">2.1 Personal Data</h3>
-                <p class="text-gray-700 mb-4">
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-3">2.1 Personal Data</h3>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">
                     <strong>We do not collect any personal data.</strong> Our calculators and tools operate entirely in your browser. None of your inputs, calculations, or results are transmitted to our servers or stored by us.
                 </p>
 
-                <h3 class="text-xl font-semibold text-gray-800 mb-3">2.2 Usage Data</h3>
-                <p class="text-gray-700 mb-4">
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-3">2.2 Usage Data</h3>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">
                     We may collect anonymous usage data through third-party analytics services (such as Google Analytics) to understand how visitors use our website. This may include:
                 </p>
-                <ul class="list-disc list-inside text-gray-700 mb-4 ml-4">
+                <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 mb-4 ml-4">
                     <li>Your device's Internet Protocol (IP) address</li>
                     <li>Browser type and version</li>
                     <li>Pages you visit on our website</li>
@@ -100,16 +111,16 @@
                     <li>Device and operating system information</li>
                 </ul>
 
-                <h3 class="text-xl font-semibold text-gray-800 mb-3">2.3 Cookies and Tracking Technologies</h3>
-                <p class="text-gray-700 mb-4">
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-3">2.3 Cookies and Tracking Technologies</h3>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">
                     We use cookies and similar tracking technologies to track activity on our website and hold certain information. Cookies are files with small amount of data that are stored on your device. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.
                 </p>
             </div>
 
             <!-- How We Use Your Information -->
             <div class="mb-8">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">3. How We Use Your Information</h2>
-                <p class="text-gray-700 mb-4">We use the collected data for various purposes:</p>
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">3. How We Use Your Information</h2>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">We use the collected data for various purposes:</p>
                 <ul class="list-disc list-inside text-gray-700 ml-4">
                     <li>To provide and maintain our service</li>
                     <li>To analyze how our website is used</li>
@@ -121,35 +132,35 @@
 
             <!-- Third-Party Services -->
             <div class="mb-8">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">4. Third-Party Services</h2>
-                <p class="text-gray-700 mb-4">
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">4. Third-Party Services</h2>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">
                     We use third-party services that may collect information used to identify you. These services include:
                 </p>
-                <ul class="list-disc list-inside text-gray-700 mb-4 ml-4">
+                <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 mb-4 ml-4">
                     <li><strong>Tailwind CSS CDN:</strong> For styling our website</li>
                     <li><strong>Font Awesome CDN:</strong> For icons</li>
                     <li><strong>Google Analytics:</strong> For website analytics (if implemented)</li>
                 </ul>
-                <p class="text-gray-700">
+                <p class="text-gray-700 dark:text-gray-300">
                     These third-party service providers have their own privacy policies addressing how they use such information.
                 </p>
             </div>
 
             <!-- Data Security -->
             <div class="mb-8">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">5. Data Security</h2>
-                <p class="text-gray-700 mb-4">
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">5. Data Security</h2>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">
                     All calculations and image processing on our tools (SIP Calculator, GST Calculator, Age Calculator, Image Resizer) are performed entirely in your browser using JavaScript. <strong>No data is uploaded to our servers.</strong> Your privacy is protected by design.
                 </p>
-                <p class="text-gray-700">
+                <p class="text-gray-700 dark:text-gray-300">
                     However, remember that no method of transmission over the Internet is 100% secure, and we cannot guarantee absolute security of data transmitted to our website.
                 </p>
             </div>
 
             <!-- Your Rights -->
             <div class="mb-8">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">6. Your Privacy Rights</h2>
-                <p class="text-gray-700 mb-4">You have the right to:</p>
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">6. Your Privacy Rights</h2>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">You have the right to:</p>
                 <ul class="list-disc list-inside text-gray-700 ml-4">
                     <li>Access and receive a copy of your personal data (though we don't collect any)</li>
                     <li>Opt-out of cookies through your browser settings</li>
@@ -160,30 +171,30 @@
 
             <!-- Children's Privacy -->
             <div class="mb-8">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">7. Children's Privacy</h2>
-                <p class="text-gray-700">
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">7. Children's Privacy</h2>
+                <p class="text-gray-700 dark:text-gray-300">
                     Our service is available to all ages. We do not knowingly collect personally identifiable information from anyone. If you are a parent or guardian and you are aware that your child has provided us with personal data, please contact us.
                 </p>
             </div>
 
             <!-- Changes to Privacy Policy -->
             <div class="mb-8">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">8. Changes to This Privacy Policy</h2>
-                <p class="text-gray-700">
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">8. Changes to This Privacy Policy</h2>
+                <p class="text-gray-700 dark:text-gray-300">
                     We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the top of this Privacy Policy.
                 </p>
             </div>
 
             <!-- Contact Us -->
             <div class="mb-8">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">9. Contact Us</h2>
-                <p class="text-gray-700 mb-4">
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">9. Contact Us</h2>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">
                     If you have any questions about this Privacy Policy, please contact us:
                 </p>
                 <div class="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
-                    <p class="text-gray-800">
+                    <p class="text-gray-800 dark:text-white">
                         <i class="fas fa-envelope text-indigo-600 mr-2"></i>
-                        <strong>Email:</strong> <a href="mailto:quicktoolsindiaa@gmail.com" class="text-indigo-600 hover:underline">quicktoolsindiaa@gmail.com</a>
+                        <strong>Email:</strong> <a href="mailto:quicktoolsindiaa@gmail.com" class="text-indigo-600 dark:text-indigo-400 hover:underline">quicktoolsindiaa@gmail.com</a>
                     </p>
                 </div>
             </div>
@@ -230,6 +241,25 @@
                 document.getElementById('dropdownMenu').classList.add('hidden');
             }
         });
+
+        // Dark Mode Toggle
+        function toggleDarkMode() {
+            const html = document.documentElement;
+            html.classList.toggle('dark');
+            if (html.classList.contains('dark')) {
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        }
+
+        // Initialize dark mode from localStorage on page load
+        (function initDarkMode() {
+            const darkMode = localStorage.getItem('darkMode');
+            if (darkMode === 'enabled') {
+                document.documentElement.classList.add('dark');
+            }
+        })();
     </script>
 </body>
 
