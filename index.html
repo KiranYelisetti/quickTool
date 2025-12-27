@@ -116,7 +116,35 @@
                     <i class="fas fa-tools text-3xl text-indigo-600"></i>
                     <h1 class="text-2xl md:text-3xl font-bold text-gray-800">QuickTools India</h1>
                 </div>
-                <p class="hidden md:block text-gray-600">Fast & Free Online Tools</p>
+
+                <!-- Navigation -->
+                <nav class="flex items-center space-x-6">
+                    <p class="hidden lg:block text-gray-600">Fast & Free Online Tools</p>
+
+                    <!-- Tools Dropdown -->
+                    <div class="relative" id="toolsDropdown">
+                        <button onclick="toggleDropdown()" class="flex items-center text-indigo-600 hover:text-indigo-800 font-semibold transition">
+                            <i class="fas fa-th mr-1"></i>Tools
+                            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+
+                        <!-- Dropdown Menu -->
+                        <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-200 z-50">
+                            <a href="sip-calculator.html" class="block px-4 py-3 hover:bg-indigo-50 transition border-b border-gray-100">
+                                <i class="fas fa-chart-line text-green-600 mr-2"></i>SIP Calculator
+                            </a>
+                            <a href="gst-calculator.html" class="block px-4 py-3 hover:bg-indigo-50 transition border-b border-gray-100">
+                                <i class="fas fa-percentage text-blue-600 mr-2"></i>GST Calculator
+                            </a>
+                            <a href="age-calculator.html" class="block px-4 py-3 hover:bg-indigo-50 transition border-b border-gray-100">
+                                <i class="fas fa-calendar-alt text-purple-600 mr-2"></i>Age Calculator
+                            </a>
+                            <a href="image-resizer.html" class="block px-4 py-3 hover:bg-indigo-50 transition">
+                                <i class="fas fa-image text-orange-600 mr-2"></i>Image Resizer
+                            </a>
+                        </div>
+                    </div>
+                </nav>
             </div>
         </div>
     </header>
@@ -254,6 +282,22 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Tools Dropdown Toggle
+        function toggleDropdown() {
+            const menu = document.getElementById('dropdownMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function (event) {
+            const dropdown = document.getElementById('toolsDropdown');
+            if (dropdown && !dropdown.contains(event.target)) {
+                document.getElementById('dropdownMenu').classList.add('hidden');
+            }
+        });
+    </script>
 </body>
 
 </html>
