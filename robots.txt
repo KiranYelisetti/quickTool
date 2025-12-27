@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://kiranyelisetti.github.io/quickTool/sitemap.xml
+Sitemap: https://www.quicktoolsindia.com/sitemap.xml
