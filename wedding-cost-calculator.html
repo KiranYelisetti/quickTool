@@ -45,6 +45,111 @@
         }
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Indian Wedding Cost Calculator",
+      "url": "https://www.quicktoolsindia.com/wedding-cost-calculator.html",
+      "description": "Calculate future Indian wedding costs with inflation, destination wedding premium, and gold purchase planning",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "featureList": [
+        "Wedding cost inflation calculator",
+        "Destination wedding cost estimator",
+        "Gold purchase planning",
+        "Marriage budget planner",
+        "SIP investment calculator for wedding",
+        "Future cost projection",
+        "Indian wedding budget templates"
+      ],
+      "inLanguage": "en-IN",
+      "audience": {
+        "@type": "Audience",
+        "geographicArea": {
+          "@type": "Country",
+          "name": "India"
+        }
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does an Indian wedding cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Indian wedding costs vary widely: Simple wedding costs ₹10-15 lakhs, Middle-class wedding costs ₹20-30 lakhs, Grand wedding costs ₹50 lakhs to several crores. Costs include venue, catering, photography, clothes, jewelry, decoration, and music."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does wedding cost increase every year in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Indian wedding costs increase 8-10% annually due to inflation. A wedding costing ₹20 lakhs today will cost approximately ₹43 lakhs in 10 years and ₹50 lakhs in 12 years at 8% annual inflation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much extra does a destination wedding cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Destination weddings (Goa, Jaipur, Udaipur, Thailand, etc.) typically cost 20-30% more than traditional weddings due to travel, accommodation, logistics, and venue costs. For a ₹25 lakh wedding, destination premium adds ₹5-7.5 lakhs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much gold should I buy for a wedding in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Families typically spend ₹3-10 lakhs on gold for weddings. Gold prices increase 8-10% annually in India. If planning to buy ₹5 lakhs worth of gold in 10 years, you'll actually need ₹10-12 lakhs due to gold price inflation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How to save for a wedding in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Start a monthly SIP in equity mutual funds or recurring deposits. For a wedding 5-10 years away, equity SIPs (12-15% returns) help beat inflation. Calculate your required monthly SIP using our wedding cost calculator."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.quicktoolsindia.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Wedding Cost Calculator",
+          "item": "https://www.quicktoolsindia.com/wedding-cost-calculator.html"
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body class="bg-gradient-to-br from-pink-50 to-rose-100 dark:from-gray-900 dark:to-gray-800 min-h-screen transition-colors duration-200">
@@ -568,7 +673,7 @@
         (function initDarkMode() {
             const darkMode = localStorage.getItem('darkMode');
             if (darkMode === 'enabled') {
-                document.elementElement.classList.add('dark');
+                document.documentElement.classList.add('dark');
             }
         })();
 
