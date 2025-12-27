@@ -2,16 +2,25 @@
 <html lang="en-IN">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C3255KS80R"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-C3255KS80R');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary Meta Tags -->
-    <title>Study Abroad Education Cost Calculator - Plan for US, UK, Canada Education | QuickTools India</title>
-    <meta name="title" content="Study Abroad Education Cost Calculator - Plan Foreign Education Costs">
+    <title>Study Abroad Cost Calculator - Plan Foreign Education Budget (Inflation Adjusted)</title>
+    <meta name="title" content="Study Abroad Cost Calculator - Plan Foreign Education Budget (Inflation Adjusted)">
     <meta name="description"
-        content="Free Study Abroad Cost Calculator - Calculate future education costs with inflation & currency depreciation. Plan for US, UK, Canada, Australia education. Factor in rupee depreciation against dollar, pound. Get SIP investment plan.">
+        content="Calculate true cost of foreign education considering 7% inflation & 4% rupee depreciation. Plan for US, UK, Canada & Australia. Find exact SIP amount needed for your child's dream education.">
     <meta name="keywords"
-        content="study abroad calculator, foreign education cost, US education cost calculator, UK degree cost, rupee depreciation calculator, education inflation, study abroad planning, SIP for education, abroad education fund, dollar rupee calculator India">
+        content="study abroad calculator, foreign education cost, education inflation calculator, rupee depreciation calculator, ms in us cost, study abroad planning, education loan planner, sip for education">
     <meta name="author" content="QuickTools India">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.quicktoolsindia.com/study-abroad-calculator.html">
@@ -84,6 +93,36 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Calculate Real Cost of Studying Abroad",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Select Country",
+          "text": "Choose your target destination (USA, UK, Canada, Australia, etc.) to set default currency and costs."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Enter Current Cost",
+          "text": "Input the today's cost of the 3-4 year degree including tuition and living expenses."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Set Time Horizon",
+          "text": "Enter how many years are left before the education starts."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Adjust Inflation & Depreciation",
+          "text": "Set Expected Education Inflation (usually 5-7%) and Currency Depreciation (3-5%) rates."
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
         {
@@ -144,7 +183,8 @@
     </script>
 </head>
 
-<body class="bg-gradient-to-br from-red-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 min-h-screen transition-colors duration-200">
+<body
+    class="bg-gradient-to-br from-red-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 min-h-screen transition-colors duration-200">
     <!-- Header -->
     <header class="bg-white dark:bg-gray-800 shadow-md transition-colors duration-200">
         <div class="container mx-auto px-4 py-6">
@@ -156,42 +196,56 @@
 
                 <!-- Navigation -->
                 <nav class="flex items-center space-x-4">
-                    <a href="index.html" class="hidden md:flex items-center text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-semibold transition">
+                    <a href="index.html"
+                        class="hidden md:flex items-center text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-semibold transition">
                         <i class="fas fa-home mr-1"></i>Home
                     </a>
 
                     <!-- Dark Mode Toggle -->
-                    <button onclick="toggleDarkMode()" id="darkModeToggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors" aria-label="Toggle dark mode">
+                    <button onclick="toggleDarkMode()" id="darkModeToggle"
+                        class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                        aria-label="Toggle dark mode">
                         <i class="fas fa-moon text-gray-600 dark:text-yellow-300 dark:hidden"></i>
                         <i class="fas fa-sun text-yellow-500 hidden dark:inline"></i>
                     </button>
 
                     <!-- Tools Dropdown -->
                     <div class="relative" id="toolsDropdown">
-                        <button onclick="toggleDropdown()" class="flex items-center text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 font-semibold transition">
+                        <button onclick="toggleDropdown()"
+                            class="flex items-center text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 font-semibold transition">
                             <i class="fas fa-th mr-1"></i>Tools
                             <i class="fas fa-chevron-down ml-1 text-xs"></i>
                         </button>
 
                         <!-- Dropdown Menu -->
-                        <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-56 bg-white dark:bg-gray-700 rounded-lg shadow-xl border border-gray-200 dark:border-gray-600 z-50">
-                            <a href="sip-calculator.html" class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
+                        <div id="dropdownMenu"
+                            class="hidden absolute right-0 mt-2 w-56 bg-white dark:bg-gray-700 rounded-lg shadow-xl border border-gray-200 dark:border-gray-600 z-50">
+                            <a href="sip-calculator.html"
+                                class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
                                 <i class="fas fa-chart-line text-green-600 dark:text-green-400 mr-2"></i>SIP Calculator
                             </a>
-                            <a href="gst-calculator.html" class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
+                            <a href="gst-calculator.html"
+                                class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
                                 <i class="fas fa-percentage text-blue-600 dark:text-blue-400 mr-2"></i>GST Calculator
                             </a>
-                            <a href="age-calculator.html" class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
-                                <i class="fas fa-calendar-alt text-purple-600 dark:text-purple-400 mr-2"></i>Age Calculator
+                            <a href="age-calculator.html"
+                                class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
+                                <i class="fas fa-calendar-alt text-purple-600 dark:text-purple-400 mr-2"></i>Age
+                                Calculator
                             </a>
-                            <a href="image-resizer.html" class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
+                            <a href="image-resizer.html"
+                                class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
                                 <i class="fas fa-image text-orange-600 dark:text-orange-400 mr-2"></i>Image Resizer
                             </a>
-                            <a href="study-abroad-calculator.html" class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition bg-indigo-50 dark:bg-gray-600 font-semibold border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
-                                <i class="fas fa-graduation-cap text-red-600 dark:text-red-400 mr-2"></i>Study Abroad Calculator
+                            <a href="study-abroad-calculator.html"
+                                class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition bg-indigo-50 dark:bg-gray-600 font-semibold border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
+                                <i class="fas fa-graduation-cap text-red-600 dark:text-red-400 mr-2"></i>Study Abroad
+                                Calculator
                             </a>
-                            <a href="wedding-cost-calculator.html" class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition text-gray-800 dark:text-gray-200">
-                                <i class="fas fa-heart text-pink-600 dark:text-pink-400 mr-2"></i>Wedding Cost Calculator
+                            <a href="wedding-cost-calculator.html"
+                                class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition text-gray-800 dark:text-gray-200">
+                                <i class="fas fa-heart text-pink-600 dark:text-pink-400 mr-2"></i>Wedding Cost
+                                Calculator
                             </a>
                         </div>
                     </div>
@@ -206,13 +260,17 @@
             <!-- Title -->
             <div class="text-center mb-8">
                 <div class="flex items-center justify-center gap-4 mb-2">
-                    <div class="inline-block bg-gradient-to-br from-red-400 to-red-600 w-12 h-12 rounded-full flex items-center justify-center">
+                    <div
+                        class="inline-block bg-gradient-to-br from-red-400 to-red-600 w-12 h-12 rounded-full flex items-center justify-center">
                         <i class="fas fa-graduation-cap text-xl text-white"></i>
                     </div>
-                    <h1 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white">Planning to Send Your Child Abroad for Studies?</h1>
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white">Planning to Send Your Child
+                        Abroad for Studies?</h1>
                 </div>
                 <p class="text-lg text-gray-600 dark:text-gray-300 mb-2">Find out the REAL cost of foreign education</p>
-                <p class="text-sm text-gray-500 dark:text-gray-400 max-w-3xl mx-auto">Most parents are shocked when they discover the actual amount needed. This calculator shows you the true cost considering BOTH rising fees AND weakening rupee.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400 max-w-3xl mx-auto">Most parents are shocked when they
+                    discover the actual amount needed. This calculator shows you the true cost considering BOTH rising
+                    fees AND weakening rupee.</p>
             </div>
 
             <!-- Calculator Card -->
@@ -225,7 +283,8 @@
                         <!-- Country/Currency Selection -->
                         <div>
                             <label class="block text-gray-700 dark:text-gray-300 font-semibold mb-2">
-                                <i class="fas fa-globe text-red-600 dark:text-red-400 mr-2"></i>Which country do you want to send your child?
+                                <i class="fas fa-globe text-red-600 dark:text-red-400 mr-2"></i>Which country do you
+                                want to send your child?
                             </label>
                             <select id="currency" onchange="updateCurrencyDefaults()"
                                 class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:border-red-500 dark:focus:border-red-400 focus:outline-none text-lg transition-colors">
@@ -240,44 +299,53 @@
                         <!-- Current Cost -->
                         <div>
                             <label class="block text-gray-700 dark:text-gray-300 font-semibold mb-2">
-                                <i class="fas fa-dollar-sign text-red-600 dark:text-red-400 mr-2"></i>What does a 4-year degree cost TODAY in that country?
+                                <i class="fas fa-dollar-sign text-red-600 dark:text-red-400 mr-2"></i>What does a 4-year
+                                degree cost TODAY in that country?
                             </label>
                             <input type="number" id="currentCost" value="200000" step="1000"
                                 class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:border-red-500 dark:focus:border-red-400 focus:outline-none text-lg transition-colors"
                                 oninput="calculateCost()">
-                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Include everything: College fees + Food + Rent + Books (for 4 years)</p>
-                            <p class="text-sm text-blue-600 dark:text-blue-400 mt-1">💡 Example: USA degree costs around $200,000 (₹1.6 crore today)</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Include everything: College fees +
+                                Food + Rent + Books (for 4 years)</p>
+                            <p class="text-sm text-blue-600 dark:text-blue-400 mt-1">💡 Example: USA degree costs around
+                                $200,000 (₹1.6 crore today)</p>
                         </div>
 
                         <!-- Years to Study -->
                         <div>
                             <label class="block text-gray-700 dark:text-gray-300 font-semibold mb-2">
-                                <i class="fas fa-calendar text-red-600 dark:text-red-400 mr-2"></i>How many years from now will your child start?
+                                <i class="fas fa-calendar text-red-600 dark:text-red-400 mr-2"></i>How many years from
+                                now will your child start?
                             </label>
                             <input type="number" id="yearsToStudy" value="10" min="1" max="20"
                                 class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:border-red-500 dark:focus:border-red-400 focus:outline-none text-lg transition-colors"
                                 oninput="calculateCost()">
-                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Example: If your child is 8 years old, enter 10 years (they'll go at age 18)</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Example: If your child is 8 years
+                                old, enter 10 years (they'll go at age 18)</p>
                         </div>
 
                         <!-- Education Inflation Rate -->
                         <div>
                             <label class="block text-gray-700 dark:text-gray-300 font-semibold mb-2">
-                                How fast are college fees increasing? <span id="inflationValue" class="text-red-600 dark:text-red-400">6</span>% per year
+                                How fast are college fees increasing? <span id="inflationValue"
+                                    class="text-red-600 dark:text-red-400">6</span>% per year
                             </label>
                             <input type="range" id="inflationRate" min="0" max="15" value="6" step="0.5"
                                 class="w-full accent-red-600" oninput="updateInflation()">
-                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">📚 College fees go up 5-7% every year (you can adjust this slider)</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">📚 College fees go up 5-7% every
+                                year (you can adjust this slider)</p>
                         </div>
 
                         <!-- Currency Depreciation Rate -->
                         <div>
                             <label class="block text-gray-700 dark:text-gray-300 font-semibold mb-2">
-                                How fast is rupee getting weaker? <span id="depreciationValue" class="text-red-600 dark:text-red-400">4</span>% per year
+                                How fast is rupee getting weaker? <span id="depreciationValue"
+                                    class="text-red-600 dark:text-red-400">4</span>% per year
                             </label>
                             <input type="range" id="depreciationRate" min="0" max="10" value="4" step="0.5"
                                 class="w-full accent-red-600" oninput="updateDepreciation()">
-                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">💵 Every year, ₹1 buys less dollars. Last 20 years average: 3-5% per year</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">💵 Every year, ₹1 buys less
+                                dollars. Last 20 years average: 3-5% per year</p>
                         </div>
 
                         <button onclick="calculateCost()"
@@ -291,20 +359,28 @@
                         <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">💰 What You Actually Need</h2>
 
                         <!-- Main Result Card -->
-                        <div class="bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900 dark:to-red-800 rounded-lg p-6 border-2 border-red-300 dark:border-red-600 transition-colors duration-200">
-                            <p class="text-gray-600 dark:text-gray-300 text-sm mb-2">You will need this much money in <span id="resultYears"></span> years:</p>
-                            <p id="totalCostINR" class="text-3xl md:text-4xl font-bold text-red-600 dark:text-red-300"></p>
+                        <div
+                            class="bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900 dark:to-red-800 rounded-lg p-6 border-2 border-red-300 dark:border-red-600 transition-colors duration-200">
+                            <p class="text-gray-600 dark:text-gray-300 text-sm mb-2">You will need this much money in
+                                <span id="resultYears"></span> years:
+                            </p>
+                            <p id="totalCostINR" class="text-3xl md:text-4xl font-bold text-red-600 dark:text-red-300">
+                            </p>
                             <p id="totalCostForeign" class="text-lg text-gray-700 dark:text-gray-300 mt-2"></p>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mt-3">⚠️ This is what you'll actually pay when your child goes abroad</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mt-3">⚠️ This is what you'll actually pay
+                                when your child goes abroad</p>
                         </div>
 
                         <!-- Breakdown Cards -->
                         <div class="grid grid-cols-2 gap-3">
-                            <div class="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900 dark:to-orange-800 rounded-lg p-4 text-center transition-colors duration-200">
+                            <div
+                                class="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900 dark:to-orange-800 rounded-lg p-4 text-center transition-colors duration-200">
                                 <p class="text-xs text-gray-600 dark:text-gray-300 mb-1">If you sent them today</p>
-                                <p id="currentCostINR" class="text-xl font-bold text-orange-600 dark:text-orange-300"></p>
+                                <p id="currentCostINR" class="text-xl font-bold text-orange-600 dark:text-orange-300">
+                                </p>
                             </div>
-                            <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 dark:from-yellow-900 dark:to-yellow-800 rounded-lg p-4 text-center transition-colors duration-200">
+                            <div
+                                class="bg-gradient-to-br from-yellow-50 to-yellow-100 dark:from-yellow-900 dark:to-yellow-800 rounded-lg p-4 text-center transition-colors duration-200">
                                 <p class="text-xs text-gray-600 dark:text-gray-300 mb-1">Extra you'll pay</p>
                                 <p id="costIncrease" class="text-xl font-bold text-yellow-600 dark:text-yellow-300"></p>
                             </div>
@@ -313,16 +389,19 @@
                         <!-- Impact Breakdown -->
                         <div class="bg-gray-50 dark:bg-gray-600 rounded-lg p-4 transition-colors duration-200">
                             <h4 class="font-semibold text-gray-700 dark:text-gray-200 mb-3 flex items-center">
-                                <i class="fas fa-chart-pie text-red-600 dark:text-red-400 mr-2"></i>Why So Much? Here's Why:
+                                <i class="fas fa-chart-pie text-red-600 dark:text-red-400 mr-2"></i>Why So Much? Here's
+                                Why:
                             </h4>
                             <div class="space-y-2 text-sm">
                                 <div class="flex justify-between">
                                     <span class="text-gray-600 dark:text-gray-300">Because fees keep rising:</span>
-                                    <span class="font-semibold text-gray-800 dark:text-white" id="inflationImpact"></span>
+                                    <span class="font-semibold text-gray-800 dark:text-white"
+                                        id="inflationImpact"></span>
                                 </div>
                                 <div class="flex justify-between">
                                     <span class="text-gray-600 dark:text-gray-300">Because rupee keeps falling:</span>
-                                    <span class="font-semibold text-gray-800 dark:text-white" id="depreciationImpact"></span>
+                                    <span class="font-semibold text-gray-800 dark:text-white"
+                                        id="depreciationImpact"></span>
                                 </div>
                                 <div class="flex justify-between pt-2 border-t border-gray-300 dark:border-gray-500">
                                     <span class="text-gray-600 dark:text-gray-300">Your money loses value by:</span>
@@ -332,13 +411,17 @@
                         </div>
 
                         <!-- SIP Planning Section -->
-                        <div class="bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900 dark:to-emerald-900 rounded-lg p-4 border-l-4 border-green-500 dark:border-green-400 transition-colors duration-200">
+                        <div
+                            class="bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900 dark:to-emerald-900 rounded-lg p-4 border-l-4 border-green-500 dark:border-green-400 transition-colors duration-200">
                             <h4 class="font-semibold text-gray-800 dark:text-white mb-2 flex items-center">
-                                <i class="fas fa-piggy-bank text-green-600 dark:text-green-400 mr-2"></i>💡 Good News: How to Save For This
+                                <i class="fas fa-piggy-bank text-green-600 dark:text-green-400 mr-2"></i>💡 Good News:
+                                How to Save For This
                             </h4>
-                            <p class="text-sm text-gray-700 dark:text-gray-300 mb-2">Start a monthly SIP investment now:</p>
+                            <p class="text-sm text-gray-700 dark:text-gray-300 mb-2">Start a monthly SIP investment now:
+                            </p>
                             <p id="monthlySIP" class="text-2xl font-bold text-green-600 dark:text-green-300"></p>
-                            <p class="text-xs text-gray-600 dark:text-gray-400 mt-2">Assuming 12% annual returns from mutual funds</p>
+                            <p class="text-xs text-gray-600 dark:text-gray-400 mt-2">Assuming 12% annual returns from
+                                mutual funds</p>
                         </div>
                     </div>
 
@@ -353,13 +436,18 @@
                 </div>
 
                 <!-- Alert Box -->
-                <div class="mt-6 bg-yellow-50 dark:bg-yellow-900 border-l-4 border-yellow-500 dark:border-yellow-400 p-4 rounded transition-colors duration-200">
+                <div
+                    class="mt-6 bg-yellow-50 dark:bg-yellow-900 border-l-4 border-yellow-500 dark:border-yellow-400 p-4 rounded transition-colors duration-200">
                     <div class="flex items-start">
-                        <i class="fas fa-exclamation-triangle text-yellow-600 dark:text-yellow-400 text-xl mr-3 mt-1"></i>
+                        <i
+                            class="fas fa-exclamation-triangle text-yellow-600 dark:text-yellow-400 text-xl mr-3 mt-1"></i>
                         <div>
                             <p class="font-semibold text-yellow-800 dark:text-yellow-200">⚠️ Most Parents Miss This!</p>
                             <p class="text-sm text-yellow-700 dark:text-yellow-300 mt-1">
-                                They only think about today's cost. But there are TWO problems: <strong>(1)</strong> College fees go up every year, AND <strong>(2)</strong> The rupee becomes weaker every year, so you need MORE rupees to buy the same dollars. Many parents get shocked when the actual bill comes - don't let this happen to you!
+                                They only think about today's cost. But there are TWO problems: <strong>(1)</strong>
+                                College fees go up every year, AND <strong>(2)</strong> The rupee becomes weaker every
+                                year, so you need MORE rupees to buy the same dollars. Many parents get shocked when the
+                                actual bill comes - don't let this happen to you!
                             </p>
                         </div>
                     </div>
@@ -369,11 +457,14 @@
             <!-- Preset Examples -->
             <div class="bg-white dark:bg-gray-700 rounded-xl shadow-xl p-6 md:p-8 mb-8 transition-colors duration-200">
                 <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">
-                    <i class="fas fa-lightbulb text-yellow-500 dark:text-yellow-400 mr-2"></i>Quick Start - Click Your Destination
+                    <i class="fas fa-lightbulb text-yellow-500 dark:text-yellow-400 mr-2"></i>Quick Start - Click Your
+                    Destination
                 </h2>
-                <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">Not sure about costs? Click below to see typical amounts for each country</p>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">Not sure about costs? Click below to see
+                    typical amounts for each country</p>
                 <div class="grid md:grid-cols-3 gap-4">
-                    <button onclick="loadPreset('USA')" class="text-left p-4 border-2 border-gray-200 dark:border-gray-600 rounded-lg hover:border-red-500 dark:hover:border-red-400 hover:bg-red-50 dark:hover:bg-gray-600 transition">
+                    <button onclick="loadPreset('USA')"
+                        class="text-left p-4 border-2 border-gray-200 dark:border-gray-600 rounded-lg hover:border-red-500 dark:hover:border-red-400 hover:bg-red-50 dark:hover:bg-gray-600 transition">
                         <div class="flex items-center mb-2">
                             <span class="text-2xl mr-2">🇺🇸</span>
                             <h3 class="font-bold text-gray-800 dark:text-white">America (USA)</h3>
@@ -382,7 +473,8 @@
                         <p class="text-sm text-gray-600 dark:text-gray-300">Harvard, MIT, Stanford etc.</p>
                     </button>
 
-                    <button onclick="loadPreset('UK')" class="text-left p-4 border-2 border-gray-200 dark:border-gray-600 rounded-lg hover:border-red-500 dark:hover:border-red-400 hover:bg-red-50 dark:hover:bg-gray-600 transition">
+                    <button onclick="loadPreset('UK')"
+                        class="text-left p-4 border-2 border-gray-200 dark:border-gray-600 rounded-lg hover:border-red-500 dark:hover:border-red-400 hover:bg-red-50 dark:hover:bg-gray-600 transition">
                         <div class="flex items-center mb-2">
                             <span class="text-2xl mr-2">🇬🇧</span>
                             <h3 class="font-bold text-gray-800 dark:text-white">UK (England)</h3>
@@ -391,7 +483,8 @@
                         <p class="text-sm text-gray-600 dark:text-gray-300">Oxford, Cambridge etc.</p>
                     </button>
 
-                    <button onclick="loadPreset('Canada')" class="text-left p-4 border-2 border-gray-200 dark:border-gray-600 rounded-lg hover:border-red-500 dark:hover:border-red-400 hover:bg-red-50 dark:hover:bg-gray-600 transition">
+                    <button onclick="loadPreset('Canada')"
+                        class="text-left p-4 border-2 border-gray-200 dark:border-gray-600 rounded-lg hover:border-red-500 dark:hover:border-red-400 hover:bg-red-50 dark:hover:bg-gray-600 transition">
                         <div class="flex items-center mb-2">
                             <span class="text-2xl mr-2">🇨🇦</span>
                             <h3 class="font-bold text-gray-800 dark:text-white">Canada</h3>
@@ -404,15 +497,21 @@
 
             <!-- SEO Content -->
             <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg p-8 transition-colors duration-200">
-                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Sending Your Child Abroad? Here's What You Must Know</h2>
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Sending Your Child Abroad? Here's What
+                    You Must Know</h2>
                 <p class="text-gray-600 dark:text-gray-300 mb-4">
-                    Many parents dream of sending their children to study in America, UK, Canada, or Australia. But most parents only look at today's cost and think "I'll save ₹2 crore". This is a BIG mistake! By the time your child is ready to go, the actual cost will be MUCH higher because of two reasons:
+                    Many parents dream of sending their children to study in America, UK, Canada, or Australia. But most
+                    parents only look at today's cost and think "I'll save ₹2 crore". This is a BIG mistake! By the time
+                    your child is ready to go, the actual cost will be MUCH higher because of two reasons:
                 </p>
 
                 <div class="bg-red-50 dark:bg-red-900 p-4 rounded-lg mb-4">
-                    <h3 class="text-lg font-bold text-red-800 dark:text-red-200 mb-2">Real Example That Shocks Parents:</h3>
+                    <h3 class="text-lg font-bold text-red-800 dark:text-red-200 mb-2">Real Example That Shocks Parents:
+                    </h3>
                     <p class="text-gray-700 dark:text-gray-300 text-sm">
-                        A USA degree costs ₹1.6 crore TODAY. But if your child is 8 years old now, you'll need <strong>₹4.8 to ₹5.2 crores</strong> when they turn 18! That's 3X more money! Why? Because college fees go up every year AND rupee becomes weaker every year.
+                        A USA degree costs ₹1.6 crore TODAY. But if your child is 8 years old now, you'll need
+                        <strong>₹4.8 to ₹5.2 crores</strong> when they turn 18! That's 3X more money! Why? Because
+                        college fees go up every year AND rupee becomes weaker every year.
                     </p>
                 </div>
 
@@ -421,20 +520,25 @@
                     <div class="flex items-start">
                         <span class="text-2xl mr-3">📈</span>
                         <div>
-                            <p class="font-semibold text-gray-800 dark:text-white">Problem 1: College Fees Keep Rising</p>
-                            <p class="text-sm text-gray-600 dark:text-gray-300">Foreign university fees go up 5-7% every year. In 10 years, a $50,000/year college becomes $100,000/year!</p>
+                            <p class="font-semibold text-gray-800 dark:text-white">Problem 1: College Fees Keep Rising
+                            </p>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">Foreign university fees go up 5-7% every
+                                year. In 10 years, a $50,000/year college becomes $100,000/year!</p>
                         </div>
                     </div>
                     <div class="flex items-start">
                         <span class="text-2xl mr-3">💸</span>
                         <div>
-                            <p class="font-semibold text-gray-800 dark:text-white">Problem 2: Rupee Keeps Getting Weaker</p>
-                            <p class="text-sm text-gray-600 dark:text-gray-300">20 years ago, $1 = ₹45. Today $1 = ₹83. Tomorrow? Maybe ₹120! You need MORE rupees to buy same dollars.</p>
+                            <p class="font-semibold text-gray-800 dark:text-white">Problem 2: Rupee Keeps Getting Weaker
+                            </p>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">20 years ago, $1 = ₹45. Today $1 = ₹83.
+                                Tomorrow? Maybe ₹120! You need MORE rupees to buy same dollars.</p>
                         </div>
                     </div>
                 </div>
 
-                <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3 mt-6">How This Calculator Helps You:</h3>
+                <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3 mt-6">How This Calculator Helps You:
+                </h3>
                 <ul class="space-y-2 text-gray-600 dark:text-gray-300">
                     <li class="flex items-start">
                         <i class="fas fa-check-circle text-green-600 dark:text-green-400 mr-2 mt-1"></i>
@@ -460,7 +564,8 @@
 
                 <div class="mt-6 bg-green-50 dark:bg-green-900 p-4 rounded-lg border-l-4 border-green-500">
                     <p class="text-sm text-gray-700 dark:text-gray-300">
-                        <strong>💡 Smart Tip:</strong> Start saving early! Even small monthly investments grow BIG when you have 10-15 years. Use our calculator to find out your monthly SIP amount and start TODAY.
+                        <strong>💡 Smart Tip:</strong> Start saving early! Even small monthly investments grow BIG when
+                        you have 10-15 years. Use our calculator to find out your monthly SIP amount and start TODAY.
                     </p>
                 </div>
             </div>
@@ -475,7 +580,8 @@
                 <h3 class="text-lg font-semibold mb-2">
                     <i class="fas fa-lightbulb text-yellow-400 mr-2"></i>Have a Tool Idea or Feedback?
                 </h3>
-                <p class="text-gray-300 text-sm mb-3">We'd love to hear from you! Suggest new calculators or share your thoughts.</p>
+                <p class="text-gray-300 text-sm mb-3">We'd love to hear from you! Suggest new calculators or share your
+                    thoughts.</p>
                 <a href="mailto:quicktoolsindiaa@gmail.com"
                     class="inline-flex items-center bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
                     <i class="fas fa-envelope mr-2"></i>quicktoolsindiaa@gmail.com
@@ -487,7 +593,8 @@
                 <a href="about.html" class="text-gray-300 hover:text-white transition">About Us</a>
                 <a href="privacy-policy.html" class="text-gray-300 hover:text-white transition">Privacy Policy</a>
                 <a href="terms-of-service.html" class="text-gray-300 hover:text-white transition">Terms of Service</a>
-                <a href="mailto:quicktoolsindiaa@gmail.com" class="text-gray-300 hover:text-white transition">Contact</a>
+                <a href="mailto:quicktoolsindiaa@gmail.com"
+                    class="text-gray-300 hover:text-white transition">Contact</a>
             </div>
 
             <!-- Copyright -->
@@ -646,7 +753,7 @@
         })();
 
         // Initial calculation with default values
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             calculateCost();
         });
     </script>

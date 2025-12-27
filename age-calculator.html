@@ -2,16 +2,25 @@
 <html lang="en-IN">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C3255KS80R"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-C3255KS80R');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary Meta Tags -->
-    <title>Age Calculator - Calculate Exact Age in Years, Months & Days | QuickTools India</title>
-    <meta name="title" content="Age Calculator - Calculate Exact Age in Years, Months & Days">
+    <title>Age Calculator by Date of Birth - Calculate Exact Age Online</title>
+    <meta name="title" content="Age Calculator by Date of Birth - Calculate Exact Age Online">
     <meta name="description"
-        content="Free Age Calculator - Calculate your exact age in years, months, days, hours, and minutes. Find age difference, next birthday countdown. Perfect for official documents, passport applications, and age verification.">
+        content="Calculate your exact age in years, months, days, hours & minutes. Best online Age Calculator by Date of Birth for age verification, passport, and official forms.">
     <meta name="keywords"
-        content="age calculator, age calculator India, calculate age, exact age calculator, age in years months days, date of birth calculator, age difference calculator, how old am I, birthday calculator, age verification">
+        content="age calculator, age calculator by date of birth, calculate age, exact age calculator, date of birth calculator, how old am i, age difference calculator, birthday countdown">
     <meta name="author" content="QuickTools India">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.quicktoolsindia.com/age-calculator.html">
@@ -74,6 +83,36 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Calculate Exact Age Online",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Enter Date of Birth",
+          "text": "Select your Date of Birth (Day, Month, Year) from the calendar."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Select 'As On' Date",
+          "text": "Choose the date you want to calculate your age for (defaults to today)."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Click Calculate",
+          "text": "Press the Calculate Age button to see your exact age in years, months, and days."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "View Detailed Stats",
+          "text": "See additional details like total weeks, days, hours, and your next birthday countdown."
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
         {
@@ -126,7 +165,8 @@
     </script>
 </head>
 
-<body class="bg-gradient-to-br from-purple-50 to-pink-100 dark:from-gray-900 dark:to-gray-800 min-h-screen transition-colors duration-200">
+<body
+    class="bg-gradient-to-br from-purple-50 to-pink-100 dark:from-gray-900 dark:to-gray-800 min-h-screen transition-colors duration-200">
     <!-- Header -->
     <header class="bg-white dark:bg-gray-800 shadow-md transition-colors duration-200">
         <div class="container mx-auto px-4 py-6">
@@ -138,42 +178,56 @@
 
                 <!-- Navigation -->
                 <nav class="flex items-center space-x-4">
-                    <a href="index.html" class="hidden md:flex items-center text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-semibold transition">
+                    <a href="index.html"
+                        class="hidden md:flex items-center text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-semibold transition">
                         <i class="fas fa-home mr-1"></i>Home
                     </a>
 
                     <!-- Dark Mode Toggle -->
-                    <button onclick="toggleDarkMode()" id="darkModeToggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors" aria-label="Toggle dark mode">
+                    <button onclick="toggleDarkMode()" id="darkModeToggle"
+                        class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                        aria-label="Toggle dark mode">
                         <i class="fas fa-moon text-gray-600 dark:text-yellow-300 dark:hidden"></i>
                         <i class="fas fa-sun text-yellow-500 hidden dark:inline"></i>
                     </button>
 
                     <!-- Tools Dropdown -->
                     <div class="relative" id="toolsDropdown">
-                        <button onclick="toggleDropdown()" class="flex items-center text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 font-semibold transition">
+                        <button onclick="toggleDropdown()"
+                            class="flex items-center text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 font-semibold transition">
                             <i class="fas fa-th mr-1"></i>Tools
                             <i class="fas fa-chevron-down ml-1 text-xs"></i>
                         </button>
 
                         <!-- Dropdown Menu -->
-                        <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-56 bg-white dark:bg-gray-700 rounded-lg shadow-xl border border-gray-200 dark:border-gray-600 z-50">
-                            <a href="sip-calculator.html" class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
+                        <div id="dropdownMenu"
+                            class="hidden absolute right-0 mt-2 w-56 bg-white dark:bg-gray-700 rounded-lg shadow-xl border border-gray-200 dark:border-gray-600 z-50">
+                            <a href="sip-calculator.html"
+                                class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
                                 <i class="fas fa-chart-line text-green-600 dark:text-green-400 mr-2"></i>SIP Calculator
                             </a>
-                            <a href="gst-calculator.html" class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
+                            <a href="gst-calculator.html"
+                                class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
                                 <i class="fas fa-percentage text-blue-600 dark:text-blue-400 mr-2"></i>GST Calculator
                             </a>
-                            <a href="age-calculator.html" class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 bg-indigo-50 dark:bg-gray-600 font-semibold text-gray-800 dark:text-gray-200">
-                                <i class="fas fa-calendar-alt text-purple-600 dark:text-purple-400 mr-2"></i>Age Calculator
+                            <a href="age-calculator.html"
+                                class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 bg-indigo-50 dark:bg-gray-600 font-semibold text-gray-800 dark:text-gray-200">
+                                <i class="fas fa-calendar-alt text-purple-600 dark:text-purple-400 mr-2"></i>Age
+                                Calculator
                             </a>
-                            <a href="image-resizer.html" class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
+                            <a href="image-resizer.html"
+                                class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
                                 <i class="fas fa-image text-orange-600 dark:text-orange-400 mr-2"></i>Image Resizer
                             </a>
-                            <a href="study-abroad-calculator.html" class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
-                                <i class="fas fa-graduation-cap text-red-600 dark:text-red-400 mr-2"></i>Study Abroad Calculator
+                            <a href="study-abroad-calculator.html"
+                                class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
+                                <i class="fas fa-graduation-cap text-red-600 dark:text-red-400 mr-2"></i>Study Abroad
+                                Calculator
                             </a>
-                            <a href="wedding-cost-calculator.html" class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition text-gray-800 dark:text-gray-200">
-                                <i class="fas fa-heart text-pink-600 dark:text-pink-400 mr-2"></i>Wedding Cost Calculator
+                            <a href="wedding-cost-calculator.html"
+                                class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition text-gray-800 dark:text-gray-200">
+                                <i class="fas fa-heart text-pink-600 dark:text-pink-400 mr-2"></i>Wedding Cost
+                                Calculator
                             </a>
                         </div>
                     </div>
@@ -207,7 +261,8 @@
                         <!-- Date of Birth -->
                         <div>
                             <label class="block text-gray-700 dark:text-gray-300 font-semibold mb-2">
-                                <i class="fas fa-birthday-cake text-purple-600 dark:text-purple-400 mr-2"></i>Date of Birth
+                                <i class="fas fa-birthday-cake text-purple-600 dark:text-purple-400 mr-2"></i>Date of
+                                Birth
                             </label>
                             <input type="date" id="birthDate"
                                 class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:border-purple-500 dark:focus:border-purple-400 focus:outline-none text-lg transition-colors">
@@ -216,7 +271,8 @@
                         <!-- Calculate Age As On -->
                         <div>
                             <label class="block text-gray-700 dark:text-gray-300 font-semibold mb-2">
-                                <i class="fas fa-calendar-check text-purple-600 dark:text-purple-400 mr-2"></i>Calculate Age As On
+                                <i class="fas fa-calendar-check text-purple-600 dark:text-purple-400 mr-2"></i>Calculate
+                                Age As On
                             </label>
                             <input type="date" id="currentDate"
                                 class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:border-purple-500 dark:focus:border-purple-400 focus:outline-none text-lg transition-colors">
@@ -239,19 +295,23 @@
                         <div
                             class="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900 dark:to-purple-800 rounded-lg p-6 border-2 border-purple-300 dark:border-purple-600 transition-colors duration-200">
                             <p class="text-gray-600 dark:text-gray-300 text-sm mb-2">You are</p>
-                            <p id="ageInWords" class="text-2xl md:text-3xl font-bold text-purple-600 dark:text-purple-300"></p>
+                            <p id="ageInWords"
+                                class="text-2xl md:text-3xl font-bold text-purple-600 dark:text-purple-300"></p>
                         </div>
 
                         <div class="grid grid-cols-3 gap-3">
-                            <div class="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900 dark:to-blue-800 rounded-lg p-4 text-center transition-colors duration-200">
+                            <div
+                                class="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900 dark:to-blue-800 rounded-lg p-4 text-center transition-colors duration-200">
                                 <p id="years" class="text-3xl font-bold text-blue-600 dark:text-blue-300">0</p>
                                 <p class="text-gray-600 dark:text-gray-300 text-xs mt-1">Years</p>
                             </div>
-                            <div class="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900 dark:to-green-800 rounded-lg p-4 text-center transition-colors duration-200">
+                            <div
+                                class="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900 dark:to-green-800 rounded-lg p-4 text-center transition-colors duration-200">
                                 <p id="months" class="text-3xl font-bold text-green-600 dark:text-green-300">0</p>
                                 <p class="text-gray-600 dark:text-gray-300 text-xs mt-1">Months</p>
                             </div>
-                            <div class="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900 dark:to-orange-800 rounded-lg p-4 text-center transition-colors duration-200">
+                            <div
+                                class="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900 dark:to-orange-800 rounded-lg p-4 text-center transition-colors duration-200">
                                 <p id="days" class="text-3xl font-bold text-orange-600 dark:text-orange-300">0</p>
                                 <p class="text-gray-600 dark:text-gray-300 text-xs mt-1">Days</p>
                             </div>
@@ -260,7 +320,8 @@
                         <!-- Additional Stats -->
                         <div class="bg-gray-50 dark:bg-gray-600 rounded-lg p-4 transition-colors duration-200">
                             <h4 class="font-semibold text-gray-700 dark:text-gray-200 mb-3 flex items-center">
-                                <i class="fas fa-chart-bar text-purple-600 dark:text-purple-400 mr-2"></i>Additional Information
+                                <i class="fas fa-chart-bar text-purple-600 dark:text-purple-400 mr-2"></i>Additional
+                                Information
                             </h4>
                             <div class="space-y-2 text-sm">
                                 <div class="flex justify-between">
@@ -305,10 +366,13 @@
                 </div>
 
                 <!-- Info Section -->
-                <div class="mt-8 bg-blue-50 dark:bg-blue-900 border-l-4 border-blue-500 dark:border-blue-400 p-4 rounded transition-colors duration-200">
-                    <h3 class="font-bold text-gray-800 dark:text-white mb-2"><i class="fas fa-info-circle text-blue-500 dark:text-blue-400 mr-2"></i>How It
+                <div
+                    class="mt-8 bg-blue-50 dark:bg-blue-900 border-l-4 border-blue-500 dark:border-blue-400 p-4 rounded transition-colors duration-200">
+                    <h3 class="font-bold text-gray-800 dark:text-white mb-2"><i
+                            class="fas fa-info-circle text-blue-500 dark:text-blue-400 mr-2"></i>How It
                         Works</h3>
-                    <p class="text-gray-700 dark:text-gray-300 text-sm">Simply enter your date of birth and the date you want to calculate
+                    <p class="text-gray-700 dark:text-gray-300 text-sm">Simply enter your date of birth and the date you
+                        want to calculate
                         your age as of. The calculator will instantly show your exact age in years, months, days, and
                         even in total weeks, hours, and minutes!</p>
                 </div>
@@ -356,7 +420,8 @@
                 <a href="about.html" class="text-gray-300 hover:text-white transition">About Us</a>
                 <a href="privacy-policy.html" class="text-gray-300 hover:text-white transition">Privacy Policy</a>
                 <a href="terms-of-service.html" class="text-gray-300 hover:text-white transition">Terms of Service</a>
-                <a href="mailto:quicktoolsindiaa@gmail.com" class="text-gray-300 hover:text-white transition">Contact</a>
+                <a href="mailto:quicktoolsindiaa@gmail.com"
+                    class="text-gray-300 hover:text-white transition">Contact</a>
             </div>
 
             <!-- Copyright -->
