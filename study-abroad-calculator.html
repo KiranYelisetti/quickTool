@@ -225,28 +225,44 @@
                                 class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
                                 <i class="fas fa-chart-line text-green-600 dark:text-green-400 mr-2"></i>SIP Calculator
                             </a>
+                            <a href="wedding-cost-calculator.html"
+                                class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
+                                <i class="fas fa-heart text-pink-600 dark:text-pink-400 mr-2"></i>Wedding Calculator
+                            </a>
+                            <a href="study-abroad-calculator.html"
+                                class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 bg-red-50 dark:bg-gray-600 font-semibold text-gray-800 dark:text-gray-200">
+                                <i class="fas fa-graduation-cap text-red-600 dark:text-red-400 mr-2"></i>Study Abroad
+                                Calculator
+                            </a>
+                            <a href="ssy-calculator.html"
+                                class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
+                                <i class="fas fa-piggy-bank text-cyan-600 dark:text-cyan-400 mr-2"></i>SSY Calculator
+                            </a>
+                            <a href="ppf-calculator.html"
+                                class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
+                                <i class="fas fa-lock text-orange-600 dark:text-orange-400 mr-2"></i>PPF Calculator
+                            </a>
+                            <a href="home-loan-calculator.html"
+                                class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
+                                <i class="fas fa-home text-orange-600 dark:text-orange-400 mr-2"></i>Home Loan
+                                Calculator
+                            </a>
+                            <a href="car-loan-calculator.html"
+                                class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
+                                <i class="fas fa-car text-red-600 dark:text-red-400 mr-2"></i>Car Loan Calculator
+                            </a>
                             <a href="gst-calculator.html"
                                 class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
                                 <i class="fas fa-percentage text-blue-600 dark:text-blue-400 mr-2"></i>GST Calculator
                             </a>
                             <a href="age-calculator.html"
-                                class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
+                                class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition text-gray-800 dark:text-gray-200">
                                 <i class="fas fa-calendar-alt text-purple-600 dark:text-purple-400 mr-2"></i>Age
                                 Calculator
                             </a>
                             <a href="image-resizer.html"
-                                class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
-                                <i class="fas fa-image text-orange-600 dark:text-orange-400 mr-2"></i>Image Resizer
-                            </a>
-                            <a href="study-abroad-calculator.html"
-                                class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition bg-indigo-50 dark:bg-gray-600 font-semibold border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
-                                <i class="fas fa-graduation-cap text-red-600 dark:text-red-400 mr-2"></i>Study Abroad
-                                Calculator
-                            </a>
-                            <a href="wedding-cost-calculator.html"
                                 class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition text-gray-800 dark:text-gray-200">
-                                <i class="fas fa-heart text-pink-600 dark:text-pink-400 mr-2"></i>Wedding Cost
-                                Calculator
+                                <i class="fas fa-image text-teal-600 dark:text-teal-400 mr-2"></i>Image Resizer
                             </a>
                         </div>
                     </div>
@@ -757,6 +773,100 @@
         window.addEventListener('load', function () {
             calculateCost();
         });
+    </script>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent"
+        class="hidden fixed bottom-0 left-0 right-0 bg-gray-900 bg-opacity-95 text-white p-4 md:p-6 z-50 shadow-2xl border-t-4 border-red-500">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-start gap-3 flex-1">
+                <i class="fas fa-cookie-bite text-3xl text-red-400 flex-shrink-0"></i>
+                <div>
+                    <h3 class="font-bold text-lg mb-1">We Value Your Privacy</h3>
+                    <p class="text-sm text-gray-300">
+                        We use cookies and similar technologies to improve your experience, analyze site traffic, and
+                        personalize content.
+                        By clicking "Accept All", you consent to our use of cookies. See our
+                        <a href="privacy-policy.html" class="text-red-400 hover:text-red-300 underline">Privacy
+                            Policy</a> for details.
+                    </p>
+                </div>
+            </div>
+            <div class="flex gap-3 flex-shrink-0">
+                <button onclick="acceptCookies()"
+                    class="bg-red-600 hover:bg-red-700 px-6 py-2 rounded-lg font-semibold transition-colors">
+                    Accept All
+                </button>
+                <button onclick="rejectCookies()"
+                    class="bg-gray-700 hover:bg-gray-600 px-6 py-2 rounded-lg font-semibold transition-colors">
+                    Reject
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Financial Disclaimer -->
+    <div
+        class="bg-yellow-50 dark:bg-yellow-900 dark:bg-opacity-20 border-l-4 border-yellow-500 p-6 max-w-4xl mx-auto mb-8">
+        <div class="flex items-start">
+            <i class="fas fa-exclamation-triangle text-yellow-600 text-2xl mr-4 flex-shrink-0 mt-1"></i>
+            <div>
+                <h3 class="font-bold text-gray-800 dark:text-white mb-2">Important Disclaimer</h3>
+                <div class="text-sm text-gray-700 dark:text-gray-300 space-y-2">
+                    <p><strong>For Informational Purposes Only:</strong> This calculator provides cost estimates based
+                        on the inputs you provide and assumed inflation/currency depreciation rates. Actual costs may
+                        vary significantly based on university, location, lifestyle, exchange rates, and economic
+                        conditions.</p>
+                    <p><strong>Not Financial/Educational Advice:</strong> The information and calculations provided here
+                        are NOT professional financial or educational counseling advice. Education costs abroad are
+                        highly variable and depend on numerous factors.</p>
+                    <p><strong>Consult Professionals:</strong> Always consult with certified education counselors,
+                        financial advisors, and study-abroad consultants for accurate cost estimates and planning for
+                        international education.</p>
+                    <p><strong>Inflation & Currency Disclaimer:</strong> The assumed education inflation rate (7%) and
+                        rupee depreciation (4%) are estimates based on historical trends. Actual rates can vary
+                        significantly. Exchange rates are volatile and unpredictable.</p>
+                    <p><strong>Cost Variations:</strong> Tuition fees, living expenses, and other costs vary widely by
+                        country, university ranking, program type, and city. The estimates provided are approximate
+                        averages and should not be used for precise financial planning.</p>
+                    <p><strong>No Liability:</strong> QuickTools India assumes no responsibility for any educational or
+                        financial decisions or actions taken based on the calculations or information provided on this
+                        tool.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Cookie Consent Management (DPDP Act 2023 & GDPR Compliant)
+        function showCookieConsent() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (!consent) {
+                document.getElementById('cookieConsent').classList.remove('hidden');
+            }
+        }
+
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookieConsent').classList.add('hidden');
+            if (typeof gtag !== 'undefined') {
+                gtag('consent', 'update', {
+                    'analytics_storage': 'granted'
+                });
+            }
+        }
+
+        function rejectCookies() {
+            localStorage.setItem('cookieConsent', 'rejected');
+            document.getElementById('cookieConsent').classList.add('hidden');
+            if (typeof gtag !== 'undefined') {
+                gtag('consent', 'update', {
+                    'analytics_storage': 'denied'
+                });
+            }
+        }
+
+        window.addEventListener('load', showCookieConsent);
     </script>
 </body>
 
