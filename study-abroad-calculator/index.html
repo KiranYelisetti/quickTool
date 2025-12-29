@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+
+<head>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C3255KS80R"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-C3255KS80R');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Study Abroad Cost Calculator - Plan Foreign Education Budget (Inflation Adjusted)</title>
+    <meta name="title" content="Study Abroad Cost Calculator - Plan Foreign Education Budget (Inflation Adjusted)">
+    <meta name="description" content="Calculate true cost of foreign education considering 7% inflation &amp; 4% rupee depreciation. Plan for US, UK, Canada &amp; Australia. Find exact SIP amount needed for your child&#39;s dream education.">
+    
+    <meta name="keywords" content="study abroad calculator, foreign education cost, education inflation calculator, rupee depreciation calculator, ms in us cost, study abroad planning, education loan planner, sip for education">
+    
+    <meta name="author" content="QuickTools India">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.quicktoolsindia.com/study-abroad-calculator/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.quicktoolsindia.com/study-abroad-calculator/">
+    <meta property="og:title" content="Study Abroad Cost Calculator - Plan Foreign Education Budget (Inflation Adjusted)">
+    <meta property="og:description" content="Calculate true cost of foreign education considering 7% inflation &amp; 4% rupee depreciation. Plan for US, UK, Canada &amp; Australia. Find exact SIP amount needed for your child&#39;s dream education.">
+    <meta property="og:image" content="https://www.quicktoolsindia.com/og-image.png">
+    <meta property="og:site_name" content="QuickTools India">
+    <meta property="og:locale" content="en_IN">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.quicktoolsindia.com/study-abroad-calculator/">
+    <meta property="twitter:title" content="Study Abroad Cost Calculator - Plan Foreign Education Budget (Inflation Adjusted)">
+    <meta property="twitter:description" content="Calculate true cost of foreign education considering 7% inflation &amp; 4% rupee depreciation. Plan for US, UK, Canada &amp; Australia. Find exact SIP amount needed for your child&#39;s dream education.">
+    <meta property="twitter:image" content="https://www.quicktoolsindia.com/og-image.png">
+
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#4F46E5">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Local Tailwind Build -->
+    <link rel="stylesheet" href="/css/styles.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Config for Dark Mode (Inline for FOUC prevention) -->
+    <script>
+        // Initialize dark mode from localStorage on page load
+        (function initDarkMode() {
+            const darkMode = localStorage.getItem('darkMode');
+            if (darkMode === 'enabled') {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
+
+    
+
+    
+</head>
+
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 min-h-screen transition-colors duration-200">
+    <header class="bg-white dark:bg-gray-800 shadow-md transition-colors duration-200">
+    <div class="container mx-auto px-4 py-6">
+        <div class="flex items-center justify-between">
+            <a href="/" class="flex items-center space-x-3 hover:opacity-80 transition">
+                <i class="fas fa-tools text-2xl text-indigo-600 dark:text-indigo-400"></i>
+                <span class="text-xl md:text-2xl font-bold text-gray-800 dark:text-white">QuickTools India</span>
+            </a>
+
+            <!-- Navigation -->
+            <nav class="flex items-center space-x-4">
+                <a href="/"
+                    class="hidden md:flex items-center text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-semibold transition">
+                    <i class="fas fa-home mr-1"></i>Home
+                </a>
+
+                <!-- Dark Mode Toggle -->
+                <button onclick="toggleDarkMode()" id="darkModeToggle"
+                    class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                    aria-label="Toggle dark mode">
+                    <i class="fas fa-moon text-gray-600 dark:text-yellow-300 dark:hidden"></i>
+                    <i class="fas fa-sun text-yellow-500 hidden dark:inline"></i>
+                </button>
+
+                <!-- Tools Dropdown -->
+                <div class="relative" id="toolsDropdown">
+                    <button onclick="toggleDropdown()"
+                        class="flex items-center text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 font-semibold transition">
+                        <i class="fas fa-th mr-1"></i>Tools
+                        <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                    </button>
+
+                    <!-- Dropdown Menu -->
+                    <div id="dropdownMenu"
+                        class="hidden absolute right-0 mt-2 w-56 bg-white dark:bg-gray-700 rounded-lg shadow-xl border border-gray-200 dark:border-gray-600 z-50">
+                        <a href="/sip-calculator/"
+                            class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
+                            <i class="fas fa-chart-line text-green-600 dark:text-green-400 mr-2"></i>SIP Calculator
+                        </a>
+                        <a href="/home-loan-calculator/"
+                            class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
+                            <i class="fas fa-home text-orange-600 dark:text-orange-400 mr-2"></i>Home Loan
+                            Calculator
+                        </a>
+                        <a href="/car-loan-calculator/"
+                            class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
+                            <i class="fas fa-car text-red-600 dark:text-red-400 mr-2"></i>Car Loan Calculator
+                        </a>
+                        <a href="/ppf-calculator/"
+                            class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
+                            <i class="fas fa-lock text-orange-600 dark:text-orange-400 mr-2"></i>PPF Calculator
+                        </a>
+                        <a href="/ssy-calculator/"
+                            class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
+                            <i class="fas fa-piggy-bank text-cyan-600 dark:text-cyan-400 mr-2"></i>SSY Calculator
+                        </a>
+                        <a href="/gst-calculator/"
+                            class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
+                            <i class="fas fa-percentage text-blue-600 dark:text-blue-400 mr-2"></i>GST Calculator
+                        </a>
+                        <a href="/wedding-cost-calculator/"
+                            class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
+                            <i class="fas fa-heart text-pink-600 dark:text-pink-400 mr-2"></i>Wedding Calculator
+                        </a>
+                        <a href="/study-abroad-calculator/"
+                            class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
+                            <i class="fas fa-graduation-cap text-red-600 dark:text-red-400 mr-2"></i>Study Abroad
+                            Calculator
+                        </a>
+                        <a href="/age-calculator/"
+                            class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
+                            <i class="fas fa-calendar-alt text-purple-600 dark:text-purple-400 mr-2"></i>Age
+                            Calculator
+                        </a>
+                        <a href="/cash-counter/"
+                            class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
+                            <i class="fas fa-money-bill-wave text-green-600 dark:text-green-400 mr-2"></i>Cash Counter
+                        </a>
+                        <a href="/number-to-words/"
+                            class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition border-b border-gray-100 dark:border-gray-600 text-gray-800 dark:text-gray-200">
+                            <i class="fas fa-font text-indigo-600 dark:text-indigo-400 mr-2"></i>Number to Words
+                        </a>
+                        <a href="/image-resizer/"
+                            class="block px-4 py-3 hover:bg-indigo-50 dark:hover:bg-gray-600 transition bg-indigo-50 dark:bg-gray-600 font-semibold text-gray-800 dark:text-gray-200">
+                            <i class="fas fa-image text-orange-600 dark:text-orange-400 mr-2"></i>Image Resizer
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+    
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Study Abroad Education Cost Calculator",
+  "url": "https://www.quicktoolsindia.com/study-abroad-calculator/",
+  "description": "Calculate future costs of foreign education with dual-factor inflation (education + currency depreciation) for US, UK, Canada, Australia, Europe",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web Browser",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  },
+  "featureList": [
+    "Calculate foreign education costs",
+    "Education inflation calculator",
+    "Currency depreciation calculator",
+    "Multi-country support (US, UK, Canada, Australia, Europe)",
+    "SIP investment planning for education",
+    "Exchange rate projection",
+    "Dual-factor cost calculation"
+  ],
+  "inLanguage": "en-IN",
+  "audience": {
+    "@type": "Audience",
+    "geographicArea": {
+      "@type": "Country",
+      "name": "India"
+    }
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Calculate Real Cost of Studying Abroad",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Select Country",
+      "text": "Choose your target destination (USA, UK, Canada, Australia, etc.) to set default currency and costs."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Enter Current Cost",
+      "text": "Input the today's cost of the 3-4 year degree including tuition and living expenses."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Set Time Horizon",
+      "text": "Enter how many years are left before the education starts."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Adjust Inflation & Depreciation",
+      "text": "Set Expected Education Inflation (usually 5-7%) and Currency Depreciation (3-5%) rates."
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does studying abroad cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "US education costs $150,000-$300,000 (₹1.2-2.5 crores), UK costs £80,000-£150,000 (₹80L-1.5Cr), Canada costs CAD 120,000-200,000 (₹70L-1.2Cr), Australia costs AUD 150,000-250,000 (₹80L-1.3Cr). These are current costs - factor in education inflation (5-7%) and rupee depreciation (3-5%) for future planning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does ₹1.6 crore become ₹5 crores in 10 years?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Foreign education costs increase due to TWO factors: (1) Education inflation (5-7% annually) - universities raise fees every year, and (2) Rupee depreciation (3-5% annually) - the rupee loses value against dollar/pound. Combined, these double or triple the INR cost over 10 years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to calculate rupee depreciation for education?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rupee depreciates 3-5% annually against USD/GBP. If USD exchange rate is ₹83 today and depreciates 4% annually, it becomes ₹123 in 10 years. This means the same $200,000 degree costs ₹1.66 crores today but ₹2.46 crores in 10 years - just from currency depreciation alone!"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best way to save for foreign education?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start a SIP (Systematic Investment Plan) in equity mutual funds as early as possible. For 10+ year goals, equity funds historically return 12-15% annually, helping beat education inflation and currency depreciation. Calculate required monthly SIP using our calculator."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.quicktoolsindia.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Study Abroad Calculator",
+      "item": "https://www.quicktoolsindia.com/study-abroad-calculator/"
+    }
+  ]
+}
+</script>
+
+
+<main class="container mx-auto px-4 py-8 md:py-12">
+    <div class="max-w-6xl mx-auto">
+        <!-- Title -->
+        <div class="text-center mb-8">
+            <div class="flex items-center justify-center gap-4 mb-2">
+                <div
+                    class="inline-block bg-gradient-to-br from-red-400 to-red-600 w-12 h-12 rounded-full flex items-center justify-center">
+                    <i class="fas fa-graduation-cap text-xl text-white"></i>
+                </div>
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white">Planning to Send Your Child
+                    Abroad for Studies?</h1>
+            </div>
+            <p class="text-lg text-gray-600 dark:text-gray-300 mb-2">Find out the REAL cost of foreign education</p>
+            <p class="text-sm text-gray-500 dark:text-gray-400 max-w-3xl mx-auto">Most parents are shocked when they
+                discover the actual amount needed. This calculator shows you the true cost considering BOTH rising
+                fees AND weakening rupee.</p>
+        </div>
+
+        <!-- Calculator Card -->
+        <div class="bg-white dark:bg-gray-700 rounded-xl shadow-xl border-2 border-gray-900 dark:border-gray-700 p-6 md:p-8 mb-8 transition-colors duration-200">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Input Section -->
+                <div class="space-y-6">
+                    <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Tell Us Your Plan</h2>
+
+                    <!-- Country/Currency Selection -->
+                    <div>
+                        <label class="block text-gray-700 dark:text-gray-300 font-semibold mb-2">
+                            <i class="fas fa-globe text-red-600 dark:text-red-400 mr-2"></i>Which country do you
+                            want to send your child?
+                        </label>
+                        <select id="currency" onchange="updateCurrencyDefaults()"
+                            class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:border-red-500 dark:focus:border-red-400 focus:outline-none text-lg transition-colors">
+                            <option value="USD">🇺🇸 United States (America)</option>
+                            <option value="GBP">🇬🇧 United Kingdom (UK/England)</option>
+                            <option value="EUR">🇪🇺 Europe (Germany, France, etc.)</option>
+                            <option value="AUD">🇦🇺 Australia</option>
+                            <option value="CAD">🇨🇦 Canada</option>
+                        </select>
+                    </div>
+
+                    <!-- Current Cost -->
+                    <div>
+                        <label class="block text-gray-700 dark:text-gray-300 font-semibold mb-2">
+                            <i class="fas fa-dollar-sign text-red-600 dark:text-red-400 mr-2"></i>What does a 4-year
+                            degree cost TODAY in that country?
+                        </label>
+                        <input type="number" id="currentCost" value="200000" step="1000"
+                            class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:border-red-500 dark:focus:border-red-400 focus:outline-none text-lg transition-colors"
+                            oninput="calculateCost()">
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Include everything: College fees +
+                            Food + Rent + Books (for 4 years)</p>
+                        <p class="text-sm text-blue-600 dark:text-blue-400 mt-1">💡 Example: USA degree costs around
+                            $200,000 (₹1.6 crore today)</p>
+                    </div>
+
+                    <!-- Years to Study -->
+                    <div>
+                        <label class="block text-gray-700 dark:text-gray-300 font-semibold mb-2">
+                            <i class="fas fa-calendar text-red-600 dark:text-red-400 mr-2"></i>How many years from
+                            now will your child start?
+                        </label>
+                        <input type="number" id="yearsToStudy" value="10" min="1" max="20"
+                            class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:border-red-500 dark:focus:border-red-400 focus:outline-none text-lg transition-colors"
+                            oninput="calculateCost()">
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Example: If your child is 8 years
+                            old, enter 10 years (they'll go at age 18)</p>
+                    </div>
+
+                    <!-- Education Inflation Rate -->
+                    <div>
+                        <label class="block text-gray-700 dark:text-gray-300 font-semibold mb-2">
+                            How fast are college fees increasing? <span id="inflationValue"
+                                class="text-red-600 dark:text-red-400">6</span>% per year
+                        </label>
+                        <input type="range" id="inflationRate" min="0" max="15" value="6" step="0.5"
+                            class="w-full accent-red-600" oninput="updateInflation()">
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">📚 College fees go up 5-7% every
+                            year (you can adjust this slider)</p>
+                    </div>
+
+                    <!-- Currency Depreciation Rate -->
+                    <div>
+                        <label class="block text-gray-700 dark:text-gray-300 font-semibold mb-2">
+                            How fast is rupee getting weaker? <span id="depreciationValue"
+                                class="text-red-600 dark:text-red-400">4</span>% per year
+                        </label>
+                        <input type="range" id="depreciationRate" min="0" max="10" value="4" step="0.5"
+                            class="w-full accent-red-600" oninput="updateDepreciation()">
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">💵 Every year, ₹1 buys less
+                            dollars. Last 20 years average: 3-5% per year</p>
+                    </div>
+
+                    <button onclick="calculateCost()"
+                        class="w-full bg-gradient-to-r from-red-500 to-red-600 text-white py-3 px-6 rounded-lg font-bold hover:from-red-600 hover:to-red-700 transition-all shadow-lg">
+                        <i class="fas fa-calculator mr-2"></i>Show Me The Real Amount
+                    </button>
+                </div>
+
+                <!-- Results Section -->
+                <div id="results" class="space-y-4 hidden">
+                    <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">💰 What You Actually Need</h2>
+
+                    <!-- Main Result Card -->
+                    <div
+                        class="bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900 dark:to-red-800 rounded-lg p-6 border-2 border-red-300 dark:border-red-600 transition-colors duration-200">
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-2">You will need this much money in
+                            <span id="resultYears"></span> years:
+                        </p>
+                        <p id="totalCostINR" class="text-3xl md:text-4xl font-bold text-red-600 dark:text-red-300">
+                        </p>
+                        <p id="totalCostForeign" class="text-lg text-gray-700 dark:text-gray-300 mt-2"></p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mt-3">⚠️ This is what you'll actually pay
+                            when your child goes abroad</p>
+                    </div>
+
+                    <!-- Breakdown Cards -->
+                    <div class="grid grid-cols-2 gap-3">
+                        <div
+                            class="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900 dark:to-orange-800 rounded-lg p-4 text-center transition-colors duration-200">
+                            <p class="text-xs text-gray-600 dark:text-gray-300 mb-1">If you sent them today</p>
+                            <p id="currentCostINR" class="text-xl font-bold text-orange-600 dark:text-orange-300">
+                            </p>
+                        </div>
+                        <div
+                            class="bg-gradient-to-br from-yellow-50 to-yellow-100 dark:from-yellow-900 dark:to-yellow-800 rounded-lg p-4 text-center transition-colors duration-200">
+                            <p class="text-xs text-gray-600 dark:text-gray-300 mb-1">Extra you'll pay</p>
+                            <p id="costIncrease" class="text-xl font-bold text-yellow-600 dark:text-yellow-300"></p>
+                        </div>
+                    </div>
+
+                    <!-- Impact Breakdown -->
+                    <div class="bg-gray-50 dark:bg-gray-600 rounded-lg p-4 transition-colors duration-200">
+                        <h4 class="font-semibold text-gray-700 dark:text-gray-200 mb-3 flex items-center">
+                            <i class="fas fa-chart-pie text-red-600 dark:text-red-400 mr-2"></i>Why So Much? Here's
+                            Why:
+                        </h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-300">Because fees keep rising:</span>
+                                <span class="font-semibold text-gray-800 dark:text-white"
+                                    id="inflationImpact"></span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-300">Because rupee keeps falling:</span>
+                                <span class="font-semibold text-gray-800 dark:text-white"
+                                    id="depreciationImpact"></span>
+                            </div>
+                            <div class="flex justify-between pt-2 border-t border-gray-300 dark:border-gray-500">
+                                <span class="text-gray-600 dark:text-gray-300">Your money loses value by:</span>
+                                <span class="font-semibold text-gray-800 dark:text-white" id="combinedRate"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SIP Planning Section -->
+                    <div
+                        class="bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900 dark:to-emerald-900 rounded-lg p-4 border-l-4 border-green-500 dark:border-green-400 transition-colors duration-200">
+                        <h4 class="font-semibold text-gray-800 dark:text-white mb-2 flex items-center">
+                            <i class="fas fa-piggy-bank text-green-600 dark:text-green-400 mr-2"></i>💡 Good News:
+                            How to Save For This
+                        </h4>
+                        <p class="text-sm text-gray-700 dark:text-gray-300 mb-2">Start a monthly SIP investment now:
+                        </p>
+                        <p id="monthlySIP" class="text-2xl font-bold text-green-600 dark:text-green-300"></p>
+                        <p class="text-xs text-gray-600 dark:text-gray-400 mt-2">Assuming 12% annual returns from
+                            mutual funds</p>
+                    </div>
+                </div>
+
+                <!-- Placeholder -->
+                <div id="placeholder" class="flex items-center justify-center">
+                    <div class="text-center text-gray-400 dark:text-gray-500">
+                        <i class="fas fa-graduation-cap text-6xl mb-4"></i>
+                        <p class="text-lg">Fill in your details on the left</p>
+                        <p class="text-sm mt-2">We'll show you the real cost</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alert Box -->
+            <div
+                class="mt-6 bg-yellow-50 dark:bg-yellow-900 border-l-4 border-yellow-500 dark:border-yellow-400 p-4 rounded transition-colors duration-200">
+                <div class="flex items-start">
+                    <i
+                        class="fas fa-exclamation-triangle text-yellow-600 dark:text-yellow-400 text-xl mr-3 mt-1"></i>
+                    <div>
+                        <p class="font-semibold text-yellow-800 dark:text-yellow-200">⚠️ Most Parents Miss This!</p>
+                        <p class="text-sm text-yellow-700 dark:text-yellow-300 mt-1">
+                            They only think about today's cost. But there are TWO problems: <strong>(1)</strong>
+                            College fees go up every year, AND <strong>(2)</strong> The rupee becomes weaker every
+                            year, so you need MORE rupees to buy the same dollars. Many parents get shocked when the
+                            actual bill comes - don't let this happen to you!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Preset Examples -->
+        <div class="bg-white dark:bg-gray-700 rounded-xl shadow-xl border-2 border-gray-900 dark:border-gray-700 p-6 md:p-8 mb-8 transition-colors duration-200">
+            <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">
+                <i class="fas fa-lightbulb text-yellow-500 dark:text-yellow-400 mr-2"></i>Quick Start - Click Your
+                Destination
+            </h2>
+            <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">Not sure about costs? Click below to see
+                typical amounts for each country</p>
+            <div class="grid md:grid-cols-3 gap-4">
+                <button onclick="loadPreset('USA')"
+                    class="text-left p-4 border-2 border-gray-200 dark:border-gray-600 rounded-lg hover:border-red-500 dark:hover:border-red-400 hover:bg-red-50 dark:hover:bg-gray-600 transition">
+                    <div class="flex items-center mb-2">
+                        <span class="text-2xl mr-2">🇺🇸</span>
+                        <h3 class="font-bold text-gray-800 dark:text-white">America (USA)</h3>
+                    </div>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">4 years: $200,000</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Harvard, MIT, Stanford etc.</p>
+                </button>
+
+                <button onclick="loadPreset('UK')"
+                    class="text-left p-4 border-2 border-gray-200 dark:border-gray-600 rounded-lg hover:border-red-500 dark:hover:border-red-400 hover:bg-red-50 dark:hover:bg-gray-600 transition">
+                    <div class="flex items-center mb-2">
+                        <span class="text-2xl mr-2">🇬🇧</span>
+                        <h3 class="font-bold text-gray-800 dark:text-white">UK (England)</h3>
+                    </div>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">3 years: £120,000</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Oxford, Cambridge etc.</p>
+                </button>
+
+                <button onclick="loadPreset('Canada')"
+                    class="text-left p-4 border-2 border-gray-200 dark:border-gray-600 rounded-lg hover:border-red-500 dark:hover:border-red-400 hover:bg-red-50 dark:hover:bg-gray-600 transition">
+                    <div class="flex items-center mb-2">
+                        <span class="text-2xl mr-2">🇨🇦</span>
+                        <h3 class="font-bold text-gray-800 dark:text-white">Canada</h3>
+                    </div>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">4 years: CAD 150,000</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Toronto, UBC etc.</p>
+                </button>
+            </div>
+        </div>
+
+        <!-- SEO Content -->
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg border-2 border-gray-900 dark:border-gray-700 p-8 transition-colors duration-200 mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Sending Your Child Abroad? Here's What
+                You Must Know</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                Many parents dream of sending their children to study in America, UK, Canada, or Australia. But most
+                parents only look at today's cost and think "I'll save ₹2 crore". This is a BIG mistake! By the time
+                your child is ready to go, the actual cost will be MUCH higher because of two reasons:
+            </p>
+
+            <div class="bg-red-50 dark:bg-red-900 p-4 rounded-lg mb-4">
+                <h3 class="text-lg font-bold text-red-800 dark:text-red-200 mb-2">Real Example That Shocks Parents:
+                </h3>
+                <p class="text-gray-700 dark:text-gray-300 text-sm">
+                    A USA degree costs ₹1.6 crore TODAY. But if your child is 8 years old now, you'll need
+                    <strong>₹4.8 to ₹5.2 crores</strong> when they turn 18! That's 3X more money! Why? Because
+                    college fees go up every year AND rupee becomes weaker every year.
+                </p>
+            </div>
+
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3 mt-6">The Two Hidden Problems:</h3>
+            <div class="space-y-3 mb-4">
+                <div class="flex items-start">
+                    <span class="text-2xl mr-3">📈</span>
+                    <div>
+                        <p class="font-semibold text-gray-800 dark:text-white">Problem 1: College Fees Keep Rising
+                        </p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300">Foreign university fees go up 5-7% every
+                            year. In 10 years, a $50,000/year college becomes $100,000/year!</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <span class="text-2xl mr-3">💸</span>
+                    <div>
+                        <p class="font-semibold text-gray-800 dark:text-white">Problem 2: Rupee Keeps Getting Weaker
+                        </p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300">20 years ago, $1 = ₹45. Today $1 = ₹83.
+                            Tomorrow? Maybe ₹120! You need MORE rupees to buy same dollars.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3 mt-6">How This Calculator Helps You:
+            </h3>
+            <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-600 dark:text-green-400 mr-2 mt-1"></i>
+                    <span>Shows you the REAL amount you'll need (not just today's cost)</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-600 dark:text-green-400 mr-2 mt-1"></i>
+                    <span>Works for USA, UK, Canada, Australia, Europe - all countries</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-600 dark:text-green-400 mr-2 mt-1"></i>
+                    <span>Tells you exactly how much to save every month (SIP amount)</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-600 dark:text-green-400 mr-2 mt-1"></i>
+                    <span>Simple language - no complicated terms, anyone can understand</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-600 dark:text-green-400 mr-2 mt-1"></i>
+                    <span>100% free - no login, no registration needed</span>
+                </li>
+            </ul>
+
+            <div class="mt-6 bg-green-50 dark:bg-green-900 p-4 rounded-lg border-l-4 border-green-500">
+                <p class="text-sm text-gray-700 dark:text-gray-300">
+                    <strong>💡 Smart Tip:</strong> Start saving early! Even small monthly investments grow BIG when
+                    you have 10-15 years. Use our calculator to find out your monthly SIP amount and start TODAY.
+                </p>
+            </div>
+        </div>
+
+        <!-- Financial Disclaimer -->
+        <div
+            class="bg-yellow-50 dark:bg-yellow-900 dark:bg-opacity-20 border-l-4 border-yellow-500 p-6 max-w-4xl mx-auto mb-8">
+            <div class="flex items-start">
+                <i class="fas fa-exclamation-triangle text-yellow-600 text-2xl mr-4 flex-shrink-0 mt-1"></i>
+                <div>
+                    <h3 class="font-bold text-gray-800 dark:text-white mb-2">Important Disclaimer</h3>
+                    <div class="text-sm text-gray-700 dark:text-gray-300 space-y-2">
+                        <p><strong>For Informational Purposes Only:</strong> This calculator provides cost estimates based
+                            on the inputs you provide and assumed inflation/currency depreciation rates. Actual costs may
+                            vary significantly based on university, location, lifestyle, exchange rates, and economic
+                            conditions.</p>
+                        <p><strong>Not Financial/Educational Advice:</strong> The information and calculations provided here
+                            are NOT professional financial or educational counseling advice. Education costs abroad are
+                            highly variable and depend on numerous factors.</p>
+                        <p><strong>Consult Professionals:</strong> Always consult with certified education counselors,
+                            financial advisors, and study-abroad consultants for accurate cost estimates and planning for
+                            international education.</p>
+                        <p><strong>Inflation & Currency Disclaimer:</strong> The assumed education inflation rate (7%) and
+                            rupee depreciation (4%) are estimates based on historical trends. Actual rates can vary
+                            significantly. Exchange rates are volatile and unpredictable.</p>
+                        <p><strong>Cost Variations:</strong> Tuition fees, living expenses, and other costs vary widely by
+                            country, university ranking, program type, and city. The estimates provided are approximate
+                            averages and should not be used for precise financial planning.</p>
+                        <p><strong>No Liability:</strong> QuickTools India assumes no responsibility for any educational or
+                            financial decisions or actions taken based on the calculations or information provided on this
+                            tool.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<script>
+    // Exchange rates (approximate, for calculation purposes)
+    const exchangeRates = {
+        'USD': 83,
+        'GBP': 105,
+        'EUR': 90,
+        'AUD': 55,
+        'CAD': 62
+    };
+
+    // Preset values for popular destinations
+    const presets = {
+        'USA': { currency: 'USD', cost: 200000, years: 10, inflation: 6, depreciation: 4 },
+        'UK': { currency: 'GBP', cost: 120000, years: 10, inflation: 5.5, depreciation: 3.5 },
+        'Canada': { currency: 'CAD', cost: 150000, years: 10, inflation: 5, depreciation: 3 }
+    };
+
+    function updateInflation() {
+        const value = document.getElementById('inflationRate').value;
+        document.getElementById('inflationValue').textContent = value;
+        calculateCost();
+    }
+
+    function updateDepreciation() {
+        const value = document.getElementById('depreciationRate').value;
+        document.getElementById('depreciationValue').textContent = value;
+        calculateCost();
+    }
+
+    function updateCurrencyDefaults() {
+        const currency = document.getElementById('currency').value;
+        // Update with typical costs for each destination
+        const defaults = {
+            'USD': 200000,
+            'GBP': 120000,
+            'EUR': 100000,
+            'AUD': 180000,
+            'CAD': 150000
+        };
+        document.getElementById('currentCost').value = defaults[currency];
+        calculateCost();
+    }
+
+    function loadPreset(country) {
+        const preset = presets[country];
+        document.getElementById('currency').value = preset.currency;
+        document.getElementById('currentCost').value = preset.cost;
+        document.getElementById('yearsToStudy').value = preset.years;
+        document.getElementById('inflationRate').value = preset.inflation;
+        document.getElementById('depreciationRate').value = preset.depreciation;
+        document.getElementById('inflationValue').textContent = preset.inflation;
+        document.getElementById('depreciationValue').textContent = preset.depreciation;
+        calculateCost();
+    }
+
+    function calculateCost() {
+        const currency = document.getElementById('currency').value;
+        const currentCost = parseFloat(document.getElementById('currentCost').value);
+        const years = parseInt(document.getElementById('yearsToStudy').value);
+        const inflationRate = parseFloat(document.getElementById('inflationRate').value) / 100;
+        const depreciationRate = parseFloat(document.getElementById('depreciationRate').value) / 100;
+
+        if (!currentCost || !years) return;
+
+        const exchangeRate = exchangeRates[currency];
+
+        // Calculate future cost in foreign currency (with education inflation)
+        const futureCostForeign = currentCost * Math.pow((1 + inflationRate), years);
+
+        // Calculate future exchange rate (with currency depreciation)
+        const futureExchangeRate = exchangeRate * Math.pow((1 + depreciationRate), years);
+
+        // Calculate future cost in INR
+        const futureCostINR = futureCostForeign * futureExchangeRate;
+
+        // Calculate current cost in INR (today's exchange rate)
+        const currentCostINR = currentCost * exchangeRate;
+
+        // Calculate increase
+        const increase = futureCostINR - currentCostINR;
+        const increasePercentage = ((futureCostINR / currentCostINR - 1) * 100).toFixed(1);
+
+        // Calculate individual impacts
+        const costWithJustInflation = currentCost * Math.pow((1 + inflationRate), years) * exchangeRate;
+        const costWithJustDepreciation = currentCost * futureExchangeRate;
+        const inflationImpactAmount = costWithJustInflation - currentCostINR;
+        const depreciationImpactAmount = costWithJustDepreciation - currentCostINR;
+
+        // Combined effective rate
+        const combinedRate = ((Math.pow(futureCostINR / currentCostINR, 1 / years) - 1) * 100).toFixed(2);
+
+        // Calculate SIP required (assuming 12% annual return)
+        const monthlyReturn = Math.pow(1.12, 1 / 12) - 1;
+        const months = years * 12;
+        const sipRequired = (futureCostINR * monthlyReturn) / (Math.pow(1 + monthlyReturn, months) - 1);
+
+        // Display results
+        document.getElementById('totalCostINR').textContent = '₹' + futureCostINR.toLocaleString('en-IN', { maximumFractionDigits: 0 });
+        document.getElementById('totalCostForeign').textContent = currency + ' ' + futureCostForeign.toLocaleString('en-US', { maximumFractionDigits: 0 });
+        document.getElementById('currentCostINR').textContent = '₹' + currentCostINR.toLocaleString('en-IN', { maximumFractionDigits: 0 });
+        document.getElementById('costIncrease').textContent = '+' + increasePercentage + '%';
+        document.getElementById('resultYears').textContent = years;
+
+        document.getElementById('inflationImpact').textContent = '₹' + inflationImpactAmount.toLocaleString('en-IN', { maximumFractionDigits: 0 });
+        document.getElementById('depreciationImpact').textContent = '₹' + depreciationImpactAmount.toLocaleString('en-IN', { maximumFractionDigits: 0 });
+        document.getElementById('combinedRate').textContent = combinedRate + '% per year';
+
+        document.getElementById('monthlySIP').textContent = '₹' + sipRequired.toLocaleString('en-IN', { maximumFractionDigits: 0 }) + '/month';
+
+        // Show results, hide placeholder
+        document.getElementById('results').classList.remove('hidden');
+        document.getElementById('placeholder').classList.add('hidden');
+    }
+
+    // Initial calculation with default values
+    window.addEventListener('load', function () {
+        calculateCost();
+    });
+</script>
+
+
+
+    <footer class="bg-gray-800 text-white mt-16 py-8">
+    <div class="container mx-auto px-4">
+        <!-- Feedback Section -->
+        <div class="text-center mb-6 pb-6 border-b border-gray-700">
+            <h3 class="text-lg font-semibold mb-2">
+                <i class="fas fa-lightbulb text-yellow-400 mr-2"></i>Have a Tool Idea or Feedback?
+            </h3>
+            <p class="text-gray-300 text-sm mb-3">We'd love to hear from you! Suggest new calculators or share your
+                thoughts.</p>
+            <a href="mailto:quicktoolsindiaa@gmail.com"
+                class="inline-flex items-center bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
+                <i class="fas fa-envelope mr-2"></i>quicktoolsindiaa@gmail.com
+            </a>
+        </div>
+
+        <!-- Links Section -->
+        <div class="flex flex-wrap justify-center gap-6 mb-6 pb-6 border-b border-gray-700">
+            <a href="/about/" class="text-gray-300 hover:text-white transition">About Us</a>
+            <a href="/privacy-policy/" class="text-gray-300 hover:text-white transition">Privacy Policy</a>
+            <a href="/terms-of-service/" class="text-gray-300 hover:text-white transition">Terms of Service</a>
+            <a href="mailto:quicktoolsindiaa@gmail.com"
+                class="text-gray-300 hover:text-white transition">Contact</a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center">
+            <p class="mb-2">&copy; 2025 QuickTools India. All rights reserved.</p>
+            <p class="text-gray-400 text-sm">Made with <i class="fas fa-heart text-red-500 dark:text-red-400"></i>
+                for India</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Cookie Consent Banner -->
+<div id="cookieConsent"
+    class="hidden fixed bottom-0 left-0 right-0 bg-gray-900 bg-opacity-95 text-white p-4 md:p-6 z-50 shadow-2xl border-t-4 border-indigo-500">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-start gap-3 flex-1">
+            <i class="fas fa-cookie-bite text-3xl text-indigo-400 flex-shrink-0"></i>
+            <div>
+                <h3 class="font-bold text-lg mb-1">We Value Your Privacy</h3>
+                <p class="text-sm text-gray-300">
+                    We use cookies and similar technologies to improve your experience, analyze site traffic, and
+                    personalize content.
+                    By clicking "Accept All", you consent to our use of cookies. See our
+                    <a href="/privacy-policy/" class="text-indigo-400 hover:text-indigo-300 underline">Privacy
+                        Policy</a> for details.
+                </p>
+            </div>
+        </div>
+        <div class="flex gap-3 flex-shrink-0">
+            <button onclick="acceptCookies()"
+                class="bg-indigo-600 hover:bg-indigo-700 px-6 py-2 rounded-lg font-semibold transition-colors">
+                Accept All
+            </button>
+            <button onclick="rejectCookies()"
+                class="bg-gray-700 hover:bg-gray-600 px-6 py-2 rounded-lg font-semibold transition-colors">
+                Reject
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Cookie Consent Management
+    function showCookieConsent() {
+        const consent = localStorage.getItem('cookieConsent');
+        if (!consent) {
+            document.getElementById('cookieConsent').classList.remove('hidden');
+        }
+    }
+
+    function acceptCookies() {
+        localStorage.setItem('cookieConsent', 'accepted');
+        document.getElementById('cookieConsent').classList.add('hidden');
+        if (typeof gtag !== 'undefined') {
+            gtag('consent', 'update', {
+                'analytics_storage': 'granted'
+            });
+        }
+    }
+
+    function rejectCookies() {
+        localStorage.setItem('cookieConsent', 'rejected');
+        document.getElementById('cookieConsent').classList.add('hidden');
+        if (typeof gtag !== 'undefined') {
+            gtag('consent', 'update', {
+                'analytics_storage': 'denied'
+            });
+        }
+    }
+
+    window.addEventListener('load', showCookieConsent);
+    // Dark Mode Toggle
+    function toggleDarkMode() {
+        const html = document.documentElement;
+        html.classList.toggle('dark');
+
+        // Save preference to localStorage
+        if (html.classList.contains('dark')) {
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            localStorage.setItem('darkMode', 'disabled');
+        }
+    }
+
+    // Initialize dark mode from localStorage on page load
+    (function initDarkMode() {
+        const darkMode = localStorage.getItem('darkMode');
+        if (darkMode === 'enabled') {
+            document.documentElement.classList.add('dark');
+        }
+    })();
+
+    // Tools Dropdown Toggle
+    function toggleDropdown() {
+        const menu = document.getElementById('dropdownMenu');
+        menu.classList.toggle('hidden');
+    }
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function (event) {
+        const dropdown = document.getElementById('toolsDropdown');
+        if (dropdown && !dropdown.contains(event.target)) {
+            document.getElementById('dropdownMenu').classList.add('hidden');
+        }
+    });
+</script>
+
+
+    
+</body>
+</html>
