@@ -4,6 +4,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/robots.txt");
     eleventyConfig.addPassthroughCopy("src/CNAME");
     eleventyConfig.addPassthroughCopy("src/og-image.png");
+    eleventyConfig.addPassthroughCopy("src/js");
 
     // Watch targets
     eleventyConfig.addWatchTarget("./src/css/");

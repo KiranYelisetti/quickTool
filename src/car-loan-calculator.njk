@@ -240,6 +240,11 @@ meta_keywords: "car loan EMI calculator, car loan calculator India, auto loan ca
                     <p class="text-2xl font-bold" id="totalInterest">₹0</p>
                 </div>
             </div>
+            
+            <button onclick="shareResult('Car Loan EMI', document.getElementById('monthlyEMI').innerText)"
+                class="mt-6 w-full bg-white text-red-600 hover:bg-gray-100 font-bold py-3 px-4 rounded-xl flex items-center justify-center transition-colors shadow-md">
+                <i class="fab fa-whatsapp text-xl mr-2 text-[#25D366]"></i> Share via WhatsApp
+            </button>
         </div>
 
         <div class="bg-white dark:bg-gray-800 rounded-xl shadow-xl border-2 border-gray-900 dark:border-gray-700 p-8">
@@ -617,6 +622,11 @@ meta_keywords: "car loan EMI calculator, car loan calculator India, auto loan ca
 
 {% block scripts %}
 <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        initAutoSave('car_loan_calc');
+        calculateCarLoan();
+    });
+
     document.querySelectorAll('input[name="carType"]').forEach(radio => {
         radio.addEventListener('change', function () {
             const interestInput = document.getElementById('interestRate');

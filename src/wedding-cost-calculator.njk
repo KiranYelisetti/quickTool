@@ -342,6 +342,11 @@ meta_keywords: "wedding planning India, Indian wedding planning guide, wedding c
                         <p class="text-xs text-gray-600 dark:text-gray-400 mt-2">Assuming 12% annual returns from
                             mutual funds</p>
                     </div>
+
+                    <button onclick="shareResult('Wedding Cost', document.getElementById('totalCost').innerText)"
+                        class="w-full bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center transition-colors shadow-md">
+                        <i class="fab fa-whatsapp text-xl mr-2"></i> Share Result
+                    </button>
                 </div>
 
                 <!-- Placeholder -->
@@ -741,6 +746,7 @@ meta_keywords: "wedding planning India, Indian wedding planning guide, wedding c
 
     // Initial calculation with default values
     window.addEventListener('load', function () {
+        initAutoSave('wedding_calc');
         calculateWeddingCost();
     });
 </script>

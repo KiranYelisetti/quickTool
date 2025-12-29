@@ -253,6 +253,12 @@ meta_keywords: "GST calculator, GST calculator India, add GST, remove GST, CGST 
                         <p id="finalAmount"
                             class="text-3xl md:text-4xl font-bold text-purple-600 dark:text-purple-300">₹0</p>
                     </div>
+                    </div>
+                    
+                    <button onclick="shareResult('GST Calculation', document.getElementById('finalAmount').innerText)"
+                        class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center transition-colors shadow-md mt-4">
+                        <i class="fab fa-whatsapp text-xl mr-2"></i> Share Result
+                    </button>
                 </div>
             </div>
 
@@ -417,6 +423,7 @@ meta_keywords: "GST calculator, GST calculator India, add GST, remove GST, CGST 
 
     // Calculate on page load
     window.addEventListener('load', function () {
+        initAutoSave('gst_calc');
         calculateGST();
     });
 </script>

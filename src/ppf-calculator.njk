@@ -327,6 +327,11 @@ meta_keywords: "PPF calculator, Public Provident Fund calculator, PPF calculator
                         </p>
                         <p id="breakdown" class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed"></p>
                     </div>
+
+                    <button onclick="shareResult('PPF Maturity', document.getElementById('maturityValue').innerText)"
+                        class="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center transition-colors shadow-md">
+                        <i class="fab fa-whatsapp text-xl mr-2"></i> Share Result
+                    </button>
                 </div>
 
                 <!-- Placeholder -->
@@ -939,6 +944,7 @@ meta_keywords: "PPF calculator, Public Provident Fund calculator, PPF calculator
 
     // Initialize with default values
     window.addEventListener('load', function () {
+        initAutoSave('ppf_calc');
         calculatePPF();
     });
 </script>

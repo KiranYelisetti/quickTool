@@ -235,6 +235,11 @@ meta_keywords: "age calculator, age calculator by date of birth, calculate age, 
                         </p>
                         <p id="nextBirthday" class="text-lg font-semibold text-gray-800 dark:text-white"></p>
                     </div>
+
+                    <button onclick="shareResult('My Age', document.getElementById('ageInWords').innerText)"
+                        class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center transition-colors shadow-md mt-4">
+                        <i class="fab fa-whatsapp text-xl mr-2"></i> Share Result
+                    </button>
                 </div>
 
                 <!-- Placeholder when no results -->
@@ -317,6 +322,7 @@ meta_keywords: "age calculator, age calculator by date of birth, calculate age, 
     // Initialize with today's date
     window.addEventListener('load', function () {
         setToday();
+        initAutoSave('age_calc');
     });
 
     function calculateAge() {
