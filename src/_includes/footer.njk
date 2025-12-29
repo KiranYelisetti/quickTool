@@ -1,0 +1,128 @@
+<footer class="bg-gray-800 text-white mt-16 py-8">
+    <div class="container mx-auto px-4">
+        <!-- Feedback Section -->
+        <div class="text-center mb-6 pb-6 border-b border-gray-700">
+            <h3 class="text-lg font-semibold mb-2">
+                <i class="fas fa-lightbulb text-yellow-400 mr-2"></i>Have a Tool Idea or Feedback?
+            </h3>
+            <p class="text-gray-300 text-sm mb-3">We'd love to hear from you! Suggest new calculators or share your
+                thoughts.</p>
+            <a href="mailto:quicktoolsindiaa@gmail.com"
+                class="inline-flex items-center bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
+                <i class="fas fa-envelope mr-2"></i>quicktoolsindiaa@gmail.com
+            </a>
+        </div>
+
+        <!-- Links Section -->
+        <div class="flex flex-wrap justify-center gap-6 mb-6 pb-6 border-b border-gray-700">
+            <a href="/about/" class="text-gray-300 hover:text-white transition">About Us</a>
+            <a href="/privacy-policy/" class="text-gray-300 hover:text-white transition">Privacy Policy</a>
+            <a href="/terms-of-service/" class="text-gray-300 hover:text-white transition">Terms of Service</a>
+            <a href="mailto:quicktoolsindiaa@gmail.com"
+                class="text-gray-300 hover:text-white transition">Contact</a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center">
+            <p class="mb-2">&copy; 2025 QuickTools India. All rights reserved.</p>
+            <p class="text-gray-400 text-sm">Made with <i class="fas fa-heart text-red-500 dark:text-red-400"></i>
+                for India</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Cookie Consent Banner -->
+<div id="cookieConsent"
+    class="hidden fixed bottom-0 left-0 right-0 bg-gray-900 bg-opacity-95 text-white p-4 md:p-6 z-50 shadow-2xl border-t-4 border-indigo-500">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-start gap-3 flex-1">
+            <i class="fas fa-cookie-bite text-3xl text-indigo-400 flex-shrink-0"></i>
+            <div>
+                <h3 class="font-bold text-lg mb-1">We Value Your Privacy</h3>
+                <p class="text-sm text-gray-300">
+                    We use cookies and similar technologies to improve your experience, analyze site traffic, and
+                    personalize content.
+                    By clicking "Accept All", you consent to our use of cookies. See our
+                    <a href="/privacy-policy/" class="text-indigo-400 hover:text-indigo-300 underline">Privacy
+                        Policy</a> for details.
+                </p>
+            </div>
+        </div>
+        <div class="flex gap-3 flex-shrink-0">
+            <button onclick="acceptCookies()"
+                class="bg-indigo-600 hover:bg-indigo-700 px-6 py-2 rounded-lg font-semibold transition-colors">
+                Accept All
+            </button>
+            <button onclick="rejectCookies()"
+                class="bg-gray-700 hover:bg-gray-600 px-6 py-2 rounded-lg font-semibold transition-colors">
+                Reject
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Cookie Consent Management
+    function showCookieConsent() {
+        const consent = localStorage.getItem('cookieConsent');
+        if (!consent) {
+            document.getElementById('cookieConsent').classList.remove('hidden');
+        }
+    }
+
+    function acceptCookies() {
+        localStorage.setItem('cookieConsent', 'accepted');
+        document.getElementById('cookieConsent').classList.add('hidden');
+        if (typeof gtag !== 'undefined') {
+            gtag('consent', 'update', {
+                'analytics_storage': 'granted'
+            });
+        }
+    }
+
+    function rejectCookies() {
+        localStorage.setItem('cookieConsent', 'rejected');
+        document.getElementById('cookieConsent').classList.add('hidden');
+        if (typeof gtag !== 'undefined') {
+            gtag('consent', 'update', {
+                'analytics_storage': 'denied'
+            });
+        }
+    }
+
+    window.addEventListener('load', showCookieConsent);
+    // Dark Mode Toggle
+    function toggleDarkMode() {
+        const html = document.documentElement;
+        html.classList.toggle('dark');
+
+        // Save preference to localStorage
+        if (html.classList.contains('dark')) {
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            localStorage.setItem('darkMode', 'disabled');
+        }
+    }
+
+    // Initialize dark mode from localStorage on page load
+    (function initDarkMode() {
+        const darkMode = localStorage.getItem('darkMode');
+        if (darkMode === 'enabled') {
+            document.documentElement.classList.add('dark');
+        }
+    })();
+
+    // Tools Dropdown Toggle
+    function toggleDropdown() {
+        const menu = document.getElementById('dropdownMenu');
+        menu.classList.toggle('hidden');
+    }
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function (event) {
+        const dropdown = document.getElementById('toolsDropdown');
+        if (dropdown && !dropdown.contains(event.target)) {
+            document.getElementById('dropdownMenu').classList.add('hidden');
+        }
+    });
+</script>

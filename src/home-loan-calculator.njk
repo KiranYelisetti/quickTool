@@ -1,0 +1,557 @@
+---
+layout: base.njk
+title: "Home Loan EMI Calculator India 2025 | Calculate Home Loan EMI with Pre-payment Impact"
+meta_title: "Home Loan EMI Calculator India 2025 - Calculate EMI, Interest & Tax Benefits"
+meta_description: "Free Home Loan EMI Calculator for India 2025. Calculate monthly EMI, total interest, pre-payment impact, and tax benefits. Plan your dream home with accurate calculations for all major banks."
+meta_keywords: "home loan EMI calculator, home loan calculator India, housing loan calculator, EMI calculator, pre-payment calculator, home loan tax benefits, property loan calculator, mortgage calculator India, HDFC home loan calculator, SBI home loan calculator"
+---
+
+{% block head %}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Home Loan EMI Calculator India",
+        "description": "Calculate home loan EMI, interest, pre-payment impact and tax benefits for Indian home buyers",
+        "url": "https://www.quicktoolsindia.com/home-loan-calculator/",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "INR"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Calculate Home Loan EMI",
+        "step": [
+            {
+                "@type": "HowToStep",
+                "name": "Enter Loan Amount",
+                "text": "Enter your desired home loan amount (typically ₹20 Lac to ₹1 Cr)"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Set Interest Rate",
+                "text": "Enter the annual interest rate offered by your bank (7.10% to 10.90%)"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Choose Loan Tenure",
+                "text": "Select your loan tenure from 5 to 30 years"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Add Pre-payment Details",
+                "text": "Optionally add yearly pre-payment amount to see impact on interest savings"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Calculate EMI",
+                "text": "Click Calculate to see your monthly EMI, total interest, and tax benefits"
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the current home loan interest rate in India?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Home loan interest rates in India (2024-2025) range from 7.10% to 10.90% depending on the lender, loan amount, credit score, and type of property. Major banks like SBI, HDFC, ICICI offer competitive rates starting from 8.40%."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How is home loan EMI calculated?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Home loan EMI is calculated using the formula: EMI = [P × R × (1+R)^N] / [(1+R)^N-1], where P is principal loan amount, R is monthly interest rate (annual rate/12/100), and N is tenure in months. This gives you a fixed monthly payment amount."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are the tax benefits on home loan?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Under Section 24(b), you can claim deduction up to ₹2 Lakhs on interest paid. Under Section 80C, you can claim up to ₹1.5 Lakhs on principal repayment. First-time home buyers can claim additional ₹50,000 under Section 80EEA, totaling up to ₹3.5 Lakhs in tax benefits annually."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does pre-payment reduce home loan interest?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Pre-payment reduces your outstanding principal, which decreases the interest charged in subsequent months. You can either reduce EMI or tenure. For maximum savings, opt to reduce tenure while keeping EMI same. Even ₹50,000 yearly pre-payment can save lakhs in interest over 20 years."
+                }
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.quicktoolsindia.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Home Loan Calculator",
+                "item": "https://www.quicktoolsindia.com/home-loan-calculator/"
+            }
+        ]
+    }
+    </script>
+{% endblock %}
+
+<div class="max-w-4xl mx-auto px-4 py-8">
+    <div class="text-center mb-8">
+        <div class="inline-block p-4 bg-gradient-to-br from-orange-400 to-red-600 rounded-full mb-4">
+            <i class="fas fa-home text-4xl text-white"></i>
+        </div>
+        <h1 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">Home Loan EMI Calculator</h1>
+        <p class="text-lg text-gray-600 dark:text-gray-400">Calculate your home loan EMI, total interest, and
+            pre-payment impact. Plan your dream home with accurate calculations for all major Indian banks.</p>
+    </div>
+
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-xl border-2 border-gray-900 dark:border-gray-700 p-8 mb-8">
+        <div class="space-y-6">
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                    <i class="fas fa-rupee-sign mr-2 text-orange-600"></i>Loan Amount (₹)
+                </label>
+                <input type="number" id="loanAmount" value="5000000" min="100000" step="100000"
+                    class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 dark:bg-gray-700 dark:text-white">
+                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Typical range: ₹20 Lac to ₹1 Cr</p>
+            </div>
+
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                    <i class="fas fa-percent mr-2 text-orange-600"></i>Annual Interest Rate (%)
+                </label>
+                <input type="number" id="interestRate" value="8.5" min="7.1" max="15" step="0.1"
+                    class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 dark:bg-gray-700 dark:text-white">
+                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Current rates: 7.10% - 10.90% (2024-2025)
+                </p>
+            </div>
+
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                    <i class="fas fa-calendar-alt mr-2 text-orange-600"></i>Loan Tenure (Years)
+                </label>
+                <input type="number" id="loanTenure" value="20" min="5" max="30" step="1"
+                    class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 dark:bg-gray-700 dark:text-white">
+                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Choose between 5 to 30 years</p>
+            </div>
+
+            <div class="border-t border-gray-200 dark:border-gray-700 pt-6">
+                <div class="flex items-center mb-4">
+                    <input type="checkbox" id="enablePrepayment"
+                        class="w-4 h-4 text-orange-600 rounded focus:ring-orange-500">
+                    <label for="enablePrepayment"
+                        class="ml-2 text-sm font-semibold text-gray-700 dark:text-gray-300">
+                        <i class="fas fa-piggy-bank mr-2 text-green-600"></i>Enable Yearly Pre-payment
+                    </label>
+                </div>
+                <div id="prepaymentSection" class="hidden space-y-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                            Yearly Pre-payment Amount (₹)
+                        </label>
+                        <input type="number" id="prepaymentAmount" value="100000" min="0" step="10000"
+                            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 dark:bg-gray-700 dark:text-white">
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Amount you plan to pre-pay every
+                            year</p>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                            Start Pre-payment from Year
+                        </label>
+                        <input type="number" id="prepaymentStartYear" value="2" min="1" max="30" step="1"
+                            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 dark:bg-gray-700 dark:text-white">
+                    </div>
+                </div>
+            </div>
+
+            <button onclick="calculateHomeLoan()"
+                class="w-full bg-gradient-to-r from-orange-500 to-red-600 text-white py-4 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-200 transform hover:scale-105 shadow-lg">
+                <i class="fas fa-calculator mr-2"></i>Calculate EMI
+            </button>
+        </div>
+    </div>
+
+    <div id="results" class="hidden space-y-6">
+        <div class="bg-gradient-to-br from-orange-500 to-red-600 rounded-xl shadow-xl p-8 text-white">
+            <h2 class="text-2xl font-bold mb-6 flex items-center">
+                <i class="fas fa-chart-pie mr-3"></i>Your Home Loan Summary
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                    <p class="text-sm opacity-90 mb-1">Monthly EMI</p>
+                    <p class="text-3xl font-bold" id="monthlyEMI">₹0</p>
+                </div>
+                <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                    <p class="text-sm opacity-90 mb-1">Total Amount Payable</p>
+                    <p class="text-2xl font-bold" id="totalAmount">₹0</p>
+                </div>
+                <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                    <p class="text-sm opacity-90 mb-1">Principal Amount</p>
+                    <p class="text-2xl font-bold" id="principalAmount">₹0</p>
+                </div>
+                <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                    <p class="text-sm opacity-90 mb-1">Total Interest</p>
+                    <p class="text-2xl font-bold" id="totalInterest">₹0</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="prepaymentResults" class="hidden bg-white dark:bg-gray-800 rounded-xl shadow-xl p-8">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-6 flex items-center">
+                <i class="fas fa-piggy-bank mr-3 text-green-600"></i>Pre-payment Impact
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div
+                    class="bg-green-50 dark:bg-green-900 dark:bg-opacity-20 rounded-lg p-4 border border-green-200 dark:border-green-800">
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-1">Interest Saved</p>
+                    <p class="text-2xl font-bold text-green-600" id="interestSaved">₹0</p>
+                </div>
+                <div
+                    class="bg-blue-50 dark:bg-blue-900 dark:bg-opacity-20 rounded-lg p-4 border border-blue-200 dark:border-blue-800">
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-1">Tenure Reduced By</p>
+                    <p class="text-2xl font-bold text-blue-600" id="tenureReduced">0 years</p>
+                </div>
+                <div
+                    class="bg-purple-50 dark:bg-purple-900 dark:bg-opacity-20 rounded-lg p-4 border border-purple-200 dark:border-purple-800">
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-1">New Loan Tenure</p>
+                    <p class="text-2xl font-bold text-purple-600" id="newTenure">0 years</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-xl border-2 border-gray-900 dark:border-gray-700 p-8">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-6 flex items-center">
+                <i class="fas fa-file-invoice mr-3 text-indigo-600"></i>Tax Benefits (Annual)
+            </h3>
+            <div class="space-y-4">
+                <div
+                    class="flex justify-between items-center p-4 bg-indigo-50 dark:bg-indigo-900 dark:bg-opacity-20 rounded-lg">
+                    <div>
+                        <p class="font-semibold text-gray-800 dark:text-white">Section 24(b) - Interest Deduction
+                        </p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Up to ₹2,00,000 on interest paid</p>
+                    </div>
+                    <p class="text-xl font-bold text-indigo-600" id="taxBenefit24b">₹0</p>
+                </div>
+                <div
+                    class="flex justify-between items-center p-4 bg-green-50 dark:bg-green-900 dark:bg-opacity-20 rounded-lg">
+                    <div>
+                        <p class="font-semibold text-gray-800 dark:text-white">Section 80C - Principal Deduction</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Up to ₹1,50,000 on principal repayment
+                        </p>
+                    </div>
+                    <p class="text-xl font-bold text-green-600" id="taxBenefit80c">₹0</p>
+                </div>
+                <div class="border-t border-gray-200 dark:border-gray-700 pt-4">
+                    <div class="flex justify-between items-center">
+                        <p class="text-lg font-semibold text-gray-800 dark:text-white">Total Annual Tax Benefit</p>
+                        <p class="text-2xl font-bold text-orange-600" id="totalTaxBenefit">₹0</p>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-2">
+                        <i class="fas fa-info-circle mr-1"></i>First-time buyers can claim additional ₹50,000 under
+                        Section 80EEA
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-xl border-2 border-gray-900 dark:border-gray-700 p-8">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4 flex items-center">
+                <i class="fas fa-info-circle mr-3 text-blue-600"></i>Loan Breakdown
+            </h3>
+            <div class="space-y-3 text-gray-700 dark:text-gray-300">
+                <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                    <span>Principal to Interest Ratio</span>
+                    <span class="font-semibold" id="principalInterestRatio">-</span>
+                </div>
+                <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                    <span>Total Months</span>
+                    <span class="font-semibold" id="totalMonths">-</span>
+                </div>
+                <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                    <span>EMI to Loan Ratio</span>
+                    <span class="font-semibold" id="emiRatio">-</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-12 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-8">
+        <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6 flex items-center">
+            <i class="fas fa-lightbulb mr-3 text-yellow-500"></i>Understanding Home Loans in India
+        </h2>
+
+        <div class="prose dark:prose-invert max-w-none space-y-6 text-gray-700 dark:text-gray-300">
+            <div>
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-3">What is a Home Loan?</h3>
+                <p>A home loan (also called housing loan or mortgage) is a secured loan provided by banks and
+                    financial institutions to help you purchase, construct, or renovate a residential property. The
+                    property itself serves as collateral, and you repay the loan through fixed monthly installments
+                    (EMIs) over 5-30 years.</p>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-3">Current Interest Rates
+                    (2024-2025)</h3>
+                <div
+                    class="bg-gradient-to-r from-orange-50 to-red-50 dark:from-gray-700 dark:to-gray-700 p-6 rounded-lg">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <p class="font-semibold text-orange-700 dark:text-orange-400">SBI Home Loan</p>
+                            <p class="text-2xl font-bold">8.50% - 9.65%</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-orange-700 dark:text-orange-400">HDFC Home Loan</p>
+                            <p class="text-2xl font-bold">8.60% - 9.50%</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-orange-700 dark:text-orange-400">ICICI Home Loan</p>
+                            <p class="text-2xl font-bold">8.75% - 10.65%</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-orange-700 dark:text-orange-400">Axis Bank Home Loan</p>
+                            <p class="text-2xl font-bold">8.75% - 9.65%</p>
+                        </div>
+                    </div>
+                    <p class="text-sm mt-4 text-gray-600 dark:text-gray-400"><i
+                            class="fas fa-info-circle mr-1"></i>Rates vary based on loan amount, credit score, and
+                        property location</p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-3">Real-Life Examples</h3>
+
+                <div class="space-y-4">
+                    <div class="border-l-4 border-orange-500 pl-4 py-2 bg-orange-50 dark:bg-gray-700 rounded-r-lg">
+                        <p class="font-semibold text-gray-800 dark:text-white">Young Professional in Bangalore</p>
+                        <p class="text-sm mt-1"><strong>Scenario:</strong> ₹50 Lac loan at 8.60% for 20 years</p>
+                        <p class="text-sm"><strong>Monthly EMI:</strong> ₹43,391 | <strong>Total Interest:</strong>
+                            ₹54.14 Lac</p>
+                        <p class="text-sm mt-2 text-gray-600 dark:text-gray-400"><i
+                                class="fas fa-star text-yellow-500 mr-1"></i><strong>Smart Move:</strong> By
+                            pre-paying ₹1 Lac yearly from year 3, saves ₹19.8 Lac in interest and closes loan 5
+                            years early!</p>
+                    </div>
+
+                    <div class="border-l-4 border-blue-500 pl-4 py-2 bg-blue-50 dark:bg-gray-700 rounded-r-lg">
+                        <p class="font-semibold text-gray-800 dark:text-white">Family Buying Dream Home in Mumbai
+                        </p>
+                        <p class="text-sm mt-1"><strong>Scenario:</strong> ₹1 Cr loan at 8.75% for 25 years</p>
+                        <p class="text-sm"><strong>Monthly EMI:</strong> ₹80,537 | <strong>Total Interest:</strong>
+                            ₹1.42 Cr</p>
+                        <p class="text-sm mt-2 text-gray-600 dark:text-gray-400"><i
+                                class="fas fa-piggy-bank text-green-500 mr-1"></i><strong>Tax Benefit:</strong>
+                            Saves ₹1,09,000 annually (₹2L interest + ₹1.5L principal deductions in 30% tax bracket)
+                        </p>
+                    </div>
+
+                    <div class="border-l-4 border-green-500 pl-4 py-2 bg-green-50 dark:bg-gray-700 rounded-r-lg">
+                        <p class="font-semibold text-gray-800 dark:text-white">First-Time Buyer in Delhi NCR</p>
+                        <p class="text-sm mt-1"><strong>Scenario:</strong> ₹35 Lac loan at 8.40% for 15 years</p>
+                        <p class="text-sm"><strong>Monthly EMI:</strong> ₹34,012 | <strong>Total Interest:</strong>
+                            ₹26.22 Lac</p>
+                        <p class="text-sm mt-2 text-gray-600 dark:text-gray-400"><i
+                                class="fas fa-trophy text-yellow-500 mr-1"></i><strong>Bonus:</strong> Claims
+                            additional ₹50,000 under Section 80EEA as first-time buyer, total annual benefit ₹3.5
+                            Lac!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-3">Maximum Tax Benefits Available
+                </h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full border border-gray-300 dark:border-gray-600">
+                        <thead class="bg-gray-100 dark:bg-gray-700">
+                            <tr>
+                                <th class="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left">Section
+                                </th>
+                                <th class="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left">
+                                    Component</th>
+                                <th class="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left">Maximum
+                                    Deduction</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">80C</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Principal
+                                    Repayment</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">₹1,50,000</td>
+                            </tr>
+                            <tr class="bg-gray-50 dark:bg-gray-800">
+                                <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">24(b)</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Interest Payment
+                                </td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">₹2,00,000</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">80EEA</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Additional
+                                    Interest (1st time buyer)</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">₹50,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Financial Disclaimer -->
+<div class="bg-yellow-50 dark:bg-yellow-900 dark:bg-opacity-20 border-l-4 border-yellow-500 p-6 max-w-7xl mx-auto mb-8">
+    <div class="flex items-start">
+        <i class="fas fa-exclamation-triangle text-yellow-600 text-2xl mr-4 flex-shrink-0 mt-1"></i>
+        <div>
+            <h3 class="font-bold text-gray-800 dark:text-white mb-2">Important Disclaimer</h3>
+            <div class="text-sm text-gray-700 dark:text-gray-300 space-y-2">
+                <p><strong>For Informational Purposes Only:</strong> This calculator provides estimates based on the
+                    inputs you provide. Actual loan terms, EMI amounts, interest rates, and tax benefits may vary
+                    based on lender policies, credit score, and current government regulations.</p>
+                <p><strong>Not Financial/Legal Advice:</strong> The information and calculations provided here are
+                    NOT professional financial or legal advice. Do not make major financial decisions based solely
+                    on these calculations.</p>
+                <p><strong>Consult Professionals:</strong> Always consult with certified financial advisors, tax
+                    consultants, and loan officers for accurate and personalized advice before taking any loans or
+                    making investments.</p>
+                <p><strong>No Liability:</strong> QuickTools India assumes no responsibility for any financial
+                    losses, damages, or decisions taken based on the calculations or information provided on this
+                    tool.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% block scripts %}
+<script>
+    document.getElementById('enablePrepayment').addEventListener('change', function () {
+        const section = document.getElementById('prepaymentSection');
+        if (this.checked) {
+            section.classList.remove('hidden');
+        } else {
+            section.classList.add('hidden');
+        }
+    });
+
+    function formatIndianCurrency(amount) {
+        if (amount >= 10000000) {
+            return '₹' + (amount / 10000000).toFixed(2) + ' Cr';
+        } else if (amount >= 100000) {
+            return '₹' + (amount / 100000).toFixed(2) + ' Lac';
+        } else {
+            return '₹' + amount.toLocaleString('en-IN');
+        }
+    }
+
+    function calculateHomeLoan() {
+        const loanAmount = parseFloat(document.getElementById('loanAmount').value);
+        const annualRate = parseFloat(document.getElementById('interestRate').value);
+        const tenureYears = parseFloat(document.getElementById('loanTenure').value);
+        const monthlyRate = annualRate / 12 / 100;
+        const tenureMonths = tenureYears * 12;
+
+        const emi = (loanAmount * monthlyRate * Math.pow(1 + monthlyRate, tenureMonths)) / (Math.pow(1 + monthlyRate, tenureMonths) - 1);
+        const totalAmount = emi * tenureMonths;
+        const totalInterest = totalAmount - loanAmount;
+
+        // Prepayment Calculation
+        const enablePrepayment = document.getElementById('enablePrepayment').checked;
+        let interestSaved = 0;
+        let tenureReduced = 0;
+        let newTenure = tenureYears;
+
+        if (enablePrepayment) {
+            const prepaymentAmount = parseFloat(document.getElementById('prepaymentAmount').value);
+            const startYear = parseInt(document.getElementById('prepaymentStartYear').value);
+
+            // Simulation for prepayment
+            let principal = loanAmount;
+            let originalMonths = tenureMonths;
+            let currentMonth = 0;
+            let totalInterestWithPrepayment = 0;
+
+            while (principal > 0 && currentMonth < originalMonths) {
+                const interestForMonth = principal * monthlyRate;
+                let principalPaidForMonth = emi - interestForMonth;
+                totalInterestWithPrepayment += interestForMonth;
+
+                principal -= principalPaidForMonth;
+
+                // Apply prepayment
+                if ((currentMonth + 1) >= (startYear * 12) && (currentMonth + 1) % 12 === 0) {
+                    principal -= prepaymentAmount;
+                }
+
+                currentMonth++;
+                if (principal < 0) principal = 0;
+            }
+
+            interestSaved = totalInterest - totalInterestWithPrepayment;
+            tenureReduced = (originalMonths - currentMonth) / 12;
+            newTenure = currentMonth / 12;
+
+            document.getElementById('interestSaved').textContent = formatIndianCurrency(Math.round(interestSaved));
+            document.getElementById('tenureReduced').textContent = tenureReduced.toFixed(1) + ' years';
+            document.getElementById('newTenure').textContent = newTenure.toFixed(1) + ' years';
+            document.getElementById('prepaymentResults').classList.remove('hidden');
+        } else {
+            document.getElementById('prepaymentResults').classList.add('hidden');
+        }
+
+        // Display Results
+        document.getElementById('monthlyEMI').textContent = formatIndianCurrency(Math.round(emi));
+        document.getElementById('totalAmount').textContent = formatIndianCurrency(Math.round(totalAmount));
+        document.getElementById('principalAmount').textContent = formatIndianCurrency(Math.round(loanAmount));
+        document.getElementById('totalInterest').textContent = formatIndianCurrency(Math.round(totalInterest));
+
+        document.getElementById('principalInterestRatio').textContent = ((loanAmount / totalAmount) * 100).toFixed(0) + ':' + ((totalInterest / totalAmount) * 100).toFixed(0);
+        document.getElementById('totalMonths').textContent = tenureMonths + ' months';
+        document.getElementById('emiRatio').textContent = '₹' + Math.round(emi / 100000) + ' per Lac';
+
+        // Tax Benefits
+        const tax24b = Math.min(200000, totalInterest / tenureYears);
+        const tax80c = Math.min(150000, loanAmount / tenureYears);
+        let totalTax = tax24b + tax80c;
+
+        // 80EEA check (simplified assumption)
+        if (loanAmount <= 4500000) {
+            totalTax += 50000;
+        }
+
+        document.getElementById('taxBenefit24b').textContent = formatIndianCurrency(Math.round(tax24b));
+        document.getElementById('taxBenefit80c').textContent = formatIndianCurrency(Math.round(tax80c));
+        document.getElementById('totalTaxBenefit').textContent = formatIndianCurrency(Math.round(totalTax));
+
+        document.getElementById('results').classList.remove('hidden');
+        document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+</script>
+{% endblock %}

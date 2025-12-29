@@ -1,0 +1,31 @@
+{
+  "name": "quicktool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "npx tailwindcss -i ./src/css/styles.css -o ./_site/css/styles.css --minify",
+    "build": "npm run build:css && npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve",
+    "debug": "DEBUG=* npx @11ty/eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KiranYelisetti/quickTool.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/KiranYelisetti/quickTool/issues"
+  },
+  "homepage": "https://github.com/KiranYelisetti/quickTool#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.19"
+  }
+}

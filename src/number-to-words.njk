@@ -1,0 +1,412 @@
+---
+title: Number to Words Converter - Lakh Crore Calculator | Indian Format
+layout: base.njk
+meta_title: Number to Words Converter - Lakh Crore Calculator | Indian Format
+meta_description: "Free Number to Words converter for India. Convert numbers to lakhs/crores format and words. Perfect for cheque writing, banking, invoices. Supports Indian & International numbering systems."
+meta_keywords: "number to words, lakh crore converter, number converter India, cheque writing, rupees in words, number to Indian format, lakhs to crores, million to lakh, number spelling, amount in words"
+---
+
+{% block head %}
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Number to Words Converter - Indian Format",
+  "url": "https://www.quicktoolsindia.com/number-to-words/",
+  "description": "Convert numbers to Indian format (lakhs/crores) and words for cheque writing and financial documents",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web Browser",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  },
+  "featureList": [
+    "Number to words conversion",
+    "Indian numbering system (Lakhs, Crores)",
+    "International format (Millions, Billions)",
+    "Cheque writing format",
+    "Rupees to words",
+    "Copy to clipboard",
+    "Dark mode support"
+  ],
+  "inLanguage": "en-IN",
+  "audience": {
+    "@type": "Audience",
+    "geographicArea": {
+      "@type": "Country",
+      "name": "India"
+    }
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Convert Numbers to Words",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Enter Number",
+      "text": "Type any number up to 999,99,99,999 (999 crores) in the input field"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "View Indian Format",
+      "text": "See the number formatted in lakhs and crores system (e.g., 15,00,000 = 15 Lakhs)"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Read in Words",
+      "text": "Get the complete number spelled out in words for cheque writing"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Copy or Use",
+      "text": "Copy the formatted text for use in cheques, invoices, or documents"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many zeros are in a lakh?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A lakh has 5 zeros. 1 Lakh = 1,00,000 (one hundred thousand). In the Indian numbering system, lakh is a unit equal to 100,000."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many lakhs make a crore?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "100 lakhs make 1 crore. 1 Crore = 1,00,00,000 (ten million). The crore is a unit in the Indian numbering system equal to 10,000,000 or 100 lakhs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to write rupees in words on a cheque?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To write rupees in words on a cheque: 1) Write 'Rupees' at the start, 2) Spell out the amount in words (e.g., 'One Lakh Fifty Thousand'), 3) Add 'Only' at the end. Example: 'Rupees One Lakh Fifty Thousand Only'."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Indian and International numbering?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Indian system uses Lakhs (1,00,000) and Crores (1,00,00,000), while International system uses Millions (1,000,000) and Billions (1,000,000,000). 1 Million = 10 Lakhs, 1 Crore = 10 Million, 1 Billion = 100 Crores."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.quicktoolsindia.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Number to Words",
+      "item": "https://www.quicktoolsindia.com/number-to-words/"
+    }
+  ]
+}
+</script>
+{% endblock %}
+
+<main class="container mx-auto px-4 py-8 md:py-12">
+    <div class="max-w-4xl mx-auto">
+        <!-- Title -->
+        <div class="text-center mb-8">
+            <div class="flex items-center justify-center gap-4 mb-2">
+                <div
+                    class="inline-block bg-gradient-to-br from-purple-400 to-purple-600 w-12 h-12 rounded-full flex items-center justify-center">
+                    <i class="fas fa-spell-check text-xl text-white"></i>
+                </div>
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white">Number to Words Converter</h1>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300">Convert numbers to Indian format (Lakhs/Crores) and words</p>
+        </div>
+
+        <!-- Calculator Card -->
+        <div class="bg-white dark:bg-gray-700 rounded-xl shadow-xl border-2 border-gray-900 dark:border-gray-700 p-6 md:p-8 transition-colors duration-200">
+            <!-- Input Section -->
+            <div class="mb-6">
+                <label class="block text-gray-700 dark:text-gray-300 font-semibold mb-2 text-lg">Enter Number</label>
+                <input type="text" id="numberInput" value="1500000"
+                    class="w-full px-4 py-4 border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:border-purple-500 dark:focus:border-purple-400 focus:outline-none text-2xl font-mono text-center transition-colors"
+                    oninput="convertNumber()" placeholder="Enter any number">
+                <p class="text-gray-500 dark:text-gray-400 text-sm mt-2 text-center">Maximum: 999,99,99,999 (999 Crores)</p>
+            </div>
+
+            <!-- Results Section -->
+            <div class="space-y-4 mb-6">
+                <!-- Indian Format -->
+                <div class="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900 dark:to-orange-800 rounded-lg p-6 transition-colors">
+                    <div class="flex items-center justify-between mb-2">
+                        <p class="text-gray-700 dark:text-gray-300 font-semibold flex items-center">
+                            <i class="fas fa-flag text-orange-600 dark:text-orange-400 mr-2"></i>Indian Format
+                        </p>
+                        <button onclick="copyToClipboard('indianFormat')" class="text-orange-600 dark:text-orange-400 hover:text-orange-800 dark:hover:text-orange-300 transition">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <p id="indianFormat" class="text-2xl md:text-3xl font-bold text-orange-700 dark:text-orange-300">15 Lakhs</p>
+                </div>
+
+                <!-- International Format -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900 dark:to-blue-800 rounded-lg p-6 transition-colors">
+                    <div class="flex items-center justify-between mb-2">
+                        <p class="text-gray-700 dark:text-gray-300 font-semibold flex items-center">
+                            <i class="fas fa-globe text-blue-600 dark:text-blue-400 mr-2"></i>International Format
+                        </p>
+                        <button onclick="copyToClipboard('internationalFormat')" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <p id="internationalFormat" class="text-2xl md:text-3xl font-bold text-blue-700 dark:text-blue-300">1.5 Million</p>
+                </div>
+
+                <!-- In Words -->
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900 dark:to-purple-800 rounded-lg p-6 border-2 border-purple-300 dark:border-purple-600 transition-colors">
+                    <div class="flex items-center justify-between mb-2">
+                        <p class="text-gray-700 dark:text-gray-300 font-semibold flex items-center">
+                            <i class="fas fa-font text-purple-600 dark:text-purple-400 mr-2"></i>In Words
+                        </p>
+                        <button onclick="copyToClipboard('inWords')" class="text-purple-600 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-300 transition">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <p id="inWords" class="text-xl md:text-2xl font-bold text-purple-700 dark:text-purple-300">Fifteen Lakh Rupees Only</p>
+                </div>
+
+                <!-- Cheque Format -->
+                <div class="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900 dark:to-green-800 rounded-lg p-6 transition-colors">
+                    <div class="flex items-center justify-between mb-2">
+                        <p class="text-gray-700 dark:text-gray-300 font-semibold flex items-center">
+                            <i class="fas fa-money-check text-green-600 dark:text-green-400 mr-2"></i>Cheque Writing Format
+                        </p>
+                        <button onclick="copyToClipboard('chequeFormat')" class="text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300 transition">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <p id="chequeFormat" class="text-lg md:text-xl font-semibold text-green-700 dark:text-green-300">Rupees Fifteen Lakh Only</p>
+                </div>
+            </div>
+
+            <!-- Quick Examples -->
+            <div class="mb-6">
+                <p class="text-gray-700 dark:text-gray-300 font-semibold mb-3">Quick Examples:</p>
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="setExample(100000)" class="px-4 py-2 bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 rounded-lg text-gray-800 dark:text-white transition">1 Lakh</button>
+                    <button onclick="setExample(500000)" class="px-4 py-2 bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 rounded-lg text-gray-800 dark:text-white transition">5 Lakhs</button>
+                    <button onclick="setExample(1000000)" class="px-4 py-2 bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 rounded-lg text-gray-800 dark:text-white transition">10 Lakhs</button>
+                    <button onclick="setExample(10000000)" class="px-4 py-2 bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 rounded-lg text-gray-800 dark:text-white transition">1 Crore</button>
+                    <button onclick="setExample(50000000)" class="px-4 py-2 bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 rounded-lg text-gray-800 dark:text-white transition">5 Crores</button>
+                </div>
+            </div>
+
+            <!-- Info Section -->
+            <div
+                class="bg-purple-50 dark:bg-purple-900 border-l-4 border-purple-500 dark:border-purple-400 p-4 rounded transition-colors">
+                <h3 class="font-bold text-gray-800 dark:text-white mb-2"><i
+                        class="fas fa-info-circle text-purple-500 dark:text-purple-400 mr-2"></i>Number System Guide</h3>
+                <ul class="text-gray-700 dark:text-gray-300 text-sm space-y-1">
+                    <li><strong>1 Lakh</strong> = 1,00,000 = One Hundred Thousand</li>
+                    <li><strong>1 Crore</strong> = 1,00,00,000 = Ten Million = 100 Lakhs</li>
+                    <li><strong>1 Million</strong> = 10,00,000 = 10 Lakhs</li>
+                    <li><strong>1 Billion</strong> = 100 Crores = 1,000 Million</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SEO Content -->
+        <div class="mt-12 bg-white dark:bg-gray-700 rounded-lg shadow-lg border-2 border-gray-900 dark:border-gray-700 p-8 transition-colors duration-200">
+            <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Understanding Indian Number System</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                The Indian numbering system uses unique terms like Lakh and Crore that differ from the International system. This converter helps you understand and convert between both systems effortlessly.
+            </p>
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3 mt-6">Common Conversions</h3>
+            <div class="grid md:grid-cols-2 gap-4 text-gray-600 dark:text-gray-300">
+                <div>
+                    <h4 class="font-semibold mb-2">Indian System:</h4>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                        <li>Thousand = 1,000</li>
+                        <li>Lakh = 1,00,000 (Hundred Thousand)</li>
+                        <li>Crore = 1,00,00,000 (Ten Million)</li>
+                        <li>Arab = 100 Crores (used informally)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-2">International System:</h4>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                        <li>Thousand = 1,000</li>
+                        <li>Million = 1,000,000 (10 Lakhs)</li>
+                        <li>Billion = 1,000,000,000 (100 Crores)</li>
+                        <li>Trillion = 1,000 Billions</li>
+                    </ul>
+                </div>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3 mt-6">Uses of This Tool</h3>
+            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2">
+                <li><strong>Cheque Writing:</strong> Get the exact spelling for writing amount in words on cheques</li>
+                <li><strong>Banking:</strong> Understand large transaction amounts in familiar terms</li>
+                <li><strong>Invoicing:</strong> Display amounts professionally in Indian business documents</li>
+                <li><strong>Financial Reports:</strong> Convert between Indian and International formats</li>
+                <li><strong>Learning:</strong> Understand the relationship between different numbering systems</li>
+            </ul>
+        </div>
+    </div>
+</main>
+
+{% block scripts %}
+<script>
+    const ones = ['', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
+    const teens = ['Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'];
+    const tens = ['', '', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
+
+    function numberToWordsBelow100(num) {
+        if (num === 0) return '';
+        if (num < 10) return ones[num];
+        if (num < 20) return teens[num - 10];
+        return tens[Math.floor(num / 10)] + (num % 10 ? ' ' + ones[num % 10] : '');
+    }
+
+    function numberToWordsBelow1000(num) {
+        if (num === 0) return '';
+        if (num < 100) return numberToWordsBelow100(num);
+        const hundreds = Math.floor(num / 100);
+        const remainder = num % 100;
+        return ones[hundreds] + ' Hundred' + (remainder ? ' ' + numberToWordsBelow100(remainder) : '');
+    }
+
+    function numberToIndianWords(num) {
+        if (num === 0) return 'Zero';
+
+        const crore = Math.floor(num / 10000000);
+        const lakh = Math.floor((num % 10000000) / 100000);
+        const thousand = Math.floor((num % 100000) / 1000);
+        const remainder = num % 1000;
+
+        let words = [];
+
+        if (crore > 0) {
+            words.push(numberToWordsBelow1000(crore) + ' Crore');
+        }
+        if (lakh > 0) {
+            words.push(numberToWordsBelow100(lakh) + ' Lakh');
+        }
+        if (thousand > 0) {
+            words.push(numberToWordsBelow1000(thousand) + ' Thousand');
+        }
+        if (remainder > 0) {
+            words.push(numberToWordsBelow1000(remainder));
+        }
+
+        return words.join(' ');
+    }
+
+    function formatIndianNumber(num) {
+        if (num === 0) return '0';
+
+        const crore = Math.floor(num / 10000000);
+        const lakh = Math.floor((num % 10000000) / 100000);
+        const thousand = Math.floor((num % 100000) / 1000);
+        const remainder = num % 1000;
+
+        let parts = [];
+        if (crore > 0) parts.push(crore + ' Crore');
+        if (lakh > 0) parts.push(lakh + ' Lakh');
+        if (thousand > 0) parts.push(thousand + ' Thousand');
+        if (remainder > 0) parts.push(remainder);
+
+        return parts.join(' ') || '0';
+    }
+
+    function formatInternationalNumber(num) {
+        if (num === 0) return '0';
+
+        const billion = Math.floor(num / 1000000000);
+        const million = Math.floor((num % 1000000000) / 1000000);
+        const thousand = Math.floor((num % 1000000) / 1000);
+        const remainder = num % 1000;
+
+        let parts = [];
+        if (billion > 0) parts.push(billion + ' Billion');
+        if (million > 0) parts.push(million + (million === 1 ? '' : '') + ' Million');
+        if (thousand > 0) parts.push(thousand + ' Thousand');
+        if (remainder > 0) parts.push(remainder);
+
+        return parts.join(' ') || '0';
+    }
+
+    function convertNumber() {
+        const input = document.getElementById('numberInput').value.replace(/[^0-9]/g, '');
+        const num = parseInt(input) || 0;
+
+        // Limit to 999 crores
+        const limitedNum = Math.min(num, 99999999999);
+
+        if (limitedNum !== num) {
+            document.getElementById('numberInput').value = limitedNum;
+        }
+
+        // Indian Format
+        document.getElementById('indianFormat').textContent = formatIndianNumber(limitedNum);
+
+        // International Format
+        document.getElementById('internationalFormat').textContent = formatInternationalNumber(limitedNum);
+
+        // In Words
+        const words = numberToIndianWords(limitedNum);
+        document.getElementById('inWords').textContent = words + ' Rupees Only';
+
+        // Cheque Format
+        document.getElementById('chequeFormat').textContent = 'Rupees ' + words + ' Only';
+    }
+
+    function setExample(num) {
+        document.getElementById('numberInput').value = num;
+        convertNumber();
+    }
+
+    function copyToClipboard(elementId) {
+        const text = document.getElementById(elementId).textContent;
+        navigator.clipboard.writeText(text).then(() => {
+            // Show temporary feedback
+            const button = event.target.closest('button');
+            const originalHTML = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-check"></i>';
+            setTimeout(() => {
+                button.innerHTML = originalHTML;
+            }, 1000);
+        });
+    }
+
+    // Calculate on page load
+    window.addEventListener('load', function () {
+        convertNumber();
+    });
+</script>
+{% endblock %}

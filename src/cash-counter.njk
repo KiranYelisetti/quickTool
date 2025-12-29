@@ -1,0 +1,382 @@
+---
+title: Cash Counter India - Count Currency Notes Online | Denomination Tally
+layout: base.njk
+meta_title: Cash Counter India - Count Currency Notes Online | Denomination Tally
+meta_description: "Free Indian Cash Denomination Counter. Count ₹2000, ₹500, ₹200, ₹100, ₹50, ₹20, ₹10 notes instantly. Perfect for shopkeepers, cashiers & daily cash tallying. Accurate rupee counter tool."
+meta_keywords: "cash counter, denomination counter, currency counter India, rupee counter, note counter, cash tally, shopkeeper cash counter, cashier counter, Indian currency counter, money counter online"
+---
+
+{% block head %}
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Indian Cash Denomination Counter",
+  "url": "https://www.quicktoolsindia.com/cash-counter/",
+  "description": "Free online tool to count Indian currency denominations from ₹2000 to ₹1 coins",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web Browser",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  },
+  "featureList": [
+    "Count all Indian currency denominations",
+    "Instant total calculation",
+    "Support for notes and coins",
+    "Reset and clear functions",
+    "Dark mode support",
+    "Perfect for shopkeepers and cashiers"
+  ],
+  "inLanguage": "en-IN",
+  "audience": {
+    "@type": "Audience",
+    "geographicArea": {
+      "@type": "Country",
+      "name": "India"
+    }
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Count Cash Using Denomination Counter",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Enter Note Count",
+      "text": "Enter the number of notes for each denomination (₹2000, ₹500, ₹200, etc.)"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Enter Coin Count",
+      "text": "Enter the number of coins if applicable (₹10, ₹5, ₹2, ₹1)"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "View Total",
+      "text": "See the instant calculation of total cash amount in rupees"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Reset for Next Count",
+      "text": "Click Reset All to clear and start counting new batch of cash"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What denominations are available in Indian currency?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Current Indian currency notes include ₹2000, ₹500, ₹200, ₹100, ₹50, ₹20, and ₹10. Coins include ₹10, ₹5, ₹2, and ₹1. The ₹2000 note was discontinued in 2023 but remains legal tender."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do shopkeepers count cash daily?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Shopkeepers typically separate notes by denomination, count each stack, and multiply by the denomination value. This cash counter tool automates that process by letting you enter counts and calculating the total instantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this cash counter tool free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this Indian currency denomination counter is completely free to use with no registration required. It works offline once loaded and stores no financial data."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.quicktoolsindia.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Cash Counter",
+      "item": "https://www.quicktoolsindia.com/cash-counter/"
+    }
+  ]
+}
+</script>
+{% endblock %}
+
+<main class="container mx-auto px-4 py-8 md:py-12">
+    <div class="max-w-5xl mx-auto">
+        <!-- Title -->
+        <div class="text-center mb-8">
+            <div class="flex items-center justify-center gap-4 mb-2">
+                <div
+                    class="inline-block bg-gradient-to-br from-green-400 to-green-600 w-12 h-12 rounded-full flex items-center justify-center">
+                    <i class="fas fa-money-bill-wave text-xl text-white"></i>
+                </div>
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white">Cash Denomination Counter</h1>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300">Count Indian currency notes and coins instantly</p>
+        </div>
+
+        <!-- Calculator Card -->
+        <div class="bg-white dark:bg-gray-700 rounded-xl shadow-xl border-2 border-gray-900 dark:border-gray-700 p-6 md:p-8 transition-colors duration-200">
+            <!-- Notes Section -->
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4 flex items-center">
+                    <i class="fas fa-file-invoice-dollar text-green-600 dark:text-green-400 mr-2"></i>Currency Notes
+                </h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <!-- ₹2000 Note -->
+                    <div class="bg-gradient-to-br from-pink-50 to-pink-100 dark:from-pink-900 dark:to-pink-800 rounded-lg p-4 border-2 border-pink-300 dark:border-pink-600">
+                        <div class="text-center mb-2">
+                            <div class="text-2xl font-bold text-pink-700 dark:text-pink-300">₹2000</div>
+                            <div class="text-xs text-pink-600 dark:text-pink-400">(Discontinued)</div>
+                        </div>
+                        <input type="number" id="note2000" min="0" value="0" step="1"
+                            class="w-full px-3 py-2 border-2 border-pink-300 dark:border-pink-600 dark:bg-gray-800 dark:text-white rounded-lg focus:border-pink-500 dark:focus:border-pink-400 focus:outline-none text-center"
+                            oninput="calculateTotal()">
+                    </div>
+
+                    <!-- ₹500 Note -->
+                    <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 dark:from-yellow-900 dark:to-yellow-800 rounded-lg p-4 border-2 border-yellow-300 dark:border-yellow-600">
+                        <div class="text-center mb-2">
+                            <div class="text-2xl font-bold text-yellow-700 dark:text-yellow-300">₹500</div>
+                        </div>
+                        <input type="number" id="note500" min="0" value="0" step="1"
+                            class="w-full px-3 py-2 border-2 border-yellow-300 dark:border-yellow-600 dark:bg-gray-800 dark:text-white rounded-lg focus:border-yellow-500 dark:focus:border-yellow-400 focus:outline-none text-center"
+                            oninput="calculateTotal()">
+                    </div>
+
+                    <!-- ₹200 Note -->
+                    <div class="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900 dark:to-orange-800 rounded-lg p-4 border-2 border-orange-300 dark:border-orange-600">
+                        <div class="text-center mb-2">
+                            <div class="text-2xl font-bold text-orange-700 dark:text-orange-300">₹200</div>
+                        </div>
+                        <input type="number" id="note200" min="0" value="0" step="1"
+                            class="w-full px-3 py-2 border-2 border-orange-300 dark:border-orange-600 dark:bg-gray-800 dark:text-white rounded-lg focus:border-orange-500 dark:focus:border-orange-400 focus:outline-none text-center"
+                            oninput="calculateTotal()">
+                    </div>
+
+                    <!-- ₹100 Note -->
+                    <div class="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900 dark:to-green-800 rounded-lg p-4 border-2 border-green-300 dark:border-green-600">
+                        <div class="text-center mb-2">
+                            <div class="text-2xl font-bold text-green-700 dark:text-green-300">₹100</div>
+                        </div>
+                        <input type="number" id="note100" min="0" value="0" step="1"
+                            class="w-full px-3 py-2 border-2 border-green-300 dark:border-green-600 dark:bg-gray-800 dark:text-white rounded-lg focus:border-green-500 dark:focus:border-green-400 focus:outline-none text-center"
+                            oninput="calculateTotal()">
+                    </div>
+
+                    <!-- ₹50 Note -->
+                    <div class="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900 dark:to-purple-800 rounded-lg p-4 border-2 border-purple-300 dark:border-purple-600">
+                        <div class="text-center mb-2">
+                            <div class="text-2xl font-bold text-purple-700 dark:text-purple-300">₹50</div>
+                        </div>
+                        <input type="number" id="note50" min="0" value="0" step="1"
+                            class="w-full px-3 py-2 border-2 border-purple-300 dark:border-purple-600 dark:bg-gray-800 dark:text-white rounded-lg focus:border-purple-500 dark:focus:border-purple-400 focus:outline-none text-center"
+                            oninput="calculateTotal()">
+                    </div>
+
+                    <!-- ₹20 Note -->
+                    <div class="bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900 dark:to-red-800 rounded-lg p-4 border-2 border-red-300 dark:border-red-600">
+                        <div class="text-center mb-2">
+                            <div class="text-2xl font-bold text-red-700 dark:text-red-300">₹20</div>
+                        </div>
+                        <input type="number" id="note20" min="0" value="0" step="1"
+                            class="w-full px-3 py-2 border-2 border-red-300 dark:border-red-600 dark:bg-gray-800 dark:text-white rounded-lg focus:border-red-500 dark:focus:border-red-400 focus:outline-none text-center"
+                            oninput="calculateTotal()">
+                    </div>
+
+                    <!-- ₹10 Note -->
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900 dark:to-blue-800 rounded-lg p-4 border-2 border-blue-300 dark:border-blue-600">
+                        <div class="text-center mb-2">
+                            <div class="text-2xl font-bold text-blue-700 dark:text-blue-300">₹10</div>
+                        </div>
+                        <input type="number" id="note10" min="0" value="0" step="1"
+                            class="w-full px-3 py-2 border-2 border-blue-300 dark:border-blue-600 dark:bg-gray-800 dark:text-white rounded-lg focus:border-blue-500 dark:focus:border-blue-400 focus:outline-none text-center"
+                            oninput="calculateTotal()">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coins Section -->
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4 flex items-center">
+                    <i class="fas fa-coins text-amber-600 dark:text-amber-400 mr-2"></i>Coins
+                </h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <!-- ₹10 Coin -->
+                    <div class="bg-gradient-to-br from-amber-50 to-amber-100 dark:from-amber-900 dark:to-amber-800 rounded-lg p-4 border-2 border-amber-300 dark:border-amber-600">
+                        <div class="text-center mb-2">
+                            <div class="text-xl font-bold text-amber-700 dark:text-amber-300">₹10</div>
+                        </div>
+                        <input type="number" id="coin10" min="0" value="0" step="1"
+                            class="w-full px-3 py-2 border-2 border-amber-300 dark:border-amber-600 dark:bg-gray-800 dark:text-white rounded-lg focus:border-amber-500 dark:focus:border-amber-400 focus:outline-none text-center"
+                            oninput="calculateTotal()">
+                    </div>
+
+                    <!-- ₹5 Coin -->
+                    <div class="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-600 dark:to-gray-500 rounded-lg p-4 border-2 border-gray-300 dark:border-gray-400">
+                        <div class="text-center mb-2">
+                            <div class="text-xl font-bold text-gray-700 dark:text-gray-300">₹5</div>
+                        </div>
+                        <input type="number" id="coin5" min="0" value="0" step="1"
+                            class="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-400 dark:bg-gray-800 dark:text-white rounded-lg focus:border-gray-500 dark:focus:border-gray-300 focus:outline-none text-center"
+                            oninput="calculateTotal()">
+                    </div>
+
+                    <!-- ₹2 Coin -->
+                    <div class="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-600 dark:to-slate-500 rounded-lg p-4 border-2 border-slate-300 dark:border-slate-400">
+                        <div class="text-center mb-2">
+                            <div class="text-xl font-bold text-slate-700 dark:text-slate-300">₹2</div>
+                        </div>
+                        <input type="number" id="coin2" min="0" value="0" step="1"
+                            class="w-full px-3 py-2 border-2 border-slate-300 dark:border-slate-400 dark:bg-gray-800 dark:text-white rounded-lg focus:border-slate-500 dark:focus:border-slate-300 focus:outline-none text-center"
+                            oninput="calculateTotal()">
+                    </div>
+
+                    <!-- ₹1 Coin -->
+                    <div class="bg-gradient-to-br from-zinc-50 to-zinc-100 dark:from-zinc-600 dark:to-zinc-500 rounded-lg p-4 border-2 border-zinc-300 dark:border-zinc-400">
+                        <div class="text-center mb-2">
+                            <div class="text-xl font-bold text-zinc-700 dark:text-zinc-300">₹1</div>
+                        </div>
+                        <input type="number" id="coin1" min="0" value="0" step="1"
+                            class="w-full px-3 py-2 border-2 border-zinc-300 dark:border-zinc-400 dark:bg-gray-800 dark:text-white rounded-lg focus:border-zinc-500 dark:focus:border-zinc-300 focus:outline-none text-center"
+                            oninput="calculateTotal()">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Total Display -->
+            <div class="bg-gradient-to-br from-green-100 to-green-200 dark:from-green-900 dark:to-green-800 rounded-xl p-8 border-4 border-green-400 dark:border-green-600 text-center mb-6">
+                <p class="text-gray-700 dark:text-gray-300 text-lg mb-2 font-semibold">Total Cash Amount</p>
+                <p id="totalAmount" class="text-5xl md:text-6xl font-bold text-green-700 dark:text-green-300">₹0</p>
+                <p id="totalInWords" class="text-gray-600 dark:text-gray-400 mt-3 text-sm md:text-base"></p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex gap-4">
+                <button onclick="resetAll()"
+                    class="flex-1 bg-gradient-to-r from-red-500 to-red-600 text-white py-3 px-6 rounded-lg font-bold hover:from-red-600 hover:to-red-700 transition-all shadow-lg">
+                    <i class="fas fa-redo mr-2"></i>Reset All
+                </button>
+                <button onclick="calculateTotal()"
+                    class="flex-1 bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-6 rounded-lg font-bold hover:from-green-600 hover:to-green-700 transition-all shadow-lg">
+                    <i class="fas fa-calculator mr-2"></i>Recalculate
+                </button>
+            </div>
+
+            <!-- Info Section -->
+            <div
+                class="mt-8 bg-green-50 dark:bg-green-900 border-l-4 border-green-500 dark:border-green-400 p-4 rounded transition-colors">
+                <h3 class="font-bold text-gray-800 dark:text-white mb-2"><i
+                        class="fas fa-info-circle text-green-500 dark:text-green-400 mr-2"></i>About
+                    This Tool</h3>
+                <p class="text-gray-700 dark:text-gray-300 text-sm">This cash counter helps shopkeepers, cashiers, and businesses quickly tally their daily cash collections. Simply enter the count of each denomination and get the total instantly. Perfect for closing registers and cash reconciliation.</p>
+            </div>
+        </div>
+
+        <!-- SEO Content -->
+        <div class="mt-12 bg-white dark:bg-gray-700 rounded-lg shadow-lg border-2 border-gray-900 dark:border-gray-700 p-8 transition-colors duration-200">
+            <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Indian Currency Denominations</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                The Reserve Bank of India (RBI) currently issues currency notes in denominations of ₹10, ₹20, ₹50, ₹100, ₹200, and ₹500. The ₹2000 note was discontinued in 2023 but remains legal tender.
+            </p>
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3 mt-6">How to Use This Cash Counter</h3>
+            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2">
+                <li><strong>Step 1:</strong> Count and separate your cash by denomination</li>
+                <li><strong>Step 2:</strong> Enter the number of notes/coins for each denomination</li>
+                <li><strong>Step 3:</strong> The total amount is calculated automatically</li>
+                <li><strong>Step 4:</strong> Use Reset All to clear and start a new count</li>
+            </ul>
+            <p class="text-gray-600 dark:text-gray-300 mt-4">
+                This tool is especially useful for retail businesses, small shops, and anyone handling cash transactions daily. It eliminates manual calculation errors and speeds up the cash tallying process.
+            </p>
+        </div>
+    </div>
+</main>
+
+{% block scripts %}
+<script>
+    function formatIndianCurrency(num) {
+        return '₹' + parseFloat(num).toLocaleString('en-IN', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+    }
+
+    function numberToWords(num) {
+        if (num === 0) return '';
+
+        const crore = Math.floor(num / 10000000);
+        const lakh = Math.floor((num % 10000000) / 100000);
+        const thousand = Math.floor((num % 100000) / 1000);
+        const hundred = Math.floor((num % 1000) / 100);
+        const remainder = num % 100;
+
+        let words = [];
+        if (crore > 0) words.push(crore + ' Crore');
+        if (lakh > 0) words.push(lakh + ' Lakh');
+        if (thousand > 0) words.push(thousand + ' Thousand');
+        if (hundred > 0) words.push(hundred + ' Hundred');
+        if (remainder > 0) words.push(remainder);
+
+        return words.join(' ') + ' Rupees';
+    }
+
+    function calculateTotal() {
+        const denominations = {
+            note2000: 2000,
+            note500: 500,
+            note200: 200,
+            note100: 100,
+            note50: 50,
+            note20: 20,
+            note10: 10,
+            coin10: 10,
+            coin5: 5,
+            coin2: 2,
+            coin1: 1
+        };
+
+        let total = 0;
+        for (const [id, value] of Object.entries(denominations)) {
+            const count = parseInt(document.getElementById(id).value) || 0;
+            total += count * value;
+        }
+
+        document.getElementById('totalAmount').textContent = formatIndianCurrency(total);
+        document.getElementById('totalInWords').textContent = total > 0 ? numberToWords(total) : '';
+    }
+
+    function resetAll() {
+        const inputs = document.querySelectorAll('input[type="number"]');
+        inputs.forEach(input => input.value = 0);
+        calculateTotal();
+    }
+
+    // Calculate on page load
+    window.addEventListener('load', function () {
+        calculateTotal();
+    });
+</script>
+{% endblock %}
