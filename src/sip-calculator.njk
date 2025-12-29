@@ -186,6 +186,82 @@ json_ld:
                     </details>
                 </div>
             </div>
+            
+            <!-- Mutual Fund Insights -->
+            <div class="mt-8 bg-white dark:bg-gray-800 rounded-xl shadow-sm border-2 border-gray-900 dark:border-gray-700 p-8">
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">Mutual Fund Returns Insight 2025</h2>
+                
+                <!-- Returns Table -->
+                <div class="mb-8">
+                    <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-200 mb-3">Average Annual Returns Category-wise</h3>
+                    <div class="overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-600">
+                        <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-600">
+                            <thead class="bg-gray-50 dark:bg-gray-700">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Category</th>
+                                    <th class="px-6 py-3 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">3 Years</th>
+                                    <th class="px-6 py-3 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">5 Years</th>
+                                    <th class="px-6 py-3 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">10 Years</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-600">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Large Cap Funds</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500 dark:text-gray-300">12% - 15%</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500 dark:text-gray-300">11% - 14%</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500 dark:text-gray-300">10% - 12%</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Mid Cap Funds</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500 dark:text-gray-300">15% - 20%</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500 dark:text-gray-300">14% - 18%</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500 dark:text-gray-300">13% - 16%</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Small Cap Funds</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500 dark:text-gray-300">20% - 30%</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500 dark:text-gray-300">18% - 25%</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500 dark:text-gray-300">15% - 20%</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">ELSS (Tax Saving)</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500 dark:text-gray-300">14% - 18%</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500 dark:text-gray-300">12% - 16%</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500 dark:text-gray-300">11% - 14%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-2">* Returns are historical and not guaranteed. Updated Jan 2025.</p>
+                </div>
+
+                <!-- SIP vs Lumpsum -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-200 mb-3">SIP vs Lumpsum Investment</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                            <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-2">SIP (Systematic Investment Plan)</h4>
+                            <ul class="text-sm space-y-2 text-gray-600 dark:text-gray-300 list-disc list-inside">
+                                <li>Invest small amounts regularly (e.g., ₹500/month).</li>
+                                <li>Benefit from <strong>Rupee Cost Averaging</strong> (buy more units when market is low).</li>
+                                <li>Disciplined investing habit.</li>
+                                <li>Best for salaried individuals.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                            <h4 class="font-bold text-green-600 dark:text-green-400 mb-2">Lumpsum (One-time)</h4>
+                            <ul class="text-sm space-y-2 text-gray-600 dark:text-gray-300 list-disc list-inside">
+                                <li>Invest a large amount at once.</li>
+                                <li>Best when market valuations are low.</li>
+                                <li>No rupee cost averaging benefit.</li>
+                                <li>Suitable for bonus/windfall income deployment.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            </div>
         </div>
         
         <!-- Financial Disclaimer -->
@@ -239,7 +315,13 @@ json_ld:
         const i = r / 12 / 100;
         const n = t * 12;
 
-        const fv = p * ((Math.pow(1 + i, n) - 1) / i) * (1 + i);
+        let fv;
+        if (i === 0) {
+            fv = p * n;
+        } else {
+            fv = p * ((Math.pow(1 + i, n) - 1) / i) * (1 + i);
+        }
+        
         const invested = p * n;
         const returns = fv - invested;
 

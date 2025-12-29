@@ -345,6 +345,8 @@ meta_keywords: "age calculator, age calculator by date of birth, calculate age, 
 
         if (birthDate > currentDate) {
             alert('Birth date cannot be in the future!');
+            document.getElementById('results').classList.add('hidden');
+            document.getElementById('placeholder').classList.remove('hidden');
             return;
         }
 

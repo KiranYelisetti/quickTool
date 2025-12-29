@@ -59,7 +59,7 @@ function resetForm(pagePrefix) {
         localStorage.removeItem(key);
 
         // Reset to default value
-        if (input.type === 'checkbox') {
+        if (input.type === 'checkbox' || input.type === 'radio') {
             input.checked = input.defaultChecked;
         } else {
             // Use defaultValue if available, otherwise try some sensible defaults or empty

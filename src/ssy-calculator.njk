@@ -621,6 +621,81 @@ meta_keywords: "SSY calculator, Sukanya Samriddhi Yojana calculator, SSY calcula
         </div>
     </div>
 
+    <!-- SSY Deposit Limits & Rules 2025 -->
+    <div class="max-w-4xl mx-auto mb-8">
+        <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg border-2 border-gray-900 dark:border-gray-700 p-6 md:p-8 transition-colors duration-200">
+            <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">
+                <i class="fas fa-book text-cyan-600 dark:text-cyan-400 mr-2"></i>SSY Deposit Limits & Rules 2025
+            </h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm border-collapse">
+                    <thead class="bg-cyan-50 dark:bg-gray-600">
+                        <tr>
+                            <th class="px-4 py-3 text-left border dark:border-gray-500 text-gray-800 dark:text-gray-200">Rule / Limit</th>
+                            <th class="px-4 py-3 text-left border dark:border-gray-500 text-gray-800 dark:text-gray-200">Details (2025)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-700 dark:text-gray-300">
+                        <tr>
+                            <td class="px-4 py-3 font-semibold border dark:border-gray-500">Minimum Annual Deposit</td>
+                            <td class="px-4 py-3 border dark:border-gray-500">₹250 per financial year</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-semibold border dark:border-gray-500">Maximum Annual Deposit</td>
+                            <td class="px-4 py-3 border dark:border-gray-500 font-bold text-green-600 dark:text-green-400">₹1,50,000 per financial year</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-semibold border dark:border-gray-500">Deposit Frequency</td>
+                            <td class="px-4 py-3 border dark:border-gray-500">Multiple times allowed (closest to ₹50 or ₹100 is preferred)</td>
+                        </tr>
+                         <tr>
+                            <td class="px-4 py-3 font-semibold border dark:border-gray-500">Penalty</td>
+                            <td class="px-4 py-3 border dark:border-gray-500 text-red-500">₹50 + min deposit if account becomes inactive</td>
+                        </tr>
+                         <tr>
+                            <td class="px-4 py-3 font-semibold border dark:border-gray-500">Age Limit</td>
+                            <td class="px-4 py-3 border dark:border-gray-500">Must open before girl turns 10 years old</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-semibold border dark:border-gray-500">Account Limit</td>
+                            <td class="px-4 py-3 border dark:border-gray-500">1 account per girl child (Max 2 girls per family)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- SSY Withdrawal Rules -->
+    <div class="max-w-4xl mx-auto mb-8">
+        <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg border-2 border-gray-900 dark:border-gray-700 p-6 md:p-8 transition-colors duration-200">
+            <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">
+                <i class="fas fa-hand-holding-usd text-cyan-600 dark:text-cyan-400 mr-2"></i>SSY Withdrawal Rules
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Partial Withdrawal -->
+                <div class="bg-blue-50 dark:bg-blue-900 dark:bg-opacity-30 p-6 rounded-lg border-l-4 border-blue-500">
+                    <h3 class="font-bold text-lg text-blue-800 dark:text-blue-200 mb-3">Partial Withdrawal (Age 18)</h3>
+                    <ul class="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><strong>Eligibility:</strong> Only when girl child turns 18 years old or passes 10th standard.</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><strong>Purpose:</strong> Only for Higher Education expenses.</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><strong>Limit:</strong> Up to 50% of the account balance at the end of preceding financial year.</li>
+                    </ul>
+                </div>
+
+                <!-- Maturity Closure -->
+                <div class="bg-green-50 dark:bg-green-900 dark:bg-opacity-30 p-6 rounded-lg border-l-4 border-green-500">
+                    <h3 class="font-bold text-lg text-green-800 dark:text-green-200 mb-3">Maturity Closure (21 Years)</h3>
+                    <ul class="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                         <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><strong>Timeline:</strong> Account matures 21 years from date of opening.</li>
+                         <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><strong>Marriage Exception:</strong> Can be closed for marriage if girl is 18+.</li>
+                         <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><strong>Requirement:</strong> Birth certificate, ID proof, and withdrawal form required.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Why Use This Calculator -->
     <div class="max-w-4xl mx-auto mb-8">
         <div
@@ -804,6 +879,8 @@ meta_keywords: "SSY calculator, Sukanya Samriddhi Yojana calculator, SSY calcula
         // Validation
         if (currentAge < 0 || currentAge > 10) {
             alert('Girl child must be under 10 years old to open SSY account');
+            // Reset to max valid age to prevent confusing results
+            if (currentAge > 10) document.getElementById('currentAge').value = 10;
             return;
         }
 
