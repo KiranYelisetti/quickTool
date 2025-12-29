@@ -43,6 +43,38 @@ function initAutoSave(pagePrefix) {
     });
 }
 
+// Reset Form Functionality
+function resetForm(pagePrefix) {
+    if (!confirm('Are you sure you want to reset all fields? This will clear your saved data.')) {
+        return;
+    }
+
+    const inputs = document.querySelectorAll('input:not([type="hidden"]):not([type="submit"]), select');
+
+    inputs.forEach(input => {
+        if (!input.id) return;
+
+        // Clear local storage
+        const key = `${pagePrefix}_${input.id}`;
+        localStorage.removeItem(key);
+
+        // Reset to default value
+        if (input.type === 'checkbox') {
+            input.checked = input.defaultChecked;
+        } else {
+            // Use defaultValue if available, otherwise try some sensible defaults or empty
+            input.value = input.defaultValue;
+        }
+
+        // Trigger events to update UI/Charts
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+        input.dispatchEvent(new Event('change', { bubbles: true }));
+    });
+
+    // Optional: Reload page to ensure clean state if needed, but dispatchEvent should suffice for most
+    // location.reload();
+}
+
 // WhatsApp Share Functionality
 function shareResult(title, amountString) {
     const text = `I just calculated my ${title} on QuickTools India! Result: ${amountString}. Check it out here:`;
