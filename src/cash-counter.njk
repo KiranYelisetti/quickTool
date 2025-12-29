@@ -283,9 +283,9 @@ meta_keywords: "cash counter, denomination counter, currency counter India, rupe
 
             <!-- Action Buttons -->
             <div class="flex gap-4">
-                <button onclick="resetAll()"
+                <button onclick="resetForm('cash_counter')"
                     class="flex-1 bg-gradient-to-r from-red-500 to-red-600 text-white py-3 px-6 rounded-lg font-bold hover:from-red-600 hover:to-red-700 transition-all shadow-lg">
-                    <i class="fas fa-redo mr-2"></i>Reset All
+                    <i class="fas fa-undo mr-2"></i>Reset All
                 </button>
                 <button onclick="calculateTotal()"
                     class="flex-1 bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-6 rounded-lg font-bold hover:from-green-600 hover:to-green-700 transition-all shadow-lg">
@@ -373,11 +373,7 @@ meta_keywords: "cash counter, denomination counter, currency counter India, rupe
         document.getElementById('totalInWords').textContent = total > 0 ? numberToWords(total) : '';
     }
 
-    function resetAll() {
-        const inputs = document.querySelectorAll('input[type="number"]');
-        inputs.forEach(input => input.value = 0);
-        calculateTotal();
-    }
+
 
     // Calculate on page load
     window.addEventListener('load', function () {

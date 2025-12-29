@@ -272,10 +272,16 @@ meta_keywords: "wedding planning India, Indian wedding planning guide, wedding c
                         </div>
                     </div>
 
-                    <button onclick="calculateWeddingCost()"
-                        class="w-full bg-gradient-to-r from-pink-500 to-pink-600 text-white py-3 px-6 rounded-lg font-bold hover:from-pink-600 hover:to-pink-700 transition-all shadow-lg">
-                        <i class="fas fa-calculator mr-2"></i>Calculate Wedding Cost
-                    </button>
+                    <div class="flex gap-4">
+                        <button onclick="calculateWeddingCost()"
+                            class="flex-1 bg-gradient-to-r from-pink-500 to-pink-600 text-white py-3 px-6 rounded-lg font-bold hover:from-pink-600 hover:to-pink-700 transition-all shadow-lg">
+                            <i class="fas fa-calculator mr-2"></i>Calculate Wedding Cost
+                        </button>
+                        <button onclick="resetForm('wedding_calc')"
+                            class="px-6 py-3 bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-lg font-bold hover:bg-gray-300 dark:hover:bg-gray-500 transition-all shadow-md">
+                            <i class="fas fa-undo mr-2"></i>Reset
+                        </button>
+                    </div>
                 </div>
 
                 <!-- Results Section -->

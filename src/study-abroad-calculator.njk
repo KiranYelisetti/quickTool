@@ -228,10 +228,16 @@ meta_keywords: "study abroad calculator, foreign education cost, education infla
                             dollars. Last 20 years average: 3-5% per year</p>
                     </div>
 
-                    <button onclick="calculateCost()"
-                        class="w-full bg-gradient-to-r from-red-500 to-red-600 text-white py-3 px-6 rounded-lg font-bold hover:from-red-600 hover:to-red-700 transition-all shadow-lg">
-                        <i class="fas fa-calculator mr-2"></i>Show Me The Real Amount
-                    </button>
+                    <div class="flex gap-4">
+                        <button onclick="calculateCost()"
+                            class="flex-1 bg-gradient-to-r from-red-500 to-red-600 text-white py-3 px-6 rounded-lg font-bold hover:from-red-600 hover:to-red-700 transition-all shadow-lg">
+                            <i class="fas fa-calculator mr-2"></i>Show Me The Real Amount
+                        </button>
+                        <button onclick="resetForm('study_abroad')"
+                            class="px-6 py-3 bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-lg font-bold hover:bg-gray-300 dark:hover:bg-gray-500 transition-all shadow-md">
+                            <i class="fas fa-undo mr-2"></i>Reset
+                        </button>
+                    </div>
                 </div>
 
                 <!-- Results Section -->

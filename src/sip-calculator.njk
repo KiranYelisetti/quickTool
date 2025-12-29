@@ -119,10 +119,16 @@ json_ld:
                         </div>
 
                         <!-- Share Button -->
-                        <button onclick="shareResult('SIP Returns', document.getElementById('totalValue').innerText)"
-                            class="w-full bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center transition-colors shadow-md">
-                            <i class="fab fa-whatsapp text-xl mr-2"></i> Share Result on WhatsApp
-                        </button>
+                        <div class="flex gap-2">
+                             <button onclick="shareResult('SIP Returns', document.getElementById('totalValue').innerText)"
+                                class="flex-1 bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center transition-colors shadow-md">
+                                <i class="fab fa-whatsapp text-xl mr-2"></i> Share Result
+                            </button>
+                            <button onclick="resetForm('sip_calc')" 
+                                class="px-4 bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 font-bold rounded-xl hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors shadow-md flex items-center justify-center">
+                                <i class="fas fa-undo"></i>
+                            </button>
+                        </div>
 
                         <!-- Chart Container -->
                         <div class="relative h-48 w-full mt-4">

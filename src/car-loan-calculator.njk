@@ -210,10 +210,16 @@ meta_keywords: "car loan EMI calculator, car loan calculator India, auto loan ca
                 </div>
             </div>
 
-            <button onclick="calculateCarLoan()"
-                class="w-full bg-gradient-to-r from-red-500 to-pink-600 text-white py-4 rounded-lg font-semibold hover:from-red-600 hover:to-pink-700 transition-all duration-200 transform hover:scale-105 shadow-lg">
-                <i class="fas fa-calculator mr-2"></i>Calculate EMI
-            </button>
+            <div class="flex gap-4">
+                <button onclick="calculateCarLoan()"
+                    class="flex-1 bg-gradient-to-r from-red-500 to-pink-600 text-white py-4 rounded-lg font-semibold hover:from-red-600 hover:to-pink-700 transition-all duration-200 transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-calculator mr-2"></i>Calculate EMI
+                </button>
+                <button onclick="resetForm('car_loan_calc')"
+                    class="px-6 py-4 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg font-semibold hover:bg-gray-300 dark:hover:bg-gray-600 transition-all duration-200 shadow-md">
+                    <i class="fas fa-undo mr-2"></i>Reset
+                </button>
+            </div>
         </div>
     </div>
 

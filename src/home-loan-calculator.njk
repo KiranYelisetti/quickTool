@@ -188,10 +188,16 @@ meta_keywords: "home loan EMI calculator, home loan calculator India, housing lo
                 </div>
             </div>
 
-            <button onclick="calculateHomeLoan()"
-                class="w-full bg-gradient-to-r from-orange-500 to-red-600 text-white py-4 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-200 transform hover:scale-105 shadow-lg">
-                <i class="fas fa-calculator mr-2"></i>Calculate EMI
-            </button>
+            <div class="flex gap-4">
+                <button onclick="calculateHomeLoan()"
+                    class="flex-1 bg-gradient-to-r from-orange-500 to-red-600 text-white py-4 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-200 transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-calculator mr-2"></i>Calculate EMI
+                </button>
+                <button onclick="resetForm('home_loan_calc')"
+                    class="px-6 py-4 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg font-semibold hover:bg-gray-300 dark:hover:bg-gray-600 transition-all duration-200 shadow-md">
+                    <i class="fas fa-undo mr-2"></i>Reset
+                </button>
+            </div>
         </div>
     </div>
 
