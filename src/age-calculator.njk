@@ -1,9 +1,10 @@
+```
 ---
-title: Age Calculator by Date of Birth - Calculate Exact Age Online
+title: "Age Calculator Online 2025 | Exact Age, Milestones & Birthday Timer"
 layout: base.njk
-meta_title: Age Calculator by Date of Birth - Calculate Exact Age Online
-meta_description: "Calculate your exact age in years, months, days, hours & minutes. Best online Age Calculator by Date of Birth for age verification, passport, and official forms."
-meta_keywords: "age calculator, age calculator by date of birth, calculate age, exact age calculator, date of birth calculator, how old am i, age difference calculator, birthday countdown"
+meta_title: "Age Calculator Online 2025 - Calculate Exact Age in Seconds"
+meta_description: "Calculate your exact age today. Find out if you are Gen Z or Millennial. See your age in weeks, days, hours & seconds. Fun birthday countdown included."
+meta_keywords: "age calculator 2025, age difference calculator, birthday countdown timer, how many days old am i, millennial vs gen z calculator, age in seconds"
 ---
 
 {% block head %}
@@ -242,6 +243,13 @@ meta_keywords: "age calculator, age calculator by date of birth, calculate age, 
                         <p id="nextBirthday" class="text-lg font-semibold text-gray-800 dark:text-white"></p>
                     </div>
 
+                    <!-- Fun Milestones (New) -->
+                    <div class="bg-indigo-50 dark:bg-indigo-900 rounded-lg p-4 border-l-4 border-indigo-500 dark:border-indigo-400">
+                        <h4 class="font-bold text-gray-800 dark:text-white mb-2"><i class="fas fa-star text-yellow-500 mr-2"></i>Fun Facts</h4>
+                        <p class="text-sm text-gray-700 dark:text-gray-300 mb-2"><strong>Generation:</strong> <span id="generation" class="font-bold text-indigo-600 dark:text-indigo-300"></span></p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300"><strong>Next Milestone:</strong> You will be <span class="font-bold">10,000 days</span> old on <span id="tenkDate" class="font-bold text-indigo-600 dark:text-indigo-300"></span></p>
+                    </div>
+
                     <button onclick="shareResult('My Age', document.getElementById('ageInWords').innerText)"
                         class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center transition-colors shadow-md mt-4">
                         <i class="fab fa-whatsapp text-xl mr-2"></i> Share Result
@@ -408,6 +416,25 @@ meta_keywords: "age calculator, age calculator by date of birth, calculate age, 
             day: 'numeric'
         }) + ' (' + daysUntilBirthday + ' days to go)';
         document.getElementById('nextBirthday').textContent = nextBirthdayText;
+
+        // Generation Calculation
+        let generation = '';
+        const birthYear = birthDate.getFullYear();
+        if (birthYear >= 2013) generation = 'Gen Alpha (The Future!)';
+        else if (birthYear >= 1997) generation = 'Gen Z (Zoomer)';
+        else if (birthYear >= 1981) generation = 'Millennial (Gen Y)';
+        else if (birthYear >= 1965) generation = 'Gen X';
+        else if (birthYear >= 1946) generation = 'Baby Boomer';
+        else generation = 'Silent Generation (Respected!)';
+        document.getElementById('generation').textContent = generation;
+
+        // 10,000th Day Calculation (or next big milestone)
+        let milestoneDays = 10000;
+        if (totalDays > 10000) milestoneDays = 20000;
+        if (totalDays > 20000) milestoneDays = 30000;
+        
+        const milestoneDate = new Date(birthDate.getTime() + milestoneDays * 24 * 60 * 60 * 1000);
+        document.getElementById('tenkDate').textContent = milestoneDate.toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' }) + ' (' + milestoneDays.toLocaleString() + 'th Day)';
 
         // Show results, hide placeholder
         document.getElementById('results').classList.remove('hidden');
