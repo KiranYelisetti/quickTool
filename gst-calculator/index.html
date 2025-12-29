@@ -439,26 +439,61 @@
             </div>
         </div>
 
-        <!-- SEO Content -->
-        <div class="mt-12 bg-white dark:bg-gray-700 rounded-lg shadow-lg border-2 border-gray-900 dark:border-gray-700 p-8 transition-colors">
-            <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">GST Rates in India</h2>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
-                GST (Goods and Services Tax) is an indirect tax levied on the supply of goods and services in India.
-                The GST system has multiple tax slabs to categorize different types of goods and services.
+        <!-- GST Rate Slabs 2025 & Common Items -->
+        <div class="mt-12 bg-white dark:bg-gray-700 rounded-xl shadow-lg border-2 border-gray-900 dark:border-gray-700 p-8 transition-colors">
+            <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">
+                <i class="fas fa-table text-blue-600 dark:text-blue-400 mr-2"></i>GST Rate Slabs & Common Items 2025
+            </h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+                Goods and Services Tax (GST) in India is categorized into 5 main slabs. Knowing the correct slab is crucial for accurate calculation.
             </p>
-            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3 mt-6">Common GST Slabs</h3>
-            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2">
-                <li><strong>0%</strong> - Essential items like milk, bread, vegetables, education services</li>
-                <li><strong>5%</strong> - Common use items like sugar, tea, edible oils, transport services</li>
-                <li><strong>12%</strong> - Standard goods like computers, processed food, business class travel</li>
-                <li><strong>18%</strong> - Most services, IT services, restaurants, capital goods</li>
-                <li><strong>28%</strong> - Luxury items, cars, tobacco products, aerated drinks</li>
-            </ul>
-            <p class="text-gray-600 dark:text-gray-300 mt-4">
-                GST is split into CGST (Central GST) and SGST (State GST) for intra-state transactions, or IGST
-                (Integrated GST) for inter-state transactions.
-                This calculator shows CGST and SGST breakdown for better understanding.
-            </p>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm border-collapse">
+                    <thead class="bg-gray-100 dark:bg-gray-600">
+                        <tr>
+                            <th class="px-6 py-4 text-left border dark:border-gray-500 text-gray-800 dark:text-gray-200 uppercase tracking-wider">Rate</th>
+                            <th class="px-6 py-4 text-left border dark:border-gray-500 text-gray-800 dark:text-gray-200 uppercase tracking-wider">Category</th>
+                            <th class="px-6 py-4 text-left border dark:border-gray-500 text-gray-800 dark:text-gray-200 uppercase tracking-wider">Common Items</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-700 dark:text-gray-300 divide-y divide-gray-200 dark:divide-gray-500">
+                        <tr>
+                            <td class="px-6 py-4 border dark:border-gray-500 font-bold text-green-600 dark:text-green-400">0% (Nil)</td>
+                            <td class="px-6 py-4 border dark:border-gray-500">Essential Goods</td>
+                            <td class="px-6 py-4 border dark:border-gray-500">Fresh vegetables, milk, bread, salt, newspaper, education services</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 border dark:border-gray-500 font-bold text-blue-600 dark:text-blue-400">5%</td>
+                            <td class="px-6 py-4 border dark:border-gray-500">Household Essentials</td>
+                            <td class="px-6 py-4 border dark:border-gray-500">Sugar, tea, coffee, edible oil, spices, life-saving drugs, transport services (Rail/Air Economy)</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 border dark:border-gray-500 font-bold text-yellow-600 dark:text-yellow-400">12%</td>
+                            <td class="px-6 py-4 border dark:border-gray-500">Standard Goods</td>
+                            <td class="px-6 py-4 border dark:border-gray-500">Computers, processed food, mobiles (some), business class air travel</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 border dark:border-gray-500 font-bold text-orange-600 dark:text-orange-400">18%</td>
+                            <td class="px-6 py-4 border dark:border-gray-500">Standard Services & Goods</td>
+                            <td class="px-6 py-4 border dark:border-gray-500">Restaurants, IT services, hair oil, soap, toothpaste, capital goods, most services</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 border dark:border-gray-500 font-bold text-red-600 dark:text-red-400">28%</td>
+                            <td class="px-6 py-4 border dark:border-gray-500">Luxury & Sin Goods</td>
+                            <td class="px-6 py-4 border dark:border-gray-500">Automobiles, ACs, refrigerators, tobacco products, cement, aerated drinks</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="mt-6 p-4 bg-yellow-50 dark:bg-yellow-900 dark:bg-opacity-20 rounded-lg border border-yellow-200 dark:border-yellow-700">
+                <h4 class="font-bold text-yellow-800 dark:text-yellow-200 mb-2">Special Rates</h4>
+                <ul class="list-disc list-inside text-sm text-yellow-800 dark:text-yellow-200">
+                    <li><strong>0.25%</strong>: Rough diamonds and precious stones</li>
+                    <li><strong>3%</strong>: Gold, silver, and jewelry</li>
+                </ul>
+            </div>
         </div>
     </div>
 
@@ -610,12 +645,35 @@
         </div>
 
         <!-- Links Section -->
-        <div class="flex flex-wrap justify-center gap-6 mb-6 pb-6 border-b border-gray-700">
-            <a href="/about/" class="text-gray-300 hover:text-white transition">About Us</a>
-            <a href="/privacy-policy/" class="text-gray-300 hover:text-white transition">Privacy Policy</a>
-            <a href="/terms-of-service/" class="text-gray-300 hover:text-white transition">Terms of Service</a>
-            <a href="mailto:quicktoolsindiaa@gmail.com"
-                class="text-gray-300 hover:text-white transition">Contact</a>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6 pb-6 border-b border-gray-700">
+            <!-- Quick Links -->
+            <div class="flex flex-col space-y-2">
+                <h4 class="text-lg font-bold text-white mb-2">Quick Links</h4>
+                <a href="/about/" class="text-gray-300 hover:text-white transition">About Us</a>
+                <a href="/privacy-policy/" class="text-gray-300 hover:text-white transition">Privacy Policy</a>
+                <a href="/terms-of-service/" class="text-gray-300 hover:text-white transition">Terms of Service</a>
+                <a href="mailto:quicktoolsindiaa@gmail.com" class="text-gray-300 hover:text-white transition">Contact</a>
+            </div>
+
+            <!-- Popular Calculators -->
+            <div class="flex flex-col space-y-2">
+                <h4 class="text-lg font-bold text-white mb-2">Popular Tools</h4>
+                <a href="/home-loan-calculator/" class="text-gray-300 hover:text-white transition">Home Loan BMI Calculator</a>
+                <a href="/car-loan-calculator/" class="text-gray-300 hover:text-white transition">Car Loan EMI Calculator</a>
+                <a href="/sip-calculator/" class="text-gray-300 hover:text-white transition">SIP Return Calculator</a>
+                <a href="/ppf-calculator/" class="text-gray-300 hover:text-white transition">PPF Calculator</a>
+                <a href="/ssy-calculator/" class="text-gray-300 hover:text-white transition">Sukanya Samriddhi Yojana</a>
+            </div>
+
+            <!-- More Utilities -->
+            <div class="flex flex-col space-y-2">
+                <h4 class="text-lg font-bold text-white mb-2">Utilities</h4>
+                <a href="/gst-calculator/" class="text-gray-300 hover:text-white transition">GST Calculator</a>
+                <a href="/age-calculator/" class="text-gray-300 hover:text-white transition">Age Calculator</a>
+                <a href="/cash-counter/" class="text-gray-300 hover:text-white transition">Cash Counter</a>
+                <a href="/number-to-words/" class="text-gray-300 hover:text-white transition">Number to Words</a>
+                <a href="/image-resizer/" class="text-gray-300 hover:text-white transition">Image Resizer</a>
+            </div>
         </div>
 
         <!-- Copyright -->

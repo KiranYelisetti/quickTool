@@ -291,11 +291,11 @@
         <div class="space-y-6">
             <div class="flex items-center space-x-4 mb-4">
                 <label class="flex items-center">
-                    <input type="radio" name="carType" value="new" checked class="w-4 h-4 text-red-600">
+                    <input type="radio" id="carTypeNew" name="carType" value="new" checked class="w-4 h-4 text-red-600">
                     <span class="ml-2 text-gray-700 dark:text-gray-300 font-semibold">New Car</span>
                 </label>
                 <label class="flex items-center">
-                    <input type="radio" name="carType" value="used" class="w-4 h-4 text-red-600">
+                    <input type="radio" id="carTypeUsed" name="carType" value="used" class="w-4 h-4 text-red-600">
                     <span class="ml-2 text-gray-700 dark:text-gray-300 font-semibold">Used Car</span>
                 </label>
             </div>
@@ -752,6 +752,66 @@
                     </ul>
                 </div>
             </div>
+
+            <!-- Current Car Loan Interest Rates 2025 -->
+            <div>
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-3">Current Car Loan Interest Rates 2025</h3>
+                <div class="overflow-x-auto shadow-md rounded-lg">
+                    <table class="min-w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                        <thead class="bg-red-600 text-white">
+                            <tr>
+                                <th class="px-4 py-3 text-left">Bank</th>
+                                <th class="px-4 py-3 text-center">New Car Rate</th>
+                                <th class="px-4 py-3 text-center">Used Car Rate</th>
+                                <th class="px-4 py-3 text-center">Processing Fee</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 dark:divide-gray-700 text-sm">
+                            <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+                                <td class="px-4 py-3 font-semibold text-gray-800 dark:text-gray-200">SBI</td>
+                                <td class="px-4 py-3 text-center text-gray-700 dark:text-gray-300">8.85% - 9.80%</td>
+                                <td class="px-4 py-3 text-center text-gray-700 dark:text-gray-300">11.05% - 13.05%</td>
+                                <td class="px-4 py-3 text-center text-gray-600 dark:text-gray-400">Nil - ₹1,500</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+                                <td class="px-4 py-3 font-semibold text-gray-800 dark:text-gray-200">HDFC Bank</td>
+                                <td class="px-4 py-3 text-center text-gray-700 dark:text-gray-300">9.40% Onwards</td>
+                                <td class="px-4 py-3 text-center text-gray-700 dark:text-gray-300">12.50% - 14.50%</td>
+                                <td class="px-4 py-3 text-center text-gray-600 dark:text-gray-400">0.50%</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+                                <td class="px-4 py-3 font-semibold text-gray-800 dark:text-gray-200">ICICI Bank</td>
+                                <td class="px-4 py-3 text-center text-gray-700 dark:text-gray-300">9.10% Onwards</td>
+                                <td class="px-4 py-3 text-center text-gray-700 dark:text-gray-300">12.00% Onwards</td>
+                                <td class="px-4 py-3 text-center text-gray-600 dark:text-gray-400">₹3,500 - ₹8,500</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+                                <td class="px-4 py-3 font-semibold text-gray-800 dark:text-gray-200">Axis Bank</td>
+                                <td class="px-4 py-3 text-center text-gray-700 dark:text-gray-300">9.20% - 10.50%</td>
+                                <td class="px-4 py-3 text-center text-gray-700 dark:text-gray-300">13.50% - 15.50%</td>
+                                <td class="px-4 py-3 text-center text-gray-600 dark:text-gray-400">₹3,500 - ₹7,000</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+                                <td class="px-4 py-3 font-semibold text-gray-800 dark:text-gray-200">PNB</td>
+                                <td class="px-4 py-3 text-center text-gray-700 dark:text-gray-300">8.75% - 9.60%</td>
+                                <td class="px-4 py-3 text-center text-gray-700 dark:text-gray-300">10.45% - 12.00%</td>
+                                <td class="px-4 py-3 text-center text-gray-600 dark:text-gray-400">0.25%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Factors Affecting EMI -->
+            <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg border-l-4 border-gray-600">
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-3">Factors that Affect Your Car Loan EMI</h3>
+                <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                    <li><strong class="text-red-600 dark:text-red-400">1. Credit Score:</strong> 750+ score gets you 0.5-1% lower interest rate. A 800+ score can get you pre-approved offers at lowest market rates.</li>
+                    <li><strong class="text-red-600 dark:text-red-400">2. Loan Tenure:</strong> Longer tenure (7 years) = Lower EMI but Higher Interest. Shorter tenure (3-4 years) = Higher EMI but huge interest savings.</li>
+                    <li><strong class="text-red-600 dark:text-red-400">3. Down Payment:</strong> Higher down payment reduces loan amount and total interest outgo. Aim for at least 20%.</li>
+                    <li><strong class="text-red-600 dark:text-red-400">4. Car Manufacturer:</strong> Banks often have tie-ups with manufacturers (Maruti, Hyundai, Tata) for special lower rates.</li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
@@ -891,12 +951,35 @@
         </div>
 
         <!-- Links Section -->
-        <div class="flex flex-wrap justify-center gap-6 mb-6 pb-6 border-b border-gray-700">
-            <a href="/about/" class="text-gray-300 hover:text-white transition">About Us</a>
-            <a href="/privacy-policy/" class="text-gray-300 hover:text-white transition">Privacy Policy</a>
-            <a href="/terms-of-service/" class="text-gray-300 hover:text-white transition">Terms of Service</a>
-            <a href="mailto:quicktoolsindiaa@gmail.com"
-                class="text-gray-300 hover:text-white transition">Contact</a>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6 pb-6 border-b border-gray-700">
+            <!-- Quick Links -->
+            <div class="flex flex-col space-y-2">
+                <h4 class="text-lg font-bold text-white mb-2">Quick Links</h4>
+                <a href="/about/" class="text-gray-300 hover:text-white transition">About Us</a>
+                <a href="/privacy-policy/" class="text-gray-300 hover:text-white transition">Privacy Policy</a>
+                <a href="/terms-of-service/" class="text-gray-300 hover:text-white transition">Terms of Service</a>
+                <a href="mailto:quicktoolsindiaa@gmail.com" class="text-gray-300 hover:text-white transition">Contact</a>
+            </div>
+
+            <!-- Popular Calculators -->
+            <div class="flex flex-col space-y-2">
+                <h4 class="text-lg font-bold text-white mb-2">Popular Tools</h4>
+                <a href="/home-loan-calculator/" class="text-gray-300 hover:text-white transition">Home Loan BMI Calculator</a>
+                <a href="/car-loan-calculator/" class="text-gray-300 hover:text-white transition">Car Loan EMI Calculator</a>
+                <a href="/sip-calculator/" class="text-gray-300 hover:text-white transition">SIP Return Calculator</a>
+                <a href="/ppf-calculator/" class="text-gray-300 hover:text-white transition">PPF Calculator</a>
+                <a href="/ssy-calculator/" class="text-gray-300 hover:text-white transition">Sukanya Samriddhi Yojana</a>
+            </div>
+
+            <!-- More Utilities -->
+            <div class="flex flex-col space-y-2">
+                <h4 class="text-lg font-bold text-white mb-2">Utilities</h4>
+                <a href="/gst-calculator/" class="text-gray-300 hover:text-white transition">GST Calculator</a>
+                <a href="/age-calculator/" class="text-gray-300 hover:text-white transition">Age Calculator</a>
+                <a href="/cash-counter/" class="text-gray-300 hover:text-white transition">Cash Counter</a>
+                <a href="/number-to-words/" class="text-gray-300 hover:text-white transition">Number to Words</a>
+                <a href="/image-resizer/" class="text-gray-300 hover:text-white transition">Image Resizer</a>
+            </div>
         </div>
 
         <!-- Copyright -->
