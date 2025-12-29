@@ -365,7 +365,16 @@ meta_keywords: "cash counter, denomination counter, currency counter India, rupe
 
         let total = 0;
         for (const [id, value] of Object.entries(denominations)) {
-            const count = parseInt(document.getElementById(id).value) || 0;
+            let count = parseInt(document.getElementById(id).value) || 0;
+            // Limit invalid or excessive inputs
+            if (count > 99999) {
+                count = 99999;
+                document.getElementById(id).value = 99999;
+            }
+            if (count < 0) {
+                count = 0;
+                document.getElementById(id).value = 0;
+            }
             total += count * value;
         }
 
