@@ -484,6 +484,11 @@
                         </p>
                         <p id="breakdown" class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed"></p>
                     </div>
+
+                    <button onclick="shareResult('SSY Maturity', document.getElementById('maturityValue').innerText)"
+                        class="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center transition-colors shadow-md">
+                        <i class="fab fa-whatsapp text-xl mr-2"></i> Share Result
+                    </button>
                 </div>
 
                 <!-- Placeholder -->
@@ -1030,6 +1035,7 @@
 
     // Initialize with default values
     window.addEventListener('load', function () {
+        initAutoSave('ssy_calc');
         validateAndCalculate();
     });
 </script>
@@ -1165,6 +1171,8 @@
     });
 </script>
 
+
+    <script src="/js/main.js"></script>
 
     
 </body>

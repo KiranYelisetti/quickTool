@@ -461,6 +461,11 @@
                         <p class="text-xs text-gray-600 dark:text-gray-400 mt-2">Assuming 12% annual returns from
                             mutual funds</p>
                     </div>
+
+                    <button onclick="shareResult('Study Abroad Cost', document.getElementById('totalCostINR').innerText)"
+                        class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center transition-colors shadow-md">
+                        <i class="fab fa-whatsapp text-xl mr-2"></i> Share Result
+                    </button>
                 </div>
 
                 <!-- Placeholder -->
@@ -759,6 +764,7 @@
 
     // Initial calculation with default values
     window.addEventListener('load', function () {
+        initAutoSave('study_abroad');
         calculateCost();
     });
 </script>
@@ -894,6 +900,8 @@
     });
 </script>
 
+
+    <script src="/js/main.js"></script>
 
     
 </body>

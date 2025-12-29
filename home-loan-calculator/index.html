@@ -376,6 +376,11 @@
                     <p class="text-2xl font-bold" id="totalInterest">₹0</p>
                 </div>
             </div>
+            
+            <button onclick="shareResult('Home Loan EMI', document.getElementById('monthlyEMI').innerText)"
+                class="mt-6 w-full bg-white text-orange-600 hover:bg-gray-100 font-bold py-3 px-4 rounded-xl flex items-center justify-center transition-colors shadow-md">
+                <i class="fab fa-whatsapp text-xl mr-2 text-[#25D366]"></i> Share via WhatsApp
+            </button>
         </div>
 
         <div id="prepaymentResults" class="hidden bg-white dark:bg-gray-800 rounded-xl shadow-xl p-8">
@@ -610,6 +615,15 @@
 
 
 <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        initAutoSave('home_loan_calc');
+        // We don't verify auto-run here because the user has to click "Calculate" anyway.
+        // But we DO need to restore the "Enable Prepayment" toggle state visibility.
+        if (document.getElementById('enablePrepayment').checked) {
+             document.getElementById('prepaymentSection').classList.remove('hidden');
+        }
+    });
+
     document.getElementById('enablePrepayment').addEventListener('change', function () {
         const section = document.getElementById('prepaymentSection');
         if (this.checked) {
@@ -844,6 +858,8 @@
     });
 </script>
 
+
+    <script src="/js/main.js"></script>
 
     
 </body>
