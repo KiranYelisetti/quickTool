@@ -788,7 +788,7 @@ meta_keywords: "car loan EMI calculator, car loan interest rate 2025, vehicle lo
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         initAutoSave('car_loan_calc');
-        calculateCarLoan();
+        calculateCarLoan(false);
     });
 
     document.querySelectorAll('input[name="carType"]').forEach(radio => {
@@ -821,7 +821,7 @@ meta_keywords: "car loan EMI calculator, car loan interest rate 2025, vehicle lo
         }
     }
 
-    function calculateCarLoan() {
+    function calculateCarLoan(shouldScroll = true) {
         const carPrice = parseFloat(document.getElementById('carPrice').value);
         const downPayment = parseFloat(document.getElementById('downPayment').value);
         const annualRate = parseFloat(document.getElementById('interestRate').value);
@@ -878,8 +878,11 @@ meta_keywords: "car loan EMI calculator, car loan interest rate 2025, vehicle lo
         document.getElementById('totalMonths').textContent = tenureMonths + ' months';
         document.getElementById('downPaymentPercent').textContent = ((downPayment / onRoadPrice) * 100).toFixed(1) + '%';
 
+
         document.getElementById('results').classList.remove('hidden');
-        document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        if (shouldScroll) {
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
     }
 </script>
 {% endblock %}
