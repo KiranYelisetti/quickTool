@@ -946,7 +946,7 @@
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         initAutoSave('car_loan_calc');
-        calculateCarLoan();
+        calculateCarLoan(false);
     });
 
     document.querySelectorAll('input[name="carType"]').forEach(radio => {
@@ -979,7 +979,7 @@
         }
     }
 
-    function calculateCarLoan() {
+    function calculateCarLoan(shouldScroll = true) {
         const carPrice = parseFloat(document.getElementById('carPrice').value);
         const downPayment = parseFloat(document.getElementById('downPayment').value);
         const annualRate = parseFloat(document.getElementById('interestRate').value);
@@ -1036,8 +1036,11 @@
         document.getElementById('totalMonths').textContent = tenureMonths + ' months';
         document.getElementById('downPaymentPercent').textContent = ((downPayment / onRoadPrice) * 100).toFixed(1) + '%';
 
+
         document.getElementById('results').classList.remove('hidden');
-        document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        if (shouldScroll) {
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
     }
 </script>
 

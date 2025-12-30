@@ -776,7 +776,7 @@
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         initAutoSave('home_loan_calc');
-        calculateHomeLoan();
+        calculateHomeLoan(false);
         // We don't verify auto-run here because the user has to click "Calculate" anyway.
         // But we DO need to restore the "Enable Prepayment" toggle state visibility.
         if (document.getElementById('enablePrepayment').checked) {
@@ -807,7 +807,7 @@
         }
     }
 
-    function calculateHomeLoan() {
+    function calculateHomeLoan(shouldScroll = true) {
         const loanAmount = parseFloat(document.getElementById('loanAmount').value);
         const annualRate = parseFloat(document.getElementById('interestRate').value);
         const tenureYears = parseFloat(document.getElementById('loanTenure').value);
@@ -890,7 +890,9 @@
         document.getElementById('totalTaxBenefit').textContent = formatIndianCurrency(Math.round(totalTax));
 
         document.getElementById('results').classList.remove('hidden');
-        document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        if (shouldScroll) {
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
     }
 </script>
 
