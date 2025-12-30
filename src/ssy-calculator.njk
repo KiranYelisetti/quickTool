@@ -932,6 +932,9 @@ meta_keywords: "SSY calculator, Sukanya Samriddhi Yojana calculator, SSY interes
         const taxBenefit = Math.min(annualDeposit, 150000); // Max ₹1.5L
         const taxSavings = taxBenefit * 0.30; // 30% tax bracket
 
+        // GA4 Event Tracking
+        trackCalculatorUsage('SSY Calculator', annualDeposit);
+
         // Display Results
         document.getElementById('maturityValue').textContent = formatIndianCurrency(maturityValue);
         document.getElementById('totalInvestment').textContent = formatIndianCurrency(totalInvestment);

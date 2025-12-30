@@ -76,8 +76,46 @@ function resetForm(pagePrefix) {
 }
 
 // WhatsApp Share Functionality
+// WhatsApp Share Functionality
 function shareResult(title, amountString) {
     const text = `I just calculated my ${title} on QuickTools India! Result: ${amountString}. Check it out here:`;
     const url = `https://wa.me/?text=${encodeURIComponent(text)} ${encodeURIComponent(window.location.href)}`;
+
+    // Track Share Event
+    trackEvent('share', {
+        method: 'whatsapp',
+        content_type: title,
+        item_id: title.toLowerCase().replace(/\s+/g, '_')
+    });
+
     window.open(url, '_blank');
+}
+
+/**
+ * GA4 Event Tracking Helper
+ * @param {string} toolName - Name of the calculator/tool
+ * @param {number|string} value - Principal amount or key metric
+ */
+function trackCalculatorUsage(toolName, value) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'tool_usage', {
+            'tool_name': toolName,
+            'value': value,
+            'currency': 'INR'
+        });
+        console.log(`GA4 Event - tool_usage: ${toolName}, Value: ${value}`);
+    } else {
+        console.log(`GA4 Not Loaded - tool_usage: ${toolName}, Value: ${value}`);
+    }
+}
+
+/**
+ * Generic GA4 Event Helper
+ * @param {string} eventName
+ * @param {object} params
+ */
+function trackEvent(eventName, params) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', eventName, params);
+    }
 }

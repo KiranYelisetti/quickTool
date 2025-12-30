@@ -1014,6 +1014,9 @@ meta_keywords: "PPF calculator, Public Provident Fund calculator, PPF interest r
         const taxBenefit = Math.min(annualContribution, 150000); // Max ₹1.5L
         const taxSavings = taxBenefit * 0.30; // 30% tax bracket
 
+        // GA4 Event Tracking
+        trackCalculatorUsage('PPF Calculator', annualContribution);
+
         // Display Results
         document.getElementById('maturityValue').textContent = formatIndianCurrency(maturityValue);
         document.getElementById('totalContribution').textContent = formatIndianCurrency(totalContribution);

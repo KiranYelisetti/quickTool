@@ -288,7 +288,7 @@ meta_keywords: "cash counter online, denomination calculator, note counting mach
                     class="flex-1 bg-gradient-to-r from-red-500 to-red-600 text-white py-3 px-6 rounded-lg font-bold hover:from-red-600 hover:to-red-700 transition-all shadow-lg">
                     <i class="fas fa-undo mr-2"></i>Reset All
                 </button>
-                <button onclick="calculateTotal()"
+                <button onclick="calculateTotal(); trackCalculatorUsage('Cash Counter', document.getElementById('totalAmount').innerText)"
                     class="flex-1 bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-6 rounded-lg font-bold hover:from-green-600 hover:to-green-700 transition-all shadow-lg">
                     <i class="fas fa-calculator mr-2"></i>Recalculate
                 </button>

@@ -802,6 +802,11 @@ meta_keywords: "car loan EMI calculator, car loan interest rate 2025, vehicle lo
                 interestInput.value = '13';
                 interestInput.min = '12';
                 interestInput.max = '20';
+
+                trackEvent('feature_use', {
+                    feature_name: 'car_type_used',
+                    tool_name: 'Car Loan Calculator'
+                });
             }
         });
     });
@@ -820,11 +825,13 @@ meta_keywords: "car loan EMI calculator, car loan interest rate 2025, vehicle lo
         const carPrice = parseFloat(document.getElementById('carPrice').value);
         const downPayment = parseFloat(document.getElementById('downPayment').value);
         const annualRate = parseFloat(document.getElementById('interestRate').value);
-        const tenureYears = parseInt(document.getElementById('loanTenure').value);
-        const insurance = parseFloat(document.getElementById('insurance').value);
-        const rtoTaxPercent = parseFloat(document.getElementById('rtoTax').value);
-        const accessories = parseFloat(document.getElementById('accessories').value);
-        const otherCharges = parseFloat(document.getElementById('otherCharges').value);
+        const tenureYears = parseFloat(document.getElementById('loanTenure').value);
+        
+        // Optional Costs
+        const insurance = parseFloat(document.getElementById('insurance').value) || 0;
+        const rtoTaxPercent = parseFloat(document.getElementById('rtoTax').value) || 0;
+        const accessories = parseFloat(document.getElementById('accessories').value) || 0;
+        const otherCharges = parseFloat(document.getElementById('otherCharges').value) || 0;
 
         // Calculate on-road price
         const rtoAmount = (carPrice * rtoTaxPercent) / 100;
@@ -840,8 +847,11 @@ meta_keywords: "car loan EMI calculator, car loan interest rate 2025, vehicle lo
         const emi = (loanAmount * monthlyRate * Math.pow(1 + monthlyRate, tenureMonths)) /
             (Math.pow(1 + monthlyRate, tenureMonths) - 1);
 
-        const totalAmount = emi * tenureMonths;
-        const totalInterest = totalAmount - loanAmount;
+        const totalEMIPayments = emi * tenureMonths;
+        const totalInterest = totalEMIPayments - loanAmount;
+
+        // GA4 Event Tracking
+        trackCalculatorUsage('Car Loan Calculator', loanAmount);
 
         // Display results
         document.getElementById('monthlyEMI').textContent = formatIndianCurrency(Math.round(emi));
@@ -859,9 +869,9 @@ meta_keywords: "car loan EMI calculator, car loan interest rate 2025, vehicle lo
 
         // Payment analysis
         document.getElementById('downPaymentDisplay').textContent = formatIndianCurrency(downPayment);
-        document.getElementById('totalEMIPayments').textContent = formatIndianCurrency(Math.round(totalAmount));
+        document.getElementById('totalEMIPayments').textContent = formatIndianCurrency(Math.round(totalEMIPayments));
         document.getElementById('totalInterestDisplay').textContent = formatIndianCurrency(Math.round(totalInterest));
-        document.getElementById('totalAmountPaid').textContent = formatIndianCurrency(Math.round(downPayment + totalAmount));
+        document.getElementById('totalAmountPaid').textContent = formatIndianCurrency(Math.round(downPayment + totalEMIPayments));
         document.getElementById('interestPercentage').textContent = ((totalInterest / carPrice) * 100).toFixed(1) + '%';
 
         // Loan details

@@ -273,7 +273,7 @@ meta_keywords: "wedding cost calculator India, marriage budget planner 2025, Ind
                     </div>
 
                     <div class="flex gap-4">
-                        <button onclick="calculateWeddingCost()"
+                        <button onclick="calculateWeddingCost(); trackCalculatorUsage('Wedding Cost Calculator', document.getElementById('totalCost').innerText)"
                             class="flex-1 bg-gradient-to-r from-pink-500 to-pink-600 text-white py-3 px-6 rounded-lg font-bold hover:from-pink-600 hover:to-pink-700 transition-all shadow-lg">
                             <i class="fas fa-calculator mr-2"></i>Calculate Wedding Cost
                         </button>

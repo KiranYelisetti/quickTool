@@ -392,6 +392,9 @@ meta_keywords: "number to words, lakh crore converter, number converter India, c
     }
 
     function copyToClipboard(elementId) {
+        // GA4 Event Tracking
+        trackCalculatorUsage('Number to Words', document.getElementById('numberInput').value);
+
         const text = document.getElementById(elementId).textContent;
         navigator.clipboard.writeText(text).then(() => {
             // Show temporary feedback

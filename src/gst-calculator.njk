@@ -206,7 +206,7 @@ meta_keywords: "GST calculator, GST state code list 2025, HSN code finder, rever
                     </div>
 
                     <div class="flex gap-4">
-                        <button onclick="calculateGST()"
+                        <button onclick="calculateGST(); trackCalculatorUsage('GST Calculator', document.getElementById('amount').value)"
                             class="flex-1 bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-6 rounded-lg font-bold hover:from-blue-600 hover:to-blue-700 transition-all shadow-lg">
                             <i class="fas fa-calculator mr-2"></i>Calculate GST
                         </button>

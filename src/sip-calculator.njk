@@ -376,6 +376,9 @@ json_ld:
         const invested = p * n;
         const returns = fv - invested;
 
+        // GA4 Event Tracking
+        trackCalculatorUsage('SIP Calculator', p);
+
         // Update UI
         document.getElementById('totalValue').innerText = formatCurrency(fv);
         document.getElementById('investedAmount').innerText = formatCurrency(invested);

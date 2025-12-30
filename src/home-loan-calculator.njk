@@ -630,6 +630,10 @@ meta_keywords: "home loan EMI calculator, home loan interest rate 2025, housing 
         const section = document.getElementById('prepaymentSection');
         if (this.checked) {
             section.classList.remove('hidden');
+            trackEvent('feature_use', {
+                feature_name: 'enable_prepayment',
+                tool_name: 'Home Loan Calculator'
+            });
         } else {
             section.classList.add('hidden');
         }
@@ -655,6 +659,9 @@ meta_keywords: "home loan EMI calculator, home loan interest rate 2025, housing 
         const emi = (loanAmount * monthlyRate * Math.pow(1 + monthlyRate, tenureMonths)) / (Math.pow(1 + monthlyRate, tenureMonths) - 1);
         const totalAmount = emi * tenureMonths;
         const totalInterest = totalAmount - loanAmount;
+
+        // GA4 Event Tracking
+        trackCalculatorUsage('Home Loan Calculator', loanAmount);
 
         // Prepayment Calculation
         const enablePrepayment = document.getElementById('enablePrepayment').checked;
