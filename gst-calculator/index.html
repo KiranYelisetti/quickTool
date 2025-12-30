@@ -364,7 +364,7 @@
                     </div>
 
                     <div class="flex gap-4">
-                        <button onclick="calculateGST()"
+                        <button onclick="calculateGST(); trackCalculatorUsage('GST Calculator', document.getElementById('amount').value)"
                             class="flex-1 bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-6 rounded-lg font-bold hover:from-blue-600 hover:to-blue-700 transition-all shadow-lg">
                             <i class="fas fa-calculator mr-2"></i>Calculate GST
                         </button>
@@ -721,6 +721,8 @@
                 <a href="/sip-calculator/" class="text-gray-300 hover:text-white transition">SIP Return Calculator</a>
                 <a href="/ppf-calculator/" class="text-gray-300 hover:text-white transition">PPF Calculator</a>
                 <a href="/ssy-calculator/" class="text-gray-300 hover:text-white transition">Sukanya Samriddhi Yojana</a>
+                <a href="/study-abroad-calculator/" class="text-gray-300 hover:text-white transition">Study Abroad Calculator</a>
+                <a href="/wedding-cost-calculator/" class="text-gray-300 hover:text-white transition">Wedding Cost Calculator</a>
             </div>
 
             <!-- More Utilities -->

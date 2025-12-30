@@ -507,6 +507,9 @@ meta_keywords: "resize image to 20kb, compress image to 50kb, online photo resiz
     }
 
     function downloadImage() {
+        // GA4 Event Tracking
+        trackCalculatorUsage('Image Resizer', 'download');
+
         const format = document.getElementById('outputFormat').value;
         const quality = parseInt(document.getElementById('quality').value) / 100;
 
