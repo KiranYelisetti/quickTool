@@ -8,7 +8,7 @@ json_ld:
   "@context": "https://schema.org"
   "@type": "WebApplication"
   name: "SIP Calculator & Investment Planner"
-  url: "https://www.quicktoolsindia.com/sip-calculator.html"
+  url: "https://www.quicktoolsindia.com/sip-calculator/"
   description: "Free SIP Calculator & Investment Planner for India to calculate mutual fund systematic investment plan returns"
   applicationCategory: "FinanceApplication"
   operatingSystem: "Web Browser"
@@ -17,11 +17,14 @@ json_ld:
     price: "0"
     priceCurrency: "INR"
   featureList:
-  - "Calculate SIP returns"
-  - "Monthly investment planning"
-  - "Compounding interest calculation"
-  - "Investment period up to 40 years"
-  - "Indian Rupee formatting"
+  - "Calculate SIP returns with inflation adjustment"
+  - "Lumpsum investment calculator"
+  - "Step-up SIP calculator"
+  - "Goal-based planning"
+  - "Interactive charts and tables"
+  - "Year-wise breakdown"
+  - "Download reports in PDF/Excel"
+  - "Dark mode support"
   inLanguage: "en-IN"
   audience:
     "@type": "Audience"
@@ -29,6 +32,27 @@ json_ld:
       "@type": "Country"
       name: "India"
 ---
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.quicktoolsindia.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "SIP Calculator",
+            "item": "https://www.quicktoolsindia.com/sip-calculator/"
+        }
+    ]
+}
+</script>
 
 <!-- Main Content -->
 <main class="container mx-auto px-4 py-8">

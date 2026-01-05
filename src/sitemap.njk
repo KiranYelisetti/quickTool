@@ -7,7 +7,7 @@ eleventyExcludeFromCollections: true
 {% for page in collections.all %}
   {% if not page.data.eleventyExcludeFromCollections %}
   <url>
-    <loc>https://www.quicktoolsindia.com{{ page.url | url }}</loc>
+    <loc>https://www.quicktoolsindia.com{{ page.url | url | replace('.html', '/') }}</loc>
     <lastmod>{{ page.date.toISOString().split('T')[0] }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>{% if page.url == '/' %}1.0{% elif 'calculator' in page.url %}0.9{% else %}0.8{% endif %}</priority>
