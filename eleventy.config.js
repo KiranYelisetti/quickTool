@@ -2,6 +2,7 @@ module.exports = function (eleventyConfig) {
     // Pass through static assets
     eleventyConfig.addPassthroughCopy("src/favicon.svg");
     eleventyConfig.addPassthroughCopy("src/robots.txt");
+    eleventyConfig.addPassthroughCopy("src/ads.txt");
     eleventyConfig.addPassthroughCopy("src/CNAME");
     eleventyConfig.addPassthroughCopy("src/og-image.png");
     eleventyConfig.addPassthroughCopy("src/js");
