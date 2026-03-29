@@ -1,5 +1,5 @@
 <footer class="bg-gray-800 text-white mt-16 py-8">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4 max-w-6xl">
         <!-- Feedback Section -->
         <div class="text-center mb-6 pb-6 border-b border-gray-700">
             <h3 class="text-lg font-semibold mb-2">
@@ -120,34 +120,30 @@
     function toggleDarkMode() {
         const html = document.documentElement;
         html.classList.toggle('dark');
-
-        // Save preference to localStorage
-        if (html.classList.contains('dark')) {
-            localStorage.setItem('darkMode', 'enabled');
-        } else {
-            localStorage.setItem('darkMode', 'disabled');
-        }
+        localStorage.setItem('darkMode', html.classList.contains('dark') ? 'enabled' : 'disabled');
     }
-
-    // Initialize dark mode from localStorage on page load
-    (function initDarkMode() {
-        const darkMode = localStorage.getItem('darkMode');
-        if (darkMode === 'enabled') {
-            document.documentElement.classList.add('dark');
-        }
-    })();
 
     // Tools Dropdown Toggle
     function toggleDropdown() {
         const menu = document.getElementById('dropdownMenu');
-        menu.classList.toggle('hidden');
+        const btn = document.getElementById('dropdownToggleBtn');
+        const isHidden = menu.classList.toggle('hidden');
+        btn.setAttribute('aria-expanded', String(!isHidden));
     }
 
-    // Close dropdown when clicking outside
+    function closeDropdown() {
+        document.getElementById('dropdownMenu').classList.add('hidden');
+        document.getElementById('dropdownToggleBtn')?.setAttribute('aria-expanded', 'false');
+    }
+
+    // Close on outside click
     document.addEventListener('click', function (event) {
         const dropdown = document.getElementById('toolsDropdown');
-        if (dropdown && !dropdown.contains(event.target)) {
-            document.getElementById('dropdownMenu').classList.add('hidden');
-        }
+        if (dropdown && !dropdown.contains(event.target)) closeDropdown();
+    });
+
+    // Close on ESC key
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeDropdown();
     });
 </script>
