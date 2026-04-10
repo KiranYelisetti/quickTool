@@ -1,0 +1,555 @@
+---
+layout: base.njk
+title: "Income Tax Calculator India FY 2025-26 | Old vs New Regime Comparison"
+meta_title: "Income Tax Calculator India FY 2025-26 (AY 2026-27) - Old vs New Regime"
+meta_description: "Calculate your income tax for FY 2025-26 under both Old and New regime. Compare tax slabs, deductions (80C, 80D, HRA), and find which regime saves you more money instantly."
+meta_keywords: "income tax calculator 2025-26, new regime tax calculator, old vs new regime comparison, tax slab 2026, 80C deduction calculator, HRA exemption calculator, income tax India"
+---
+
+{% block head %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Income Tax Calculator India FY 2025-26",
+    "description": "Calculate income tax under Old and New regime for FY 2025-26. Compare deductions, exemptions and find the best regime.",
+    "url": "https://www.quicktoolsindia.com/income-tax-calculator/",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    "inLanguage": "en-IN"
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.quicktoolsindia.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Income Tax Calculator", "item": "https://www.quicktoolsindia.com/income-tax-calculator/" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Which tax regime is better - Old or New for FY 2025-26?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "If your total deductions (80C, 80D, HRA, etc.) exceed ₹3-4 Lakhs, the Old Regime may save more tax. Otherwise, the New Regime with its lower slab rates and ₹75,000 standard deduction is usually better for most salaried individuals."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What is the standard deduction for FY 2025-26?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The standard deduction is ₹75,000 under the New Regime and ₹50,000 under the Old Regime for FY 2025-26."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is there any tax rebate under the New Regime?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, under Section 87A, if your taxable income is up to ₹12,00,000 under the New Regime, you get a rebate of up to ₹60,000, making your effective tax zero."
+            }
+        }
+    ]
+}
+</script>
+{% endblock %}
+
+<main class="container mx-auto px-4 py-8 md:py-12">
+    <div class="max-w-5xl mx-auto">
+        <!-- Title -->
+        <div class="text-center mb-8">
+            <div class="flex items-center justify-center gap-4 mb-2">
+                <div class="inline-block bg-gradient-to-br from-emerald-400 to-emerald-600 w-12 h-12 rounded-full flex items-center justify-center">
+                    <i class="fas fa-file-invoice-dollar text-xl text-white"></i>
+                </div>
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white">Income Tax Calculator</h1>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300">FY 2025-26 (AY 2026-27) | Compare Old vs New Regime</p>
+            <span class="inline-block mt-2 bg-emerald-100 dark:bg-emerald-900 text-emerald-800 dark:text-emerald-300 text-xs font-bold px-3 py-1 rounded-full uppercase">Updated for Budget 2025</span>
+        </div>
+
+        <!-- Calculator Card -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-xl border-2 border-gray-900 dark:border-gray-700 p-6 md:p-8">
+            <div class="space-y-6">
+                <!-- Income Inputs -->
+                <h2 class="text-xl font-bold text-gray-800 dark:text-white"><i class="fas fa-rupee-sign text-emerald-600 mr-2"></i>Income Details</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Annual Gross Salary (₹)</label>
+                        <input type="number" id="grossSalary" value="1200000" min="0" step="10000"
+                            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-emerald-500 dark:bg-gray-700 dark:text-white">
+                        <p class="text-xs text-gray-500 mt-1">Your total CTC or gross annual income</p>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Other Income (₹) <span class="font-normal text-gray-400">(FD interest, rent, etc.)</span></label>
+                        <input type="number" id="otherIncome" value="0" min="0" step="1000"
+                            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-emerald-500 dark:bg-gray-700 dark:text-white">
+                    </div>
+                </div>
+
+                <!-- Old Regime Deductions -->
+                <div class="border-t border-gray-200 dark:border-gray-700 pt-6">
+                    <h2 class="text-xl font-bold text-gray-800 dark:text-white mb-1"><i class="fas fa-hand-holding-usd text-emerald-600 mr-2"></i>Deductions (Old Regime Only)</h2>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mb-4">These deductions only apply under the Old Tax Regime</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Section 80C (₹) <span class="font-normal text-gray-400">Max ₹1.5L</span></label>
+                            <input type="number" id="deduction80C" value="150000" min="0" max="150000" step="1000"
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-emerald-500 dark:bg-gray-700 dark:text-white">
+                            <p class="text-xs text-gray-500 mt-1">EPF, PPF, ELSS, LIC, NPS Tier-I, SSY</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Section 80D - Health Insurance (₹)</label>
+                            <input type="number" id="deduction80D" value="25000" min="0" max="100000" step="1000"
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-emerald-500 dark:bg-gray-700 dark:text-white">
+                            <p class="text-xs text-gray-500 mt-1">Self: ₹25K | Self+Parents: ₹50K | Senior Parents: ₹75K-₹1L</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">HRA Exemption (₹)</label>
+                            <input type="number" id="hraExemption" value="0" min="0" step="1000"
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-emerald-500 dark:bg-gray-700 dark:text-white">
+                            <p class="text-xs text-gray-500 mt-1">If you live in rented accommodation and receive HRA</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Home Loan Interest - Sec 24 (₹) <span class="font-normal text-gray-400">Max ₹2L</span></label>
+                            <input type="number" id="homeLoanInterest" value="0" min="0" max="200000" step="1000"
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-emerald-500 dark:bg-gray-700 dark:text-white">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">NPS - 80CCD(1B) (₹) <span class="font-normal text-gray-400">Max ₹50K</span></label>
+                            <input type="number" id="nps80CCD" value="0" min="0" max="50000" step="1000"
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-emerald-500 dark:bg-gray-700 dark:text-white">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Other Deductions (₹)</label>
+                            <input type="number" id="otherDeductions" value="0" min="0" step="1000"
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-emerald-500 dark:bg-gray-700 dark:text-white">
+                            <p class="text-xs text-gray-500 mt-1">Education loan interest (80E), Donations (80G), etc.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <button onclick="calculateTax()"
+                        class="flex-1 bg-gradient-to-r from-emerald-500 to-green-600 text-white py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-green-700 transition-all duration-200 transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-calculator mr-2"></i>Compare Tax — Old vs New
+                    </button>
+                    <button onclick="resetForm('income_tax_calc')"
+                        class="px-6 py-4 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg font-semibold hover:bg-gray-300 dark:hover:bg-gray-600 transition-all duration-200 shadow-md">
+                        <i class="fas fa-undo mr-2"></i>Reset
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div id="results" class="hidden mt-8 space-y-6">
+            <!-- Regime Comparison -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Old Regime -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-xl border-2 border-gray-900 dark:border-gray-700 overflow-hidden">
+                    <div class="bg-gradient-to-r from-orange-500 to-amber-600 p-4">
+                        <h3 class="text-xl font-bold text-white flex items-center"><i class="fas fa-landmark mr-2"></i>Old Regime</h3>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <span class="text-gray-600 dark:text-gray-300">Gross Income</span>
+                            <span class="font-semibold dark:text-white" id="oldGrossIncome">₹0</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <span class="text-gray-600 dark:text-gray-300">Standard Deduction</span>
+                            <span class="font-semibold text-green-600" id="oldStdDeduction">- ₹50,000</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <span class="text-gray-600 dark:text-gray-300">Chapter VI-A Deductions</span>
+                            <span class="font-semibold text-green-600" id="oldChapterDeductions">- ₹0</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-orange-50 dark:bg-gray-600 rounded-lg border border-orange-200 dark:border-orange-800">
+                            <span class="font-bold dark:text-white">Taxable Income</span>
+                            <span class="font-bold text-orange-600" id="oldTaxableIncome">₹0</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <span class="text-gray-600 dark:text-gray-300">Tax Before Cess</span>
+                            <span class="font-semibold dark:text-white" id="oldTaxBeforeCess">₹0</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <span class="text-gray-600 dark:text-gray-300">Rebate u/s 87A</span>
+                            <span class="font-semibold text-green-600" id="oldRebate">- ₹0</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <span class="text-gray-600 dark:text-gray-300">Education Cess (4%)</span>
+                            <span class="font-semibold dark:text-white" id="oldCess">₹0</span>
+                        </div>
+                        <div class="flex justify-between p-4 bg-gradient-to-r from-orange-100 to-amber-100 dark:from-gray-600 dark:to-gray-600 rounded-lg border-2 border-orange-300 dark:border-orange-700">
+                            <span class="font-bold text-gray-800 dark:text-white text-lg">Total Tax</span>
+                            <span class="font-bold text-orange-600 text-2xl" id="oldTotalTax">₹0</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <span class="text-gray-600 dark:text-gray-300">Effective Tax Rate</span>
+                            <span class="font-semibold dark:text-white" id="oldEffectiveRate">0%</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <span class="text-gray-600 dark:text-gray-300">Monthly Tax</span>
+                            <span class="font-semibold dark:text-white" id="oldMonthlyTax">₹0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Regime -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-xl border-2 border-gray-900 dark:border-gray-700 overflow-hidden">
+                    <div class="bg-gradient-to-r from-emerald-500 to-green-600 p-4">
+                        <h3 class="text-xl font-bold text-white flex items-center"><i class="fas fa-leaf mr-2"></i>New Regime</h3>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <span class="text-gray-600 dark:text-gray-300">Gross Income</span>
+                            <span class="font-semibold dark:text-white" id="newGrossIncome">₹0</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <span class="text-gray-600 dark:text-gray-300">Standard Deduction</span>
+                            <span class="font-semibold text-green-600" id="newStdDeduction">- ₹75,000</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <span class="text-gray-600 dark:text-gray-300">Chapter VI-A Deductions</span>
+                            <span class="font-semibold text-gray-400">Not Applicable</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-emerald-50 dark:bg-gray-600 rounded-lg border border-emerald-200 dark:border-emerald-800">
+                            <span class="font-bold dark:text-white">Taxable Income</span>
+                            <span class="font-bold text-emerald-600" id="newTaxableIncome">₹0</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <span class="text-gray-600 dark:text-gray-300">Tax Before Cess</span>
+                            <span class="font-semibold dark:text-white" id="newTaxBeforeCess">₹0</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <span class="text-gray-600 dark:text-gray-300">Rebate u/s 87A</span>
+                            <span class="font-semibold text-green-600" id="newRebate">- ₹0</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <span class="text-gray-600 dark:text-gray-300">Education Cess (4%)</span>
+                            <span class="font-semibold dark:text-white" id="newCess">₹0</span>
+                        </div>
+                        <div class="flex justify-between p-4 bg-gradient-to-r from-emerald-100 to-green-100 dark:from-gray-600 dark:to-gray-600 rounded-lg border-2 border-emerald-300 dark:border-emerald-700">
+                            <span class="font-bold text-gray-800 dark:text-white text-lg">Total Tax</span>
+                            <span class="font-bold text-emerald-600 text-2xl" id="newTotalTax">₹0</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <span class="text-gray-600 dark:text-gray-300">Effective Tax Rate</span>
+                            <span class="font-semibold dark:text-white" id="newEffectiveRate">0%</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <span class="text-gray-600 dark:text-gray-300">Monthly Tax</span>
+                            <span class="font-semibold dark:text-white" id="newMonthlyTax">₹0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Verdict -->
+            <div id="verdictBox" class="bg-white dark:bg-gray-800 rounded-xl shadow-xl border-2 border-gray-900 dark:border-gray-700 p-6 text-center">
+                <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-2"><i class="fas fa-trophy text-yellow-500 mr-2"></i>Verdict</h3>
+                <p id="verdictText" class="text-xl font-bold text-emerald-600 mb-2"></p>
+                <p id="verdictSavings" class="text-gray-600 dark:text-gray-300"></p>
+            </div>
+
+            <button onclick="shareResult('Income Tax', document.getElementById('verdictText').innerText)"
+                class="w-full max-w-md mx-auto block bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center transition-colors shadow-md">
+                <i class="fab fa-whatsapp text-xl mr-2"></i> Share Result via WhatsApp
+            </button>
+        </div>
+
+        <!-- SEO Content -->
+        <div class="mt-12 space-y-8">
+            <!-- Tax Slabs Table -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-xl border-2 border-gray-900 dark:border-gray-700 p-8">
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6"><i class="fas fa-table mr-2 text-emerald-600"></i>Income Tax Slabs FY 2025-26</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- New Regime Table -->
+                    <div>
+                        <h3 class="text-lg font-bold text-emerald-700 dark:text-emerald-400 mb-3">New Tax Regime (Default)</h3>
+                        <div class="overflow-x-auto shadow-md rounded-lg">
+                            <table class="min-w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                                <thead class="bg-emerald-600 text-white">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left">Income Slab</th>
+                                        <th class="px-4 py-3 text-center">Tax Rate</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200 dark:divide-gray-700 text-sm">
+                                    <tr class="hover:bg-gray-50 dark:hover:bg-gray-700"><td class="px-4 py-3 dark:text-gray-300">Up to ₹4,00,000</td><td class="px-4 py-3 text-center font-bold text-green-600">Nil</td></tr>
+                                    <tr class="hover:bg-gray-50 dark:hover:bg-gray-700"><td class="px-4 py-3 dark:text-gray-300">₹4,00,001 - ₹8,00,000</td><td class="px-4 py-3 text-center font-bold dark:text-white">5%</td></tr>
+                                    <tr class="hover:bg-gray-50 dark:hover:bg-gray-700"><td class="px-4 py-3 dark:text-gray-300">₹8,00,001 - ₹12,00,000</td><td class="px-4 py-3 text-center font-bold dark:text-white">10%</td></tr>
+                                    <tr class="hover:bg-gray-50 dark:hover:bg-gray-700"><td class="px-4 py-3 dark:text-gray-300">₹12,00,001 - ₹16,00,000</td><td class="px-4 py-3 text-center font-bold dark:text-white">15%</td></tr>
+                                    <tr class="hover:bg-gray-50 dark:hover:bg-gray-700"><td class="px-4 py-3 dark:text-gray-300">₹16,00,001 - ₹20,00,000</td><td class="px-4 py-3 text-center font-bold dark:text-white">20%</td></tr>
+                                    <tr class="hover:bg-gray-50 dark:hover:bg-gray-700"><td class="px-4 py-3 dark:text-gray-300">₹20,00,001 - ₹24,00,000</td><td class="px-4 py-3 text-center font-bold dark:text-white">25%</td></tr>
+                                    <tr class="hover:bg-gray-50 dark:hover:bg-gray-700"><td class="px-4 py-3 dark:text-gray-300">Above ₹24,00,000</td><td class="px-4 py-3 text-center font-bold text-red-600">30%</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mt-2"><i class="fas fa-info-circle mr-1"></i>Standard Deduction: ₹75,000 | Rebate u/s 87A up to ₹60,000 (income ≤ ₹12L)</p>
+                    </div>
+
+                    <!-- Old Regime Table -->
+                    <div>
+                        <h3 class="text-lg font-bold text-orange-700 dark:text-orange-400 mb-3">Old Tax Regime</h3>
+                        <div class="overflow-x-auto shadow-md rounded-lg">
+                            <table class="min-w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                                <thead class="bg-orange-600 text-white">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left">Income Slab</th>
+                                        <th class="px-4 py-3 text-center">Tax Rate</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200 dark:divide-gray-700 text-sm">
+                                    <tr class="hover:bg-gray-50 dark:hover:bg-gray-700"><td class="px-4 py-3 dark:text-gray-300">Up to ₹2,50,000</td><td class="px-4 py-3 text-center font-bold text-green-600">Nil</td></tr>
+                                    <tr class="hover:bg-gray-50 dark:hover:bg-gray-700"><td class="px-4 py-3 dark:text-gray-300">₹2,50,001 - ₹5,00,000</td><td class="px-4 py-3 text-center font-bold dark:text-white">5%</td></tr>
+                                    <tr class="hover:bg-gray-50 dark:hover:bg-gray-700"><td class="px-4 py-3 dark:text-gray-300">₹5,00,001 - ₹10,00,000</td><td class="px-4 py-3 text-center font-bold dark:text-white">20%</td></tr>
+                                    <tr class="hover:bg-gray-50 dark:hover:bg-gray-700"><td class="px-4 py-3 dark:text-gray-300">Above ₹10,00,000</td><td class="px-4 py-3 text-center font-bold text-red-600">30%</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mt-2"><i class="fas fa-info-circle mr-1"></i>Standard Deduction: ₹50,000 | Rebate u/s 87A up to ₹12,500 (income ≤ ₹5L)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Real Life Examples -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-xl border-2 border-gray-900 dark:border-gray-700 p-8">
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6"><i class="fas fa-users mr-2 text-emerald-600"></i>Real-Life Tax Comparison Examples</h2>
+                <div class="space-y-4">
+                    <div class="border-l-4 border-emerald-500 pl-4 py-3 bg-emerald-50 dark:bg-gray-700 rounded-r-lg">
+                        <p class="font-bold text-gray-800 dark:text-white">Fresher — ₹8 Lakh Salary</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 mt-1"><strong>Old Regime Tax:</strong> ₹41,600 (with ₹1.5L 80C + ₹25K 80D)</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300"><strong>New Regime Tax:</strong> ₹0 (Income ≤ ₹12L after std deduction → full rebate)</p>
+                        <p class="text-sm font-bold text-emerald-600 mt-1"><i class="fas fa-check-circle mr-1"></i>Winner: New Regime saves ₹41,600</p>
+                    </div>
+                    <div class="border-l-4 border-blue-500 pl-4 py-3 bg-blue-50 dark:bg-gray-700 rounded-r-lg">
+                        <p class="font-bold text-gray-800 dark:text-white">Mid-Career — ₹15 Lakh Salary</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 mt-1"><strong>Old Regime Tax:</strong> ₹1,56,000 (with ₹1.5L 80C + ₹50K 80D + ₹2L HRA)</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300"><strong>New Regime Tax:</strong> ₹93,600</p>
+                        <p class="text-sm font-bold text-emerald-600 mt-1"><i class="fas fa-check-circle mr-1"></i>Winner: New Regime saves ₹62,400</p>
+                    </div>
+                    <div class="border-l-4 border-purple-500 pl-4 py-3 bg-purple-50 dark:bg-gray-700 rounded-r-lg">
+                        <p class="font-bold text-gray-800 dark:text-white">Senior Professional — ₹30 Lakh Salary (Heavy Deductions)</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 mt-1"><strong>Old Regime Tax:</strong> ₹4,26,400 (₹1.5L 80C + ₹75K 80D + ₹3L HRA + ₹2L Sec 24 + ₹50K NPS)</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300"><strong>New Regime Tax:</strong> ₹4,42,000</p>
+                        <p class="text-sm font-bold text-orange-600 mt-1"><i class="fas fa-check-circle mr-1"></i>Winner: Old Regime saves ₹15,600 (heavy deductions help!)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 80C Breakdown -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-xl border-2 border-gray-900 dark:border-gray-700 p-8">
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6"><i class="fas fa-list-alt mr-2 text-emerald-600"></i>Section 80C Investment Options</h2>
+                <div class="overflow-x-auto shadow-md rounded-lg">
+                    <table class="min-w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                        <thead class="bg-gray-800 text-white">
+                            <tr>
+                                <th class="px-4 py-3 text-left">Investment</th>
+                                <th class="px-4 py-3 text-center">Lock-in</th>
+                                <th class="px-4 py-3 text-center">Returns</th>
+                                <th class="px-4 py-3 text-center">Risk</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 dark:divide-gray-700 text-sm">
+                            <tr class="hover:bg-gray-50 dark:hover:bg-gray-700"><td class="px-4 py-3 font-semibold dark:text-white">EPF (Employee PF)</td><td class="px-4 py-3 text-center dark:text-gray-300">Till retirement</td><td class="px-4 py-3 text-center text-green-600 font-bold">8.25%</td><td class="px-4 py-3 text-center dark:text-gray-300">Low</td></tr>
+                            <tr class="hover:bg-gray-50 dark:hover:bg-gray-700"><td class="px-4 py-3 font-semibold dark:text-white">PPF</td><td class="px-4 py-3 text-center dark:text-gray-300">15 years</td><td class="px-4 py-3 text-center text-green-600 font-bold">7.1%</td><td class="px-4 py-3 text-center dark:text-gray-300">Zero (Govt.)</td></tr>
+                            <tr class="hover:bg-gray-50 dark:hover:bg-gray-700"><td class="px-4 py-3 font-semibold dark:text-white">ELSS Mutual Funds</td><td class="px-4 py-3 text-center dark:text-gray-300">3 years</td><td class="px-4 py-3 text-center text-green-600 font-bold">12-15%*</td><td class="px-4 py-3 text-center text-orange-600">Medium-High</td></tr>
+                            <tr class="hover:bg-gray-50 dark:hover:bg-gray-700"><td class="px-4 py-3 font-semibold dark:text-white">NPS (Tier-I)</td><td class="px-4 py-3 text-center dark:text-gray-300">Till 60</td><td class="px-4 py-3 text-center text-green-600 font-bold">9-12%*</td><td class="px-4 py-3 text-center text-orange-600">Medium</td></tr>
+                            <tr class="hover:bg-gray-50 dark:hover:bg-gray-700"><td class="px-4 py-3 font-semibold dark:text-white">LIC Premium</td><td class="px-4 py-3 text-center dark:text-gray-300">5-20 years</td><td class="px-4 py-3 text-center dark:text-gray-300">4-6%</td><td class="px-4 py-3 text-center dark:text-gray-300">Low</td></tr>
+                            <tr class="hover:bg-gray-50 dark:hover:bg-gray-700"><td class="px-4 py-3 font-semibold dark:text-white">SSY (Sukanya Samriddhi)</td><td class="px-4 py-3 text-center dark:text-gray-300">21 years</td><td class="px-4 py-3 text-center text-green-600 font-bold">8.2%</td><td class="px-4 py-3 text-center dark:text-gray-300">Zero (Govt.)</td></tr>
+                            <tr class="hover:bg-gray-50 dark:hover:bg-gray-700"><td class="px-4 py-3 font-semibold dark:text-white">NSC</td><td class="px-4 py-3 text-center dark:text-gray-300">5 years</td><td class="px-4 py-3 text-center dark:text-gray-300">7.7%</td><td class="px-4 py-3 text-center dark:text-gray-300">Zero (Govt.)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-xs text-gray-500 mt-2">* Market-linked returns, not guaranteed. Data as of April 2025.</p>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-xl border-2 border-gray-900 dark:border-gray-700 p-8">
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6"><i class="fas fa-question-circle mr-2 text-emerald-600"></i>Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group bg-gray-50 dark:bg-gray-700 rounded-lg p-4 cursor-pointer">
+                        <summary class="font-semibold text-gray-800 dark:text-white flex justify-between items-center">Can I switch between Old and New regime every year?<i class="fas fa-chevron-down text-gray-500 transition-transform group-open:rotate-180"></i></summary>
+                        <p class="mt-3 text-gray-600 dark:text-gray-300 text-sm">Salaried individuals can switch between Old and New regime every financial year. However, individuals with business income can only switch once in their lifetime from New to Old regime.</p>
+                    </details>
+                    <details class="group bg-gray-50 dark:bg-gray-700 rounded-lg p-4 cursor-pointer">
+                        <summary class="font-semibold text-gray-800 dark:text-white flex justify-between items-center">What deductions are available under the New Regime?<i class="fas fa-chevron-down text-gray-500 transition-transform group-open:rotate-180"></i></summary>
+                        <p class="mt-3 text-gray-600 dark:text-gray-300 text-sm">Under the New Regime, very few deductions are available. You get Standard Deduction of ₹75,000, Employer's NPS contribution (80CCD(2)) up to 14% of salary, and family pension deduction (₹15,000). Most Chapter VI-A deductions (80C, 80D, HRA, etc.) are NOT available.</p>
+                    </details>
+                    <details class="group bg-gray-50 dark:bg-gray-700 rounded-lg p-4 cursor-pointer">
+                        <summary class="font-semibold text-gray-800 dark:text-white flex justify-between items-center">How does the ₹12 Lakh rebate work in New Regime?<i class="fas fa-chevron-down text-gray-500 transition-transform group-open:rotate-180"></i></summary>
+                        <p class="mt-3 text-gray-600 dark:text-gray-300 text-sm">If your total taxable income under the New Regime (after standard deduction) is up to ₹12,00,000, you get a full rebate under Section 87A of up to ₹60,000. This effectively makes your tax liability zero. Note: This means a salary of up to ₹12,75,000 (₹12L + ₹75K standard deduction) results in zero tax under the New Regime.</p>
+                    </details>
+                    <details class="group bg-gray-50 dark:bg-gray-700 rounded-lg p-4 cursor-pointer">
+                        <summary class="font-semibold text-gray-800 dark:text-white flex justify-between items-center">Is there a surcharge on high income?<i class="fas fa-chevron-down text-gray-500 transition-transform group-open:rotate-180"></i></summary>
+                        <p class="mt-3 text-gray-600 dark:text-gray-300 text-sm">Yes, a surcharge applies on income above ₹50 Lakhs: 10% (₹50L-₹1Cr), 15% (₹1Cr-₹2Cr), 25% (₹2Cr-₹5Cr under New Regime). This calculator covers the standard slab computation without surcharge for simplicity.</p>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Financial Disclaimer -->
+    <div class="mt-12 bg-yellow-50 dark:bg-yellow-900 dark:bg-opacity-20 border-l-4 border-yellow-500 p-6 max-w-5xl mx-auto mb-8 rounded-r-lg">
+        <div class="flex items-start">
+            <i class="fas fa-exclamation-triangle text-yellow-600 text-2xl mr-4 flex-shrink-0 mt-1"></i>
+            <div>
+                <h3 class="font-bold text-gray-800 dark:text-white mb-2">Important Disclaimer</h3>
+                <div class="text-sm text-gray-700 dark:text-gray-300 space-y-2">
+                    <p><strong>For Informational Purposes Only:</strong> This calculator provides tax estimates based on the inputs you provide and the published tax slabs for FY 2025-26. Actual tax liability may differ based on your specific financial situation.</p>
+                    <p><strong>Not Tax Advice:</strong> The calculations provided here are NOT professional tax advice. Do not file your income tax return based solely on these calculations.</p>
+                    <p><strong>Consult a CA:</strong> Always consult a qualified Chartered Accountant or tax professional for accurate tax planning and filing. Tax laws are subject to changes and interpretations.</p>
+                    <p><strong>No Surcharge Computation:</strong> This calculator does not include surcharge calculations for income above ₹50 Lakhs.</p>
+                    <p><strong>No Liability:</strong> QuickTools India assumes no responsibility for any decisions or actions taken based on the tax calculations provided on this tool.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        initAutoSave('income_tax_calc');
+        calculateTax();
+    });
+
+    function fmt(amount) {
+        if (amount >= 10000000) return '₹' + (amount / 10000000).toFixed(2) + ' Cr';
+        if (amount >= 100000) return '₹' + (amount / 100000).toFixed(2) + ' Lac';
+        return '₹' + Math.round(amount).toLocaleString('en-IN');
+    }
+
+    function calcOldRegimeTax(taxableIncome) {
+        let tax = 0;
+        if (taxableIncome <= 250000) {
+            tax = 0;
+        } else if (taxableIncome <= 500000) {
+            tax = (taxableIncome - 250000) * 0.05;
+        } else if (taxableIncome <= 1000000) {
+            tax = 12500 + (taxableIncome - 500000) * 0.20;
+        } else {
+            tax = 12500 + 100000 + (taxableIncome - 1000000) * 0.30;
+        }
+        return tax;
+    }
+
+    function calcNewRegimeTax(taxableIncome) {
+        let tax = 0;
+        if (taxableIncome <= 400000) {
+            tax = 0;
+        } else if (taxableIncome <= 800000) {
+            tax = (taxableIncome - 400000) * 0.05;
+        } else if (taxableIncome <= 1200000) {
+            tax = 20000 + (taxableIncome - 800000) * 0.10;
+        } else if (taxableIncome <= 1600000) {
+            tax = 60000 + (taxableIncome - 1200000) * 0.15;
+        } else if (taxableIncome <= 2000000) {
+            tax = 120000 + (taxableIncome - 1600000) * 0.20;
+        } else if (taxableIncome <= 2400000) {
+            tax = 200000 + (taxableIncome - 2000000) * 0.25;
+        } else {
+            tax = 300000 + (taxableIncome - 2400000) * 0.30;
+        }
+        return tax;
+    }
+
+    function calculateTax() {
+        const grossSalary = parseFloat(document.getElementById('grossSalary').value) || 0;
+        const otherIncome = parseFloat(document.getElementById('otherIncome').value) || 0;
+        const d80C = Math.min(parseFloat(document.getElementById('deduction80C').value) || 0, 150000);
+        const d80D = parseFloat(document.getElementById('deduction80D').value) || 0;
+        const hra = parseFloat(document.getElementById('hraExemption').value) || 0;
+        const homeLoan = Math.min(parseFloat(document.getElementById('homeLoanInterest').value) || 0, 200000);
+        const nps = Math.min(parseFloat(document.getElementById('nps80CCD').value) || 0, 50000);
+        const otherDed = parseFloat(document.getElementById('otherDeductions').value) || 0;
+
+        const totalGross = grossSalary + otherIncome;
+
+        // ---- OLD REGIME ----
+        const oldStdDed = 50000;
+        const totalOldDeductions = d80C + d80D + hra + homeLoan + nps + otherDed;
+        const oldTaxableIncome = Math.max(0, totalGross - oldStdDed - totalOldDeductions);
+        let oldTaxBeforeCess = calcOldRegimeTax(oldTaxableIncome);
+
+        // Rebate u/s 87A (Old): up to ₹12,500 if taxable income ≤ ₹5L
+        let oldRebate = 0;
+        if (oldTaxableIncome <= 500000) {
+            oldRebate = Math.min(oldTaxBeforeCess, 12500);
+        }
+        const oldTaxAfterRebate = Math.max(0, oldTaxBeforeCess - oldRebate);
+        const oldCess = oldTaxAfterRebate * 0.04;
+        const oldTotalTax = Math.round(oldTaxAfterRebate + oldCess);
+
+        // ---- NEW REGIME ----
+        const newStdDed = 75000;
+        const newTaxableIncome = Math.max(0, totalGross - newStdDed);
+        let newTaxBeforeCess = calcNewRegimeTax(newTaxableIncome);
+
+        // Rebate u/s 87A (New): up to ₹60,000 if taxable income ≤ ₹12L
+        let newRebate = 0;
+        if (newTaxableIncome <= 1200000) {
+            newRebate = Math.min(newTaxBeforeCess, 60000);
+        }
+        const newTaxAfterRebate = Math.max(0, newTaxBeforeCess - newRebate);
+        const newCess = newTaxAfterRebate * 0.04;
+        const newTotalTax = Math.round(newTaxAfterRebate + newCess);
+
+        // GA4 Tracking
+        trackCalculatorUsage('Income Tax Calculator', grossSalary);
+
+        // ---- Display Old Regime ----
+        document.getElementById('oldGrossIncome').textContent = fmt(totalGross);
+        document.getElementById('oldStdDeduction').textContent = '- ' + fmt(oldStdDed);
+        document.getElementById('oldChapterDeductions').textContent = '- ' + fmt(totalOldDeductions);
+        document.getElementById('oldTaxableIncome').textContent = fmt(oldTaxableIncome);
+        document.getElementById('oldTaxBeforeCess').textContent = fmt(Math.round(oldTaxBeforeCess));
+        document.getElementById('oldRebate').textContent = oldRebate > 0 ? '- ' + fmt(oldRebate) : '₹0';
+        document.getElementById('oldCess').textContent = fmt(Math.round(oldCess));
+        document.getElementById('oldTotalTax').textContent = fmt(oldTotalTax);
+        document.getElementById('oldEffectiveRate').textContent = totalGross > 0 ? ((oldTotalTax / totalGross) * 100).toFixed(1) + '%' : '0%';
+        document.getElementById('oldMonthlyTax').textContent = fmt(Math.round(oldTotalTax / 12));
+
+        // ---- Display New Regime ----
+        document.getElementById('newGrossIncome').textContent = fmt(totalGross);
+        document.getElementById('newStdDeduction').textContent = '- ' + fmt(newStdDed);
+        document.getElementById('newTaxableIncome').textContent = fmt(newTaxableIncome);
+        document.getElementById('newTaxBeforeCess').textContent = fmt(Math.round(newTaxBeforeCess));
+        document.getElementById('newRebate').textContent = newRebate > 0 ? '- ' + fmt(newRebate) : '₹0';
+        document.getElementById('newCess').textContent = fmt(Math.round(newCess));
+        document.getElementById('newTotalTax').textContent = fmt(newTotalTax);
+        document.getElementById('newEffectiveRate').textContent = totalGross > 0 ? ((newTotalTax / totalGross) * 100).toFixed(1) + '%' : '0%';
+        document.getElementById('newMonthlyTax').textContent = fmt(Math.round(newTotalTax / 12));
+
+        // ---- Verdict ----
+        const diff = Math.abs(oldTotalTax - newTotalTax);
+        if (newTotalTax < oldTotalTax) {
+            document.getElementById('verdictText').textContent = '✅ New Regime saves you ' + fmt(diff) + '/year!';
+            document.getElementById('verdictText').className = 'text-xl font-bold text-emerald-600 mb-2';
+        } else if (oldTotalTax < newTotalTax) {
+            document.getElementById('verdictText').textContent = '✅ Old Regime saves you ' + fmt(diff) + '/year!';
+            document.getElementById('verdictText').className = 'text-xl font-bold text-orange-600 mb-2';
+        } else {
+            document.getElementById('verdictText').textContent = '⚖️ Both regimes result in the same tax!';
+            document.getElementById('verdictText').className = 'text-xl font-bold text-blue-600 mb-2';
+        }
+        document.getElementById('verdictSavings').textContent = 'Old Regime: ' + fmt(oldTotalTax) + '/year (' + fmt(Math.round(oldTotalTax/12)) + '/month) | New Regime: ' + fmt(newTotalTax) + '/year (' + fmt(Math.round(newTotalTax/12)) + '/month)';
+
+        document.getElementById('results').classList.remove('hidden');
+        document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+</script>
+{% endblock %}
