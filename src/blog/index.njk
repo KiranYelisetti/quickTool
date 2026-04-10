@@ -1,0 +1,60 @@
+---
+layout: base.njk
+title: Blog & Financial Guides | QuickTools India
+meta_title: Personal Finance Blog & Guides | QuickTools India
+meta_description: "Read our latest articles and expert guides on personal finance, loans, SIPs, and taxes in India. Learn money-saving strategies and make smarter financial decisions."
+---
+
+<div class="container mx-auto px-4 py-8 md:py-12 max-w-6xl">
+    <!-- Header -->
+    <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Financial Guides & Articles</h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Expert strategies to save money, understand taxes, and make the most of your investments in India.
+        </p>
+    </div>
+
+    <!-- Blog Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {%- for post in collections.post | reverse -%}
+        <article class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-shadow duration-300 overflow-hidden flex flex-col">
+            <div class="p-6 md:p-8 flex flex-col flex-1">
+                <!-- Tags -->
+                <div class="mb-4">
+                    {% for tag in post.data.tags %}
+                        {% if tag != "post" %}
+                        <span class="inline-block bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300 text-xs font-bold px-2 py-1 rounded uppercase tracking-wide">
+                            {{ tag }}
+                        </span>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                
+                <!-- Title & Excerpt -->
+                <a href="{{ post.url }}" class="block mb-4 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white line-clamp-2 leading-snug">
+                        {{ post.data.title }}
+                    </h2>
+                </a>
+                
+                <p class="text-gray-600 dark:text-gray-300 mb-6 flex-1 line-clamp-3">
+                    {{ post.data.meta_description }}
+                </p>
+                
+                <!-- Footer (Date & Read time) -->
+                <div class="mt-auto pt-4 border-t border-gray-100 dark:border-gray-700 flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
+                    <div class="flex items-center">
+                        <i class="fas fa-calendar-day mr-2"></i>
+                        <span>{{ post.date.toISOString().split('T')[0] }}</span>
+                    </div>
+                    {% if post.data.readTime %}
+                    <div class="flex items-center font-medium">
+                        {{ post.data.readTime }} min read
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </article>
+        {%- endfor -%}
+    </div>
+</div>
