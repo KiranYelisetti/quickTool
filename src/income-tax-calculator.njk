@@ -331,21 +331,21 @@ meta_keywords: "income tax calculator 2025-26, new regime tax calculator, old vs
                 <div class="space-y-4">
                     <div class="border-l-4 border-emerald-500 pl-4 py-3 bg-emerald-50 dark:bg-gray-700 rounded-r-lg">
                         <p class="font-bold text-gray-800 dark:text-white">Fresher — ₹8 Lakh Salary</p>
-                        <p class="text-sm text-gray-600 dark:text-gray-300 mt-1"><strong>Old Regime Tax:</strong> ₹41,600 (with ₹1.5L 80C + ₹25K 80D)</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 mt-1"><strong>Old Regime Tax:</strong> ₹28,600 (with ₹1.5L 80C + ₹25K 80D)</p>
                         <p class="text-sm text-gray-600 dark:text-gray-300"><strong>New Regime Tax:</strong> ₹0 (Income ≤ ₹12L after std deduction → full rebate)</p>
-                        <p class="text-sm font-bold text-emerald-600 mt-1"><i class="fas fa-check-circle mr-1"></i>Winner: New Regime saves ₹41,600</p>
+                        <p class="text-sm font-bold text-emerald-600 mt-1"><i class="fas fa-check-circle mr-1"></i>Winner: New Regime saves ₹28,600</p>
                     </div>
                     <div class="border-l-4 border-blue-500 pl-4 py-3 bg-blue-50 dark:bg-gray-700 rounded-r-lg">
                         <p class="font-bold text-gray-800 dark:text-white">Mid-Career — ₹15 Lakh Salary</p>
-                        <p class="text-sm text-gray-600 dark:text-gray-300 mt-1"><strong>Old Regime Tax:</strong> ₹1,56,000 (with ₹1.5L 80C + ₹50K 80D + ₹2L HRA)</p>
-                        <p class="text-sm text-gray-600 dark:text-gray-300"><strong>New Regime Tax:</strong> ₹93,600</p>
-                        <p class="text-sm font-bold text-emerald-600 mt-1"><i class="fas fa-check-circle mr-1"></i>Winner: New Regime saves ₹62,400</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 mt-1"><strong>Old Regime Tax:</strong> ₹1,32,600 (with ₹1.5L 80C + ₹50K 80D + ₹2L HRA)</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300"><strong>New Regime Tax:</strong> ₹97,500</p>
+                        <p class="text-sm font-bold text-emerald-600 mt-1"><i class="fas fa-check-circle mr-1"></i>Winner: New Regime saves ₹35,100</p>
                     </div>
                     <div class="border-l-4 border-purple-500 pl-4 py-3 bg-purple-50 dark:bg-gray-700 rounded-r-lg">
-                        <p class="font-bold text-gray-800 dark:text-white">Senior Professional — ₹30 Lakh Salary (Heavy Deductions)</p>
-                        <p class="text-sm text-gray-600 dark:text-gray-300 mt-1"><strong>Old Regime Tax:</strong> ₹4,26,400 (₹1.5L 80C + ₹75K 80D + ₹3L HRA + ₹2L Sec 24 + ₹50K NPS)</p>
-                        <p class="text-sm text-gray-600 dark:text-gray-300"><strong>New Regime Tax:</strong> ₹4,42,000</p>
-                        <p class="text-sm font-bold text-orange-600 mt-1"><i class="fas fa-check-circle mr-1"></i>Winner: Old Regime saves ₹15,600 (heavy deductions help!)</p>
+                        <p class="font-bold text-gray-800 dark:text-white">Senior Professional — ₹30 Lakh Salary (Max HRA + Deductions)</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 mt-1"><strong>Old Regime Tax:</strong> ₹4,52,400 (₹1.5L 80C + ₹75K 80D + ₹4L HRA + ₹2L Sec 24 + ₹50K NPS = ₹8.75L deductions)</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300"><strong>New Regime Tax:</strong> ₹4,75,800</p>
+                        <p class="text-sm font-bold text-orange-600 mt-1"><i class="fas fa-check-circle mr-1"></i>Winner: Old Regime saves ₹23,400 — only when HRA + 80C + Sec 24 are all maxed out</p>
                     </div>
                 </div>
             </div>
@@ -499,10 +499,17 @@ meta_keywords: "income tax calculator 2025-26, new regime tax calculator, old vs
         const newTaxableIncome = Math.max(0, totalGross - newStdDed);
         let newTaxBeforeCess = calcNewRegimeTax(newTaxableIncome);
 
-        // Rebate u/s 87A (New): up to ₹60,000 if taxable income ≤ ₹12L
+        // Rebate u/s 87A (New): full rebate if taxable income ≤ ₹12L.
+        // Marginal relief: just above ₹12L, tax after rebate cannot exceed
+        // the amount by which income exceeds ₹12L (Finance Act 2025).
         let newRebate = 0;
         if (newTaxableIncome <= 1200000) {
             newRebate = Math.min(newTaxBeforeCess, 60000);
+        } else {
+            const excessOver12L = newTaxableIncome - 1200000;
+            if (newTaxBeforeCess > excessOver12L) {
+                newRebate = newTaxBeforeCess - excessOver12L;
+            }
         }
         const newTaxAfterRebate = Math.max(0, newTaxBeforeCess - newRebate);
         const newCess = newTaxAfterRebate * 0.04;
