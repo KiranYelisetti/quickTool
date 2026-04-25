@@ -78,7 +78,7 @@ meta_keywords: "EMI prepayment calculator, loan prepayment calculator, home loan
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Outstanding Loan Amount (₹)</label>
                         <input type="number" id="loanAmount" value="5000000" min="100000" step="10000"
-                            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 dark:bg-gray-700 dark:text-white">
+                            class="format-inr w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 dark:bg-gray-700 dark:text-white">
                         <p class="text-xs text-gray-500 mt-1">Current outstanding balance of your loan</p>
                     </div>
                     <div>
@@ -109,13 +109,13 @@ meta_keywords: "EMI prepayment calculator, loan prepayment calculator, home loan
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Monthly Extra Payment (₹)</label>
                             <input type="number" id="monthlyExtra" value="10000" min="0" step="1000"
-                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 dark:bg-gray-700 dark:text-white">
+                                class="format-inr w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 dark:bg-gray-700 dark:text-white">
                             <p class="text-xs text-gray-500 mt-1">Additional amount you'll pay every month above your EMI</p>
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">One-time Lump Sum Prepayment (₹)</label>
                             <input type="number" id="lumpSum" value="0" min="0" step="10000"
-                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 dark:bg-gray-700 dark:text-white">
+                                class="format-inr w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 dark:bg-gray-700 dark:text-white">
                             <p class="text-xs text-gray-500 mt-1">Bonus, tax refund, or savings you can pay immediately</p>
                         </div>
                     </div>
@@ -321,11 +321,11 @@ meta_keywords: "EMI prepayment calculator, loan prepayment calculator, home loan
     }
 
     function calculatePrepayment() {
-        const P = parseFloat(document.getElementById('loanAmount').value) || 0;
-        const annualRate = parseFloat(document.getElementById('interestRate').value) || 0;
-        const tenureYears = parseFloat(document.getElementById('loanTenure').value) || 0;
-        const monthlyExtra = parseFloat(document.getElementById('monthlyExtra').value) || 0;
-        const lumpSum = parseFloat(document.getElementById('lumpSum').value) || 0;
+        const P = parseINR(document.getElementById('loanAmount').value) || 0;
+        const annualRate = parseINR(document.getElementById('interestRate').value) || 0;
+        const tenureYears = parseINR(document.getElementById('loanTenure').value) || 0;
+        const monthlyExtra = parseINR(document.getElementById('monthlyExtra').value) || 0;
+        const lumpSum = parseINR(document.getElementById('lumpSum').value) || 0;
 
         const r = annualRate / 12 / 100;
         const n = tenureYears * 12;

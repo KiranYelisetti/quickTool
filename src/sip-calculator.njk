@@ -75,12 +75,12 @@ json_ld:
                             <div class="relative">
                                 <span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">₹</span>
                                 <input type="number" id="monthlyInvestment" value="5000" min="500"
-                                    class="w-full pl-8 pr-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition shadow-sm font-bold text-lg"
+                                    class="format-inr w-full pl-8 pr-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition shadow-sm font-bold text-lg"
                                     oninput="calculateSIP()">
                             </div>
                             <input type="range" min="500" max="100000" step="500" value="5000"
                                 class="w-full mt-3 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-indigo-600"
-                                oninput="document.getElementById('monthlyInvestment').value = this.value; calculateSIP()">
+                                oninput="document.getElementById('monthlyInvestment').value = formatIndianNumber(this.value); calculateSIP()">
                         </div>
 
                         <!-- Expected Return Rate Input -->
@@ -381,9 +381,9 @@ json_ld:
 
     function calculateSIP() {
         // Get input values
-        const p = parseFloat(document.getElementById('monthlyInvestment').value);
-        const r = parseFloat(document.getElementById('returnRate').value);
-        const t = parseFloat(document.getElementById('timePeriod').value);
+        const p = parseINR(document.getElementById('monthlyInvestment').value);
+        const r = parseINR(document.getElementById('returnRate').value);
+        const t = parseINR(document.getElementById('timePeriod').value);
 
         // Calculate
         const i = r / 12 / 100;

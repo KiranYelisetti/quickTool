@@ -3,6 +3,70 @@
  * Handles Persistence (Auto-Save) and Social Sharing
  */
 
+// ─── Indian-format currency input helpers ─────────────────────────
+// Any <input class="format-inr"> is auto-upgraded from type=number to
+// type=text and kept comma-separated as the user types (lakh/crore
+// grouping, e.g. 24,00,000). Calculators read values with parseINR()
+// which strips commas before parsing.
+
+function formatIndianNumber(num) {
+    if (num === null || num === undefined || num === '') return '';
+    const n = Number(num);
+    if (isNaN(n)) return '';
+    return n.toLocaleString('en-IN', { maximumFractionDigits: 2 });
+}
+
+function parseINR(value) {
+    if (value === null || value === undefined) return 0;
+    const cleaned = String(value).replace(/,/g, '').trim();
+    if (cleaned === '') return 0;
+    const n = parseFloat(cleaned);
+    return isNaN(n) ? 0 : n;
+}
+
+function setupIndianInputs(root) {
+    const scope = root || document;
+    scope.querySelectorAll('input.format-inr').forEach(input => {
+        if (input.dataset.inrReady === '1') return;
+        input.dataset.inrReady = '1';
+
+        if (input.type === 'number') {
+            input.type = 'text';
+            input.setAttribute('inputmode', 'numeric');
+            input.setAttribute('autocomplete', 'off');
+        }
+
+        // Format initial value
+        if (input.value !== '') {
+            const initial = parseINR(input.value);
+            if (!isNaN(initial)) input.value = formatIndianNumber(initial);
+        }
+
+        input.addEventListener('input', (e) => {
+            const el = e.target;
+            const before = el.value;
+            const caret = el.selectionStart ?? before.length;
+            // Keep only digits and at most one decimal point
+            const firstDot = before.indexOf('.');
+            const raw = before.replace(/[^\d.]/g, '').replace(/\./g, (match, offset, str) => {
+                return str.indexOf('.') === offset ? match : '';
+            });
+            if (raw === '' || raw === '.') {
+                el.value = raw;
+                return;
+            }
+            const formatted = formatIndianNumber(raw);
+            el.value = formatted;
+            // Best-effort cursor restore
+            const diff = formatted.length - before.length;
+            const newPos = Math.max(0, Math.min(formatted.length, caret + diff));
+            try { el.setSelectionRange(newPos, newPos); } catch (e2) { /* noop */ }
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => setupIndianInputs());
+
 // Auto-Save Functionality
 function initAutoSave(pagePrefix) {
     if (!pagePrefix) {

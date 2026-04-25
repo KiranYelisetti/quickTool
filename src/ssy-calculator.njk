@@ -226,7 +226,7 @@ meta_keywords: "SSY calculator, Sukanya Samriddhi Yojana calculator, SSY interes
                             Annual Deposit Amount (₹)
                         </label>
                         <input type="number" id="annualDeposit" min="250" max="150000" value="100000" step="1000"
-                            class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:border-cyan-500 dark:focus:border-cyan-400 focus:outline-none text-lg transition-colors"
+                            class="format-inr w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:border-cyan-500 dark:focus:border-cyan-400 focus:outline-none text-lg transition-colors"
                             oninput="syncInput('annualDeposit', 'annualDepositSlider')">
                         <input type="range" id="annualDepositSlider" min="250" max="150000" value="100000"
                             step="1000"
@@ -833,9 +833,13 @@ meta_keywords: "SSY calculator, Sukanya Samriddhi Yojana calculator, SSY interes
         const input = document.getElementById(inputId);
         const slider = document.getElementById(sliderId);
 
-        const value = event.target.value;
-        input.value = value;
-        slider.value = value;
+        if (event.target === slider) {
+            input.value = input.classList.contains('format-inr')
+                ? formatIndianNumber(slider.value)
+                : slider.value;
+        } else {
+            slider.value = parseINR(input.value);
+        }
 
         validateAndCalculate();
     }
@@ -862,7 +866,7 @@ meta_keywords: "SSY calculator, Sukanya Samriddhi Yojana calculator, SSY interes
 
         const preset = presets[type];
         document.getElementById('currentAge').value = preset.age;
-        document.getElementById('annualDeposit').value = preset.deposit;
+        document.getElementById('annualDeposit').value = formatIndianNumber(preset.deposit);
         document.getElementById('annualDepositSlider').value = preset.deposit;
         document.getElementById('interestRate').value = preset.rate;
         document.getElementById('interestRateSlider').value = preset.rate;
@@ -872,9 +876,9 @@ meta_keywords: "SSY calculator, Sukanya Samriddhi Yojana calculator, SSY interes
 
     // Validate and Calculate
     function validateAndCalculate() {
-        const currentAge = parseFloat(document.getElementById('currentAge').value);
-        const annualDeposit = parseFloat(document.getElementById('annualDeposit').value);
-        const interestRate = parseFloat(document.getElementById('interestRate').value) / 100;
+        const currentAge = parseINR(document.getElementById('currentAge').value);
+        const annualDeposit = parseINR(document.getElementById('annualDeposit').value);
+        const interestRate = parseINR(document.getElementById('interestRate').value) / 100;
 
         // Validation
         if (currentAge < 0 || currentAge > 10) {

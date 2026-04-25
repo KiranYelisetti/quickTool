@@ -136,7 +136,7 @@ meta_keywords: "home loan EMI calculator, home loan interest rate 2026, housing 
                     <i class="fas fa-rupee-sign mr-2 text-orange-600"></i>Loan Amount (₹)
                 </label>
                 <input type="number" id="loanAmount" value="5000000" min="100000" step="100000"
-                    class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 dark:bg-gray-700 dark:text-white">
+                    class="format-inr w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 dark:bg-gray-700 dark:text-white">
                 <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Typical range: ₹20 Lac to ₹1 Cr</p>
             </div>
 
@@ -174,7 +174,7 @@ meta_keywords: "home loan EMI calculator, home loan interest rate 2026, housing 
                             Yearly Pre-payment Amount (₹)
                         </label>
                         <input type="number" id="prepaymentAmount" value="100000" min="0" step="10000"
-                            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 dark:bg-gray-700 dark:text-white">
+                            class="format-inr w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 dark:bg-gray-700 dark:text-white">
                         <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Amount you plan to pre-pay every
                             year</p>
                     </div>
@@ -650,9 +650,9 @@ meta_keywords: "home loan EMI calculator, home loan interest rate 2026, housing 
     }
 
     function calculateHomeLoan(shouldScroll = true) {
-        const loanAmount = parseFloat(document.getElementById('loanAmount').value);
-        const annualRate = parseFloat(document.getElementById('interestRate').value);
-        const tenureYears = parseFloat(document.getElementById('loanTenure').value);
+        const loanAmount = parseINR(document.getElementById('loanAmount').value);
+        const annualRate = parseINR(document.getElementById('interestRate').value);
+        const tenureYears = parseINR(document.getElementById('loanTenure').value);
         const monthlyRate = annualRate / 12 / 100;
         const tenureMonths = tenureYears * 12;
 
@@ -670,7 +670,7 @@ meta_keywords: "home loan EMI calculator, home loan interest rate 2026, housing 
         let newTenure = tenureYears;
 
         if (enablePrepayment) {
-            const prepaymentAmount = parseFloat(document.getElementById('prepaymentAmount').value);
+            const prepaymentAmount = parseINR(document.getElementById('prepaymentAmount').value);
             const startYear = parseInt(document.getElementById('prepaymentStartYear').value);
 
             // Simulation for prepayment
