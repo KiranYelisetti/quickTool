@@ -269,13 +269,13 @@
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Annual Gross Salary (₹)</label>
                         <input type="number" id="grossSalary" value="1200000" min="0" step="10000"
-                            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-emerald-500 dark:bg-gray-700 dark:text-white">
+                            class="format-inr w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-emerald-500 dark:bg-gray-700 dark:text-white">
                         <p class="text-xs text-gray-500 mt-1">Your total CTC or gross annual income</p>
                     </div>
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Other Income (₹) <span class="font-normal text-gray-400">(FD interest, rent, etc.)</span></label>
                         <input type="number" id="otherIncome" value="0" min="0" step="1000"
-                            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-emerald-500 dark:bg-gray-700 dark:text-white">
+                            class="format-inr w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-emerald-500 dark:bg-gray-700 dark:text-white">
                     </div>
                 </div>
 
@@ -288,35 +288,35 @@
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Section 80C (₹) <span class="font-normal text-gray-400">Max ₹1.5L</span></label>
                             <input type="number" id="deduction80C" value="150000" min="0" max="150000" step="1000"
-                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-emerald-500 dark:bg-gray-700 dark:text-white">
+                                class="format-inr w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-emerald-500 dark:bg-gray-700 dark:text-white">
                             <p class="text-xs text-gray-500 mt-1">EPF, PPF, ELSS, LIC, NPS Tier-I, SSY</p>
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Section 80D - Health Insurance (₹)</label>
                             <input type="number" id="deduction80D" value="25000" min="0" max="100000" step="1000"
-                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-emerald-500 dark:bg-gray-700 dark:text-white">
+                                class="format-inr w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-emerald-500 dark:bg-gray-700 dark:text-white">
                             <p class="text-xs text-gray-500 mt-1">Self: ₹25K | Self+Parents: ₹50K | Senior Parents: ₹75K-₹1L</p>
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">HRA Exemption (₹)</label>
                             <input type="number" id="hraExemption" value="0" min="0" step="1000"
-                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-emerald-500 dark:bg-gray-700 dark:text-white">
+                                class="format-inr w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-emerald-500 dark:bg-gray-700 dark:text-white">
                             <p class="text-xs text-gray-500 mt-1">If you live in rented accommodation and receive HRA</p>
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Home Loan Interest - Sec 24 (₹) <span class="font-normal text-gray-400">Max ₹2L</span></label>
                             <input type="number" id="homeLoanInterest" value="0" min="0" max="200000" step="1000"
-                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-emerald-500 dark:bg-gray-700 dark:text-white">
+                                class="format-inr w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-emerald-500 dark:bg-gray-700 dark:text-white">
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">NPS - 80CCD(1B) (₹) <span class="font-normal text-gray-400">Max ₹50K</span></label>
                             <input type="number" id="nps80CCD" value="0" min="0" max="50000" step="1000"
-                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-emerald-500 dark:bg-gray-700 dark:text-white">
+                                class="format-inr w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-emerald-500 dark:bg-gray-700 dark:text-white">
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Other Deductions (₹)</label>
                             <input type="number" id="otherDeductions" value="0" min="0" step="1000"
-                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-emerald-500 dark:bg-gray-700 dark:text-white">
+                                class="format-inr w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-emerald-500 dark:bg-gray-700 dark:text-white">
                             <p class="text-xs text-gray-500 mt-1">Education loan interest (80E), Donations (80G), etc.</p>
                         </div>
                     </div>
@@ -650,14 +650,14 @@
     }
 
     function calculateTax() {
-        const grossSalary = parseFloat(document.getElementById('grossSalary').value) || 0;
-        const otherIncome = parseFloat(document.getElementById('otherIncome').value) || 0;
-        const d80C = Math.min(parseFloat(document.getElementById('deduction80C').value) || 0, 150000);
-        const d80D = parseFloat(document.getElementById('deduction80D').value) || 0;
-        const hra = parseFloat(document.getElementById('hraExemption').value) || 0;
-        const homeLoan = Math.min(parseFloat(document.getElementById('homeLoanInterest').value) || 0, 200000);
-        const nps = Math.min(parseFloat(document.getElementById('nps80CCD').value) || 0, 50000);
-        const otherDed = parseFloat(document.getElementById('otherDeductions').value) || 0;
+        const grossSalary = parseINR(document.getElementById('grossSalary').value) || 0;
+        const otherIncome = parseINR(document.getElementById('otherIncome').value) || 0;
+        const d80C = Math.min(parseINR(document.getElementById('deduction80C').value) || 0, 150000);
+        const d80D = parseINR(document.getElementById('deduction80D').value) || 0;
+        const hra = parseINR(document.getElementById('hraExemption').value) || 0;
+        const homeLoan = Math.min(parseINR(document.getElementById('homeLoanInterest').value) || 0, 200000);
+        const nps = Math.min(parseINR(document.getElementById('nps80CCD').value) || 0, 50000);
+        const otherDed = parseINR(document.getElementById('otherDeductions').value) || 0;
 
         const totalGross = grossSalary + otherIncome;
 

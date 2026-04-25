@@ -260,7 +260,7 @@
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Annual CTC (₹)</label>
                         <input type="number" id="annualCTC" value="1000000" min="100000" step="10000"
-                            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-teal-500 dark:bg-gray-700 dark:text-white">
+                            class="format-inr w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-teal-500 dark:bg-gray-700 dark:text-white">
                         <p class="text-xs text-gray-500 mt-1">Your total Cost to Company per annum</p>
                     </div>
                     <div>
@@ -285,12 +285,12 @@
                         <div>
                             <label class="block text-sm text-gray-700 dark:text-gray-300 mb-2">Monthly Bonus (₹)</label>
                             <input type="number" id="monthlyBonus" value="0" min="0" step="500"
-                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-teal-500 dark:bg-gray-700 dark:text-white">
+                                class="format-inr w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-teal-500 dark:bg-gray-700 dark:text-white">
                         </div>
                         <div>
                             <label class="block text-sm text-gray-700 dark:text-gray-300 mb-2">Professional Tax (₹/month)</label>
                             <input type="number" id="profTax" value="200" min="0" max="300" step="50"
-                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-teal-500 dark:bg-gray-700 dark:text-white">
+                                class="format-inr w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-teal-500 dark:bg-gray-700 dark:text-white">
                         </div>
                     </div>
                 </div>
@@ -559,11 +559,11 @@
     }
 
     function calculateSalary() {
-        const annualCTC = parseFloat(document.getElementById('annualCTC').value) || 0;
+        const annualCTC = parseINR(document.getElementById('annualCTC').value) || 0;
         const cityType = document.getElementById('cityType').value;
-        const basicPercent = parseFloat(document.getElementById('basicPercent').value) || 40;
-        const monthlyBonus = parseFloat(document.getElementById('monthlyBonus').value) || 0;
-        const profTax = parseFloat(document.getElementById('profTax').value) || 200;
+        const basicPercent = parseINR(document.getElementById('basicPercent').value) || 40;
+        const monthlyBonus = parseINR(document.getElementById('monthlyBonus').value) || 0;
+        const profTax = parseINR(document.getElementById('profTax').value) || 200;
 
         // Calculate components
         const annualBasic = annualCTC * (basicPercent / 100);

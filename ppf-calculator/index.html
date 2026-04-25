@@ -394,7 +394,7 @@
                         </label>
                         <input type="number" id="annualContribution" min="500" max="150000" value="100000"
                             step="1000"
-                            class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:border-orange-500 dark:focus:border-orange-400 focus:outline-none text-lg transition-colors"
+                            class="format-inr w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:border-orange-500 dark:focus:border-orange-400 focus:outline-none text-lg transition-colors"
                             oninput="syncInput('annualContribution', 'annualContributionSlider')">
                         <input type="range" id="annualContributionSlider" min="500" max="150000" value="100000"
                             step="1000"
@@ -1109,9 +1109,15 @@
         const input = document.getElementById(inputId);
         const slider = document.getElementById(sliderId);
 
-        const value = event.target.value;
-        input.value = value;
-        slider.value = value;
+        if (event.target === slider) {
+            // Slider drives input — format if input is currency-tagged
+            input.value = input.classList.contains('format-inr')
+                ? formatIndianNumber(slider.value)
+                : slider.value;
+        } else {
+            // Text input drives slider — strip commas before assigning
+            slider.value = parseINR(input.value);
+        }
 
         calculatePPF();
     }
@@ -1137,7 +1143,7 @@
         };
 
         const preset = presets[type];
-        document.getElementById('annualContribution').value = preset.contribution;
+        document.getElementById('annualContribution').value = formatIndianNumber(preset.contribution);
         document.getElementById('annualContributionSlider').value = preset.contribution;
         document.getElementById('investmentPeriod').value = preset.years;
         document.getElementById('investmentPeriodSlider').value = preset.years;
@@ -1149,9 +1155,9 @@
 
     // Calculate PPF
     function calculatePPF() {
-        const annualContribution = parseFloat(document.getElementById('annualContribution').value);
+        const annualContribution = parseINR(document.getElementById('annualContribution').value);
         const years = parseInt(document.getElementById('investmentPeriod').value);
-        const interestRate = parseFloat(document.getElementById('interestRate').value) / 100;
+        const interestRate = parseINR(document.getElementById('interestRate').value) / 100;
 
         // Validation
         if (annualContribution < 500 || annualContribution > 150000) {

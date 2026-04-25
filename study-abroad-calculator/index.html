@@ -365,7 +365,7 @@
                             degree cost TODAY in that country?
                         </label>
                         <input type="number" id="currentCost" value="200000" step="1000"
-                            class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:border-red-500 dark:focus:border-red-400 focus:outline-none text-lg transition-colors"
+                            class="format-inr w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:border-red-500 dark:focus:border-red-400 focus:outline-none text-lg transition-colors"
                             oninput="calculateCost()">
                         <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Include everything: College fees +
                             Food + Rent + Books (for 4 years)</p>
@@ -838,10 +838,10 @@
 
     function calculateCost() {
         const currency = document.getElementById('currency').value;
-        const currentCost = parseFloat(document.getElementById('currentCost').value);
+        const currentCost = parseINR(document.getElementById('currentCost').value);
         const years = parseInt(document.getElementById('yearsToStudy').value);
-        const inflationRate = parseFloat(document.getElementById('inflationRate').value) / 100;
-        const depreciationRate = parseFloat(document.getElementById('depreciationRate').value) / 100;
+        const inflationRate = parseINR(document.getElementById('inflationRate').value) / 100;
+        const depreciationRate = parseINR(document.getElementById('depreciationRate').value) / 100;
 
         if (!currentCost || !years) return;
 
